@@ -20,7 +20,7 @@
   top: 1rem;
   left:1rem;
   margin: 0;
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   font-weight:200;
   text-align: center;
 }
@@ -32,8 +32,17 @@
   text-align: justify;
   
   }
-  
 
+.menu {
+  display:none;
+    }
+  
+.mobilemenu {
+  position:fixed;
+  top: 1rem;
+  right: 1rem;
+  font-size: 1.3rem;
+    }
 
 @media only screen and (min-width:1000px){
 
@@ -43,7 +52,7 @@
   }
 
 .title {
-    font-size: 2rem;
+    font-size: 1.5rem;
     position: fixed;
     top: 2rem;
     left:2rem;
@@ -57,7 +66,17 @@
     
     }
 
+  .menu {
+    position:fixed;
+    top: 2rem;
+    right: 2rem;
+    display:flex;
+    font-size: 1.5rem;
+        }
 
+   .mobilemenu {
+   display:none;
+         }
 }
 
 .footer {
