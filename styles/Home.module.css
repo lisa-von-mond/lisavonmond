@@ -69,11 +69,23 @@ padding:0;
   padding:0;
 }
 
+.rowspacer{
+  margin-top:4rem;
+  margin-bottom:4rem;
+  margin-right: 0;
+  margin-left: 0;
+}
+
 .decoimage{
-  margin-top:5rem;
-  margin-bottom:5rem;
+  margin-top:3rem;
+  margin-bottom:3rem;
   margin-left: 0;
   margin-right: 0;
+}
+
+.exlink{
+  border-bottom: 2px solid black;
+  cursor:pointer;
 }
 
 /* DESKTOP AND TABLET STYLES */
@@ -112,8 +124,19 @@ padding:0;
 .menusign {
     display:none;
         }
+
+
+.decoimage{
+    margin-top:5rem;
+    margin-bottom:5rem;
+    margin-left: 0;
+    margin-right: 0;
+        }
 }
 
+
+
+/* FOOTER */
 
 .footer {
   display: flex;

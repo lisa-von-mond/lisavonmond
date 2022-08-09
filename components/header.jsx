@@ -1,5 +1,6 @@
 import styles from '../styles/Home.module.css'
 import styled, {css} from 'styled-components'
+import Link from 'next/link'
 
 export function Header({setViewMobileMenu}){
 
@@ -17,17 +18,21 @@ return(
 
 <div className={styles.desktopmenu}>
 
+<Link href="/">
 <p className={styles.menuitem}>
 home
 </p>
+</Link>
 
 <p className={styles.spacer}>
 /
 </p>
 
+<Link href="/releases">
 <p className={styles.menuitem}>
-sound
+releases
 </p>
+</Link>
 
 <p className={styles.spacer}>
 /

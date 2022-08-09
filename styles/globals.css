@@ -31,9 +31,22 @@ h2{
   font-family: 'Bungee Shade', cursive;
   font-family: 'Koulen', cursive;
   font-family: 'Share Tech Mono', monospace;
-  
+  letter-spacing: 1rem;
   width:auto;
   text-align:left;
+  margin-bottom: 2rem;
+}
+
+h3{
+
+  font-family: 'Bungee', cursive;
+  font-family: 'Racing Sans One', cursive;
+  font-family: 'Bungee Shade', cursive;
+  font-family: 'Koulen', cursive;
+  font-family: 'Share Tech Mono', monospace;
+  width:auto;
+  text-align:left;
+  margin-bottom: 2rem;
 }
 
 

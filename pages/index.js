@@ -30,8 +30,10 @@ function seeMobileMenu(){
 
 
         <div className={styles.content}>
-        <h2>Lisa von Mond</h2>
-        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+        <h2>LISA VON MOND</h2>
+        <p>ambient dub, dreamtunes, slow wave<br></br>sound art and research</p>
+        <h3>news * news * news</h3>
+        <p>09/22: release of my EP <i>lovely planet</i> on HuL berlin<br></br>w/ remixes by thea, skydrips, Dana Anderson</p>
         <div className={styles.decoimage}>
        <Image src={testpic_one} width="500" height="500"></Image>
        </div>
