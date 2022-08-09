@@ -5,6 +5,7 @@ import { MobileMenu } from '../components/mobile-menu'
 import { Header } from '../components/header'
 import { useState } from 'react'
 import testpic_one from '../public/test_circle.png'
+import styled, {css} from 'styled-components'
 
 
 
@@ -24,12 +25,21 @@ function seeMobileMenu(){
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className={styles.main}>
-        <Header setViewMobileMenu={setViewMobileMenu}/>
+      <Header setViewMobileMenu={setViewMobileMenu}/>
         <MobileMenu viewMobileMenu={viewMobileMenu} setViewMobileMenu={setViewMobileMenu}/>
 
+      <main className={styles.main}>
+        <div className={styles.feature}>
+        <Moon>
+        <p className={styles.featuretext}>08/08/22</p>
+        <p className={styles.featuretext}>increasing moon</p>
+        <p className={styles.featuretext}>next full moon:</p>
+        <p className={styles.featuretext}>12/08/22</p>
+        </Moon>
+        </div>
 
         <div className={styles.content}>
+      
         <h2>LISA VON MOND</h2>
         <p>ambient dub, dreamtunes, slow wave<br></br>sound art and research</p>
         <h3>news * news * news</h3>
@@ -37,6 +47,8 @@ function seeMobileMenu(){
         <div className={styles.decoimage}>
        <Image src={testpic_one} width="500" height="500" alt="deco image"></Image>
        </div>
+
+
         </div>
 
       
@@ -62,3 +74,17 @@ function seeMobileMenu(){
     </div>
   )
 }
+
+
+const Moon = styled.div`
+background-image: linear-gradient(to top, #ff9a9e 0%, #fecfef 99%, #fecfef 100%);
+border-radius:1000px;
+display:flex;
+align-items:center;
+justify-content:center;
+flex-direction:column;
+aspect-ratio:1;
+padding:2rem;
+text-align:center;
+gap:0.5rem;
+`

@@ -23,11 +23,28 @@
   text-align: center;
 }
 
+.feature {
+  margin: 4rem 0 0 0;
+  font-size: 1.2rem;
+  width: 100%;
+  
+  }
+
+.featuretext{
+  color:blueviolet;
+  font-size: 1.4rem;
+  font-family: 'Share Tech Mono', monospace;
+  padding:0;
+  margin:0;
+}
+
 .content {
-  margin: 4rem 0;
+  margin: 2rem 0 0 0;
   line-height: 1.5;
   font-size: 1.2rem;
   text-align: justify;
+  border: 2px solid blue;
+  width: 100%;
   
   }
 
