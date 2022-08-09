@@ -43,7 +43,6 @@
   line-height: 1.5;
   font-size: 1.2rem;
   text-align: justify;
-  border: 2px solid blue;
   width: 100%;
   
   }
@@ -111,7 +110,10 @@ padding:0;
 
 .main {
     padding: 8rem;
-    background-image: url('../public/lvm_bg_landscape.jpg'),
+    background-image: url('../public/lvm_bg_landscape.jpg');
+    display:flex;
+    flex-direction:row;
+    gap:2rem;
   }
 
 .title {
@@ -126,8 +128,15 @@ padding:0;
     line-height: 1.5;
     font-size: 1.3rem;
     text-align: justify;
+    width:60%;
     
     }
+
+  .feature {
+    width:40%;
+    height:100%;
+      
+      }
 
 .desktopmenu {
     position:fixed;

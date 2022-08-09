@@ -87,4 +87,13 @@ aspect-ratio:1;
 padding:2rem;
 text-align:center;
 gap:0.5rem;
+
+@media only screen and (min-width:800px){
+  position:fixed;
+  left:15%;
+  top:30%;
+  padding:3rem;
+}
+
+
 `
