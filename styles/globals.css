@@ -2,7 +2,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Padauk:wght@400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Kosugi+Maru&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Bungee&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Racing+Sans+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Koulen&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Shade&display=swap');
 
 html,
 body {
@@ -24,6 +27,11 @@ a {
 h2{
 
   font-family: 'Bungee', cursive;
+  font-family: 'Racing Sans One', cursive;
+  font-family: 'Bungee Shade', cursive;
+  font-family: 'Koulen', cursive;
+  font-family: 'Share Tech Mono', monospace;
+  
   width:auto;
   text-align:left;
 }
