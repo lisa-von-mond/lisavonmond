@@ -35,7 +35,7 @@ function seeMobileMenu(){
         <h3>news * news * news</h3>
         <p>09/22: release of my EP <i>lovely planet</i> on HuL berlin<br></br>w/ remixes by thea, skydrips, Dana Anderson</p>
         <div className={styles.decoimage}>
-       <Image src={testpic_one} width="500" height="500"></Image>
+       <Image src={testpic_one} width="500" height="500" alt="deco image"></Image>
        </div>
         </div>
 

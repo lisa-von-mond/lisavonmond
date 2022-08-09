@@ -12,7 +12,7 @@ return(
   <>
 
   <h1 className={styles.title}>
-  <a href="/">🌑</a>
+  <Link href="/">🌑</Link>
  </h1>
 
 
