@@ -1,8 +1,20 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
+import { MobileMenu } from '../components/mobile-menu'
+import { useState } from 'react'
+import testpic_one from '../public/test_circle.png'
+
+
 
 export default function Home() {
+
+const [viewMobileMenu, setViewMobileMenu] = useState(false)
+
+function seeMobileMenu(){
+  setViewMobileMenu(true)
+}
+
   return (
     <div className={styles.container}>
       <Head>
@@ -12,14 +24,51 @@ export default function Home() {
       </Head>
 
       <main className={styles.main}>
+        <MobileMenu viewMobileMenu={viewMobileMenu} setViewMobileMenu={setViewMobileMenu}/>
+
+
         <h1 className={styles.title}>
          <a href="https://lisa-von-mond.net">Lisa von Mond</a>
         </h1>
 
+
+
         <div className={styles.content}>
+        <h2>Hello Hello Hello</h2>
         Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+        <div className={styles.decoimage}>
+       <Image src={testpic_one} width="500" height="500"></Image>
+       </div>
         </div>
 
+        <div className={styles.desktopmenu}>
+
+        <p className={styles.menuitem}>
+        home
+        </p>
+
+        <p className={styles.spacer}>
+        /
+        </p>
+
+        <p className={styles.menuitem}>
+        sound
+        </p>
+
+        <p className={styles.spacer}>
+        /
+        </p>
+
+        <p className={styles.menuitem}>
+        about
+        </p>
+        
+        </div>
+
+        <div className={styles.menusign} onClick={seeMobileMenu}>
+        ☰
+        </div>
+      
       </main>
 
       <footer className={styles.footer}>
@@ -30,7 +79,7 @@ export default function Home() {
         >
         legal notice
         </a>
-//
+        /
         <a
           href=""
           target="_blank"
