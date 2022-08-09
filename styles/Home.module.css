@@ -38,6 +38,15 @@
   margin:0;
 }
 
+.featurelink{
+  color:blueviolet;
+  font-size: 1.4rem;
+  font-family: 'Share Tech Mono', monospace;
+  border-bottom: 2px solid blueviolet;
+  margin:0;
+  cursor:pointer;
+}
+
 .content {
   margin: 2rem 0 0 0;
   line-height: 1.5;
@@ -61,9 +70,9 @@
 
 
 .menuitem{
-cursor:pointer;
-margin: 0;
-padding:0;
+  cursor:pointer;
+  margin: 0;
+  padding:0;
 
 }
 
@@ -171,6 +180,7 @@ padding:0;
   border-top: 1px solid black;
   justify-content: center;
   align-items: center;
+  background-image: linear-gradient(to top, #dad4ec 0%, #dad4ec 1%, #f3e7e9 100%);
 
 }
 
