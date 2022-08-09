@@ -1,7 +1,5 @@
 .container {
   padding: 0;
-
-
 }
 
 .main {
@@ -33,18 +31,51 @@
   
   }
 
-.menu {
+.desktopmenu {
   display:none;
     }
   
-.mobilemenu {
+.menusign {
   position:fixed;
   top: 1rem;
   right: 1rem;
   font-size: 1.3rem;
+  cursor:pointer;
     }
 
-@media only screen and (min-width:1000px){
+
+.menuitem{
+cursor:pointer;
+margin: 0;
+padding:0;
+
+}
+
+.menuitem:hover{
+  list-style-type: none;
+  border-bottom: 2px solid black;
+  
+  }
+
+.invi{
+  display:none !important;
+}
+
+.spacer{
+  margin-top:0;
+  margin-bottom:0;
+  margin-right: 1rem;
+  margin-left: 1rem;
+  padding:0;
+}
+
+.decoimage{
+  margin:5rem;
+}
+
+/* DESKTOP AND TABLET STYLES */
+
+@media only screen and (min-width:800px){
 
 .main {
     padding: 8rem;
@@ -66,18 +97,20 @@
     
     }
 
-  .menu {
+.desktopmenu {
     position:fixed;
     top: 2rem;
     right: 2rem;
     display:flex;
     font-size: 1.5rem;
+    padding: 0;
         }
 
-   .mobilemenu {
-   display:none;
-         }
+.menusign {
+    display:none;
+        }
 }
+
 
 .footer {
   display: flex;
