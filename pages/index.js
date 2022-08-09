@@ -5,7 +5,10 @@ import { MobileMenu } from '../components/mobile-menu'
 import { Header } from '../components/header'
 import { useState } from 'react'
 import testpic_one from '../public/test_circle.png'
+import insta from '../public/insta.svg'
+import soundcloud from '../public/soundcloud.svg'
 import styled, {css} from 'styled-components'
+import Link from 'next/link'
 
 
 
@@ -41,13 +44,11 @@ function seeMobileMenu(){
         <div className={styles.content}>
       
         <h2>LISA VON MOND</h2>
-        <p>ambient dub, dreamtunes, slow wave<br></br>sound art and research</p>
-        <h3>news * news * news</h3>
-        <p>09/22: release of my EP <i>lovely planet</i> on HuL berlin<br></br>w/ remixes by thea, skydrips, Dana Anderson</p>
-        <div className={styles.decoimage}>
-       <Image src={testpic_one} width="500" height="500" alt="deco image"></Image>
-       </div>
-
+        <h3>ambient dub, dreamtunes, slow wave<br></br>sound art and research</h3>
+        <ImageWrapper>
+        <Link href="https://soundcloud.com/lisavonmond" target="blank" rel="noopener"><Image src={soundcloud} width="70" height="50" alt="soundcloud"></Image></Link>
+        <Link href="https://instagram.com/lisavonmond" target="blank" rel="noopener"><Image src={insta} width="50" height="50" alt="insta"></Image></Link>
+        </ImageWrapper>
 
         </div>
 
@@ -95,5 +96,11 @@ gap:0.5rem;
   padding:3rem;
 }
 
-
 `
+
+const ImageWrapper = styled.div`
+display:flex;
+align-items:center;
+gap: 2rem;
+`
+
