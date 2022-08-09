@@ -4,10 +4,9 @@ import styles from '../styles/Home.module.css'
 import { MobileMenu } from '../components/mobile-menu'
 import { Header } from '../components/header'
 import { useState } from 'react'
-import testpic_one from '../public/test_circle.png'
-import kea from '../public/kea.gif'
-import youandme from '../public/you-and-me.gif'
 import styled, {css} from 'styled-components'
+import face from '../public/luni_face.png'
+import Link from 'next/link'
 
 
 
@@ -33,31 +32,29 @@ function seeMobileMenu(){
       <main className={styles.main}>
         <div className={styles.feature}>
         <Cloud>
-        <p className={styles.featuretext}><b>UPCOMING</b></p>
-        <p className={styles.featuretext}>98/22 EP release<br></br>lovely planet<br></br>on HuL Berlin</p>
+        <Link href="https://www.soundcloud.com/lisavonmond" target="blank" rel="noopener"><p className={styles.featurelink}>soundcloud</p></Link>
+        <Link href="https://www.instagram.com/lisavonmond" target="blank" rel="noopener"><p className={styles.featurelink}>insta</p></Link>
+        <Link href="https://www.soundcloud.com/kosmosundkrawall" target="blank" rel="noopener"><p className={styles.featurelink}>Kosmos+Krawall</p></Link>
+        <Link href="https://www.soundcloud.com/lisadelune" target="blank" rel="noopener"><p className={styles.featurelink}>Lisa de Lune</p></Link>
         </Cloud>
         </div>
 
         <div className={styles.content}>
 
-        <h2>RELEASES</h2>
-        <h3>kea // vak.leipzig</h3>
-        <div className={styles.decoimage}>
-        <Image src={kea} width="500" height="500" alt="kea cover"></Image>
-        </div>
-        <p>Kea is a smooth soundscape chillout, released may 2022 on Solisampler VAK03 of vak.leipzig collective. Revenues from the sampler go to SeaWatch e.B. and Blindspots e.V. - an organization that supports volunteer structures for Balkan and Ukraine refugees.</p>
-        <p><a href="https://soundcloud.com/vak-leipzig/sets/vak03" target="blank" rel="noopener" className={styles.exlink}>Listen to Sampler on soundcloud</a></p>
-        <p><a href="https://vak-leipzig.bandcamp.com/album/vak03" target="blank" rel="noopener" className={styles.exlink}>buy sampler on bandcamp</a></p>
+        <h2>HI THERE, I AM LISA</h2>
 
+        <div className={styles.decoimage}>
+        <Image src={face} width="600" height="500" alt="kea cover"></Image>
+        </div>
+      
+        <p>I am a producer/composer, researcher and DJ with a background based on transdisciplinary design, sonic culture and media science. As Lisa von Mond, I produce ambient, experimental and slow house music and seek to amplify unconventional shapes of sonic culture towards a merge between music and sound art, connecting sound itself and its intersections with the social.</p>
+        <h3>Lisa de Lune</h3>
+        <p>My DJ ego Lisa de Lune stands for deep, driving and pure techno and feels home in rave crowds and underground spheres.</p>
+        <p>Upcoming gigs: 13/08 KitKatClub / B * 19/08 ms dockville / HH * 17/09 Kitkatclub / B</p>
+      
         <div className={styles.rowspacer}> </div>
 
-        <h3>You and me // friendly connections</h3>
-        <div className={styles.decoimage}>
-        <Image src={youandme} width="500" height="500" alt="you and me cover"></Image>
-        </div>
-        <p>A warm and cosy downtempo track with influences of dub, house and ambient. Released may 2021 on the Bremen / Cologne label friendly connections</p>
-        <p><a className={styles.exlink} href="https://soundcloud.com/friendlyconnections/lisa-von-mond-you-and-me" target="blank" rel="noopener">Listen to on soundcloud</a></p>
- 
+      
   
        </div>
       

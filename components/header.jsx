@@ -38,9 +38,11 @@ releases
 /
 </p>
 
+<Link href="/about">
 <p className={styles.menuitem}>
 about
 </p>
+</Link>
 
 </div>
 
