@@ -1,25 +1,32 @@
 import styles from '../styles/Home.module.css'
 import styled, {css} from 'styled-components'
+import {mooncalendar} from '../utils/moon-calendar.js'
 
 export function Moon({}){
 
 const today = new Date()
 
-const todaydate = today.toString()
-console.log(todaydate)
 
 const moonMonth = today.getMonth() + 1;   
 const moonYear = today.getFullYear(); 
-const moonDate = today.getDate(); 
+const moonDate = today.getDate();
+
+const todayDate = moonDate.toString() + "/" + moonMonth.toString() + "/" + moonYear.toString()
+
+const moonState = (mooncalendar.find(e => e.date === todayDate)).state
+
+console.log(moonState)
+
+const nextFullMoon = (mooncalendar.find(e => e.state === "full moon")).date
 
 
 return(
 
 <MoonFrame>
-  <p className={styles.featuretext}>{moonDate}/{moonMonth}/{moonYear}</p>
-  <p className={styles.featuretext}>increasing moon</p>
+  <p className={styles.featuretext}>{todayDate}</p>
+  <p className={styles.featuretext}>{moonState}</p>
   <p className={styles.featuretext}>next full moon:</p>
-  <p className={styles.featuretext}>12/08/22</p>
+  <p className={styles.featuretext}>{nextFullMoon}</p>
 </MoonFrame>
 
 )    
@@ -45,3 +52,10 @@ gap:0.5rem;
 }
 
 `
+
+/*
+}
+
+const todayIndex = mooncalender.findIndex(todayDate)
+
+const todayState = mooncalender{todayIndex}.state */
