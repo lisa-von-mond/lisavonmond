@@ -9,6 +9,7 @@ import insta from '../public/insta.svg'
 import soundcloud from '../public/soundcloud.svg'
 import styled, {css} from 'styled-components'
 import Link from 'next/link'
+import { Moon } from '../components/moon'
 
 
 
@@ -33,12 +34,9 @@ function seeMobileMenu(){
 
       <main className={styles.main}>
         <div className={styles.feature}>
-        <Moon>
-        <p className={styles.featuretext}>08/08/22</p>
-        <p className={styles.featuretext}>increasing moon</p>
-        <p className={styles.featuretext}>next full moon:</p>
-        <p className={styles.featuretext}>12/08/22</p>
-        </Moon>
+ 
+        <Moon/>
+    
         </div>
 
         <div className={styles.content}>
@@ -77,26 +75,7 @@ function seeMobileMenu(){
 }
 
 
-const Moon = styled.div`
-background-image: linear-gradient(to top, #ff9a9e 0%, #fecfef 99%, #fecfef 100%);
-border-radius:1000px;
-display:flex;
-align-items:center;
-justify-content:center;
-flex-direction:column;
-aspect-ratio:1;
-padding:2rem;
-text-align:center;
-gap:0.5rem;
 
-@media only screen and (min-width:800px){
-  position:fixed;
-  left:15%;
-  top:30%;
-  padding:3rem;
-}
-
-`
 
 const ImageWrapper = styled.div`
 display:flex;
