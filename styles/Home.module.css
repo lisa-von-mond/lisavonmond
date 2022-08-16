@@ -24,11 +24,23 @@
 }
 
 .feature {
-  margin: 4rem 0 0 0;
+  margin: 0;
   font-size: 1.2rem;
   width: 100%;
   
   }
+
+.featureinner{
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  aspect-ratio:1;
+  padding:2rem;
+  text-align:center;
+  gap:0.5rem;
+
+}
 
 .featuretext{
   color:blueviolet;
@@ -147,19 +159,35 @@
       
       }
 
+  .featureinner{
+
+    position:fixed;
+    height: 100vh;
+    width:30vw;
+    left: 8rem;
+    top: 0;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    z-index:90;
+
+  }
+
+
 .desktopmenu {
     position:fixed;
     top: 2rem;
     right: 2rem;
     display:flex;
+    gap: 2rem;
     font-size: 1.5rem;
     padding: 0;
+    z-index:110;
         }
 
 .menusign {
     display:none;
         }
-
 
 .decoimage{
     margin-top:5rem;
@@ -169,19 +197,15 @@
         }
 }
 
-
-
 /* FOOTER */
 
 .footer {
   display: flex;
   padding: 2rem 0;
   gap: 2rem;
-  border-top: 1px solid black;
   justify-content: center;
   align-items: center;
-  background-image: linear-gradient(to top, #dad4ec 0%, #dad4ec 1%, #f3e7e9 100%);
-
+  background-image: linear-gradient(to top,#e3eeff 0%, #e3eeff 99%, #f3e7e9 100%);
 }
 
 .footer a:hover {
