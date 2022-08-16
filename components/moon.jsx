@@ -22,18 +22,22 @@ const nextFullMoon = (mooncalendar.find(e => e.state === "full moon")).date
 
 return(
 
-<MoonFrame>
+
+  <MoonCircle>
   <p className={styles.featuretext}>{todayDate}</p>
   <p className={styles.featuretext}>{moonState}</p>
   <p className={styles.featuretext}>next full moon:</p>
   <p className={styles.featuretext}>{nextFullMoon}</p>
-</MoonFrame>
+  </MoonCircle>
+
 
 )    
 }
 
-const MoonFrame = styled.div`
+
+const MoonCircle = styled.div`
 background-image: linear-gradient(to top, #ff9a9e 0%, #fecfef 99%, #fecfef 100%);
+height:300px;
 border-radius:1000px;
 display:flex;
 align-items:center;
@@ -43,19 +47,4 @@ aspect-ratio:1;
 padding:2rem;
 text-align:center;
 gap:0.5rem;
-
-@media only screen and (min-width:800px){
-  position:fixed;
-  left:15%;
-  top:30%;
-  padding:3rem;
-}
-
 `
-
-/*
-}
-
-const todayIndex = mooncalender.findIndex(todayDate)
-
-const todayState = mooncalender{todayIndex}.state */

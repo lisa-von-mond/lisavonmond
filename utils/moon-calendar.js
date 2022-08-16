@@ -181,9 +181,4 @@ export const mooncalendar = [
     state:"new moon",
     },
 
-
-
-
-
-
 ]

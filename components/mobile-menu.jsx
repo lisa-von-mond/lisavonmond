@@ -1,5 +1,6 @@
 import styles from '../styles/Home.module.css'
 import styled, {css} from 'styled-components'
+import Link from 'next/link'
 
 export function MobileMenu({viewMobileMenu, setViewMobileMenu}){
 
@@ -10,10 +11,15 @@ function hideMobileMenu(){
 return(
         
 <MMenuFrame visible={viewMobileMenu}>
-
+<Link href="/" target="blank" rel="noopener">
 <p className={styles.menuitem} onClick={hideMobileMenu}>home</p>
-<p className={styles.menuitem} onClick={hideMobileMenu}>sound</p>
+</Link>
+<Link href="/releases" target="blank" rel="noopener">
+<p className={styles.menuitem} onClick={hideMobileMenu}>releases</p>
+</Link>
+<Link href="/about" target="blank" rel="noopener">
 <p className={styles.menuitem} onClick={hideMobileMenu}>about</p>
+</Link>
 </MMenuFrame>
 )    
 }

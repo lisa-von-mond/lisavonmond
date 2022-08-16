@@ -31,11 +31,14 @@ function seeMobileMenu(){
         <MobileMenu viewMobileMenu={viewMobileMenu} setViewMobileMenu={setViewMobileMenu}/>
 
       <main className={styles.main}>
+
         <div className={styles.feature}>
+        <div className={styles.featureinner}>
         <Cloud>
         <p className={styles.featuretext}><b>UPCOMING</b></p>
         <p className={styles.featuretext}>98/22 EP release<br></br>lovely planet<br></br>on HuL Berlin</p>
         </Cloud>
+        </div>
         </div>
 
         <div className={styles.content}>
@@ -93,12 +96,5 @@ flex-direction:column;
 padding:2rem;
 text-align:center;
 gap:0.5rem;
-
-@media only screen and (min-width:800px){
-  position:fixed;
-  left:15%;
-  top:30%;
-  padding:3rem;
-}
 
 `

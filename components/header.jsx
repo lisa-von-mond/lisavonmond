@@ -11,7 +11,7 @@ function showMobileMenu(){
 return(
   <>
 
-  <h1 className={styles.title}>
+ <h1 className={styles.title}>
   <Link href="/">🌑</Link>
  </h1>
 
@@ -24,25 +24,18 @@ home
 </p>
 </Link>
 
-<p className={styles.spacer}>
-/
-</p>
-
 <Link href="/releases">
 <p className={styles.menuitem}>
 releases
 </p>
 </Link>
 
-<p className={styles.spacer}>
-/
-</p>
-
 <Link href="/about">
 <p className={styles.menuitem}>
 about
 </p>
 </Link>
+
 
 </div>
 
@@ -68,9 +61,9 @@ const MMenuFrame = styled.div`
   justify-content:center; 
   align-items:center;
   text-align:center;
-  z-index:100;
   gap: 2rem;
   border: 2px solid blue;
+  z-index:100;
 
 @media only screen and (min-width:800px){
     display:none;

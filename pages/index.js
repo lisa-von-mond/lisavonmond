@@ -34,19 +34,21 @@ function seeMobileMenu(){
 
       <main className={styles.main}>
         <div className={styles.feature}>
+        <div className={styles.featureinner}>
  
         <Moon/>
-    
+        </div>
         </div>
 
         <div className={styles.content}>
-      
+        <FixedIntro>
         <h2>LISA VON MOND</h2>
         <h3>ambient dub, dreamtunes, slow wave<br></br>sound art and research</h3>
         <ImageWrapper>
         <Link href="https://soundcloud.com/lisavonmond" target="blank" rel="noopener"><Image src={soundcloud} width="70" height="50" alt="soundcloud"></Image></Link>
         <Link href="https://instagram.com/lisavonmond" target="blank" rel="noopener"><Image src={insta} width="50" height="50" alt="insta"></Image></Link>
         </ImageWrapper>
+        </FixedIntro>
 
         </div>
 
@@ -82,4 +84,32 @@ display:flex;
 align-items:center;
 gap: 2rem;
 `
+
+const FixedIntro = styled.div`
+
+position: block;
+display:flex;
+flex-direction: column;
+align-items: left;
+justify-content:center;
+padding-left: 0;
+
+
+
+@media only screen and (min-width:800px)
+{
+position:fixed;
+height: 100vh;
+width: 60vw;
+top: 0;
+right: 0;
+padding-left: 6rem;
+z-index:80;
+
+}
+
+
+`
+
+
 
