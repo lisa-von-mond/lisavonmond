@@ -203,11 +203,9 @@
   display: flex;
   padding: 2rem 0;
   gap: 2rem;
-  border-top: 1px solid black;
   justify-content: center;
   align-items: center;
-  background-image: linear-gradient(to top, #dad4ec 0%, #dad4ec 1%, #f3e7e9 100%);
-
+  background-image: linear-gradient(to top,#e3eeff 0%, #e3eeff 99%, #f3e7e9 100%);
 }
 
 .footer a:hover {
