@@ -8,6 +8,8 @@ import testpic_one from '../public/test_circle.png'
 import kea from '../public/kea.gif'
 import youandme from '../public/you-and-me.gif'
 import styled, {css} from 'styled-components'
+import { KeaPlayer } from '../components/kea-player'
+import { YouAndMePlayer } from '../components/you-and-me-player'
 
 
 
@@ -48,19 +50,21 @@ function seeMobileMenu(){
         <div className={styles.decoimage}>
         <Image src={kea} width="500" height="500" alt="kea cover"></Image>
         </div>
-        <p>Kea is a smooth soundscape chillout, released may 2022 on Solisampler VAK03 of vak.leipzig collective. Revenues from the sampler go to SeaWatch e.B. and Blindspots e.V. - an organization that supports volunteer structures for Balkan and Ukraine refugees.</p>
+        <KeaPlayer/>
+        <p>A smooth soundscape chillout, released may 2022 on Solisampler VAK03 of vak.leipzig collective. Revenues from the sampler go to SeaWatch e.B. and Blindspots e.V. - an organization that supports volunteer structures for Balkan and Ukraine refugees.</p>
         <p><a href="https://soundcloud.com/vak-leipzig/sets/vak03" target="blank" rel="noopener" className={styles.exlink}>Listen to Sampler on soundcloud</a></p>
         <p><a href="https://vak-leipzig.bandcamp.com/album/vak03" target="blank" rel="noopener" className={styles.exlink}>buy sampler on bandcamp</a></p>
-
+  
         <div className={styles.rowspacer}> </div>
 
         <h3>You and me // friendly connections</h3>
         <div className={styles.decoimage}>
         <Image src={youandme} width="500" height="500" alt="you and me cover"></Image>
         </div>
+        <YouAndMePlayer/>
         <p>A warm and cosy downtempo track with influences of dub, house and ambient. Released may 2021 on the Bremen / Cologne label friendly connections</p>
         <p><a className={styles.exlink} href="https://soundcloud.com/friendlyconnections/lisa-von-mond-you-and-me" target="blank" rel="noopener">Listen to on soundcloud</a></p>
- 
+        <div className={styles.rowspacer}> </div>
   
        </div>
       
