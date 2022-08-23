@@ -10,6 +10,7 @@ import soundcloud from '../public/soundcloud.svg'
 import styled, {css} from 'styled-components'
 import Link from 'next/link'
 import { Moon } from '../components/moon'
+import { KeaPlayer } from '../components/kea-player'
 
 
 
@@ -37,6 +38,7 @@ function seeMobileMenu(){
         <div className={styles.featureinner}>
  
         <Moon/>
+
         </div>
         </div>
 
