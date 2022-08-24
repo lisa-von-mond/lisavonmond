@@ -51,9 +51,9 @@ function seeMobileMenu(){
       
         <p>I am a producer/composer, researcher and DJ with a background based on transdisciplinary design, sonic culture and media science. As Lisa von Mond, I produce ambient, experimental and slow house music and seek to amplify unconventional shapes of sonic culture towards a merge between music and sound art, connecting sound itself and its intersections with the social.</p>
 
-        <p>Next to my experimental sound work, I work as techno DJ under the ego 'Lisa de Lune' as well.</p>
+        <p>Next to my experimental sound work, I work as techno DJ under the ego Lisa de Lune as well.</p>
 
-        <p>Contact me: lisavomond * at * posteo.de</p>
+        <p>Contact me: lisavomond (at) posteo.de</p>
 
         <p>*** more info and content coming soon ***</p>
       
