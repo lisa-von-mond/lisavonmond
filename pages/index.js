@@ -45,7 +45,7 @@ function seeMobileMenu(){
         <div className={styles.content}>
         <FixedIntro>
         <h2>LISA VON MOND</h2>
-        <h3>ambient dub, dreamtunes, slow wave<br></br>sound art and research</h3>
+        <h3>ambient dub, dreamtunes, slow wave<br></br>sound production, composition and research</h3>
         <ImageWrapper>
         <Link href="https://soundcloud.com/lisavonmond" target="blank" rel="noopener"><Image src={soundcloud} width="70" height="50" alt="soundcloud"></Image></Link>
         <Link href="https://instagram.com/lisavonmond" target="blank" rel="noopener"><Image src={insta} width="50" height="50" alt="insta"></Image></Link>
@@ -59,7 +59,7 @@ function seeMobileMenu(){
 
       <footer className={styles.footer}>
         <a
-          href=""
+          href="/"
           target="_blank"
           rel="noopener noreferrer"
         >
@@ -67,7 +67,7 @@ function seeMobileMenu(){
         </a>
         /
         <a
-          href=""
+          href="/"
           target="_blank"
           rel="noopener noreferrer"
         >

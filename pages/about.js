@@ -50,9 +50,12 @@ function seeMobileMenu(){
         </div>
       
         <p>I am a producer/composer, researcher and DJ with a background based on transdisciplinary design, sonic culture and media science. As Lisa von Mond, I produce ambient, experimental and slow house music and seek to amplify unconventional shapes of sonic culture towards a merge between music and sound art, connecting sound itself and its intersections with the social.</p>
-        <h3>Lisa de Lune</h3>
-        <p>My DJ ego Lisa de Lune stands for deep, driving and pure techno and feels home in rave crowds and underground spheres.</p>
-        <p>Upcoming gigs: 13/08 KitKatClub / B * 19/08 ms dockville / HH * 17/09 Kitkatclub / B</p>
+
+        <p>Next to my experimental sound work, I work as techno DJ under the ego 'Lisa de Lune' as well.</p>
+
+        <p>Contact me: lisavomond (at) posteo.de</p>
+
+        <p>*** more info and content coming soon ***</p>
       
         <div className={styles.rowspacer}> </div>
 
@@ -64,7 +67,7 @@ function seeMobileMenu(){
 
       <footer className={styles.footer}>
         <a
-          href=""
+          href="/"
           target="_blank"
           rel="noopener noreferrer"
         >
@@ -72,7 +75,7 @@ function seeMobileMenu(){
         </a>
         /
         <a
-          href=""
+          href="/"
           target="_blank"
           rel="noopener noreferrer"
         >

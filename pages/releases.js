@@ -72,7 +72,7 @@ function seeMobileMenu(){
 
       <footer className={styles.footer}>
         <a
-          href=""
+          href="/"
           target="_blank"
           rel="noopener noreferrer"
         >
@@ -80,7 +80,7 @@ function seeMobileMenu(){
         </a>
         /
         <a
-          href=""
+          href="/"
           target="_blank"
           rel="noopener noreferrer"
         >
