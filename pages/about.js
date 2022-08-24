@@ -53,7 +53,7 @@ function seeMobileMenu(){
 
         <p>Next to my experimental sound work, I work as techno DJ under the ego 'Lisa de Lune' as well.</p>
 
-        <p>Contact me: lisavomond (at) posteo.de</p>
+        <p>Contact me: lisavomond * at * posteo.de</p>
 
         <p>*** more info and content coming soon ***</p>
       
