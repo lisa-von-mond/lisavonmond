@@ -10,7 +10,6 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-image: url('../public/lvm_bg_landscape.jpg'),
 }
 
 .title {
@@ -37,24 +36,24 @@
   justify-content:center;
   aspect-ratio:1;
   padding:2rem;
-  text-align:center;
   gap:0.5rem;
 
 }
 
 .featuretext{
-  color:blueviolet;
   font-size: 1.4rem;
   font-family: 'Share Tech Mono', monospace;
   padding:0;
   margin:0;
 }
 
+.featurelink_inner:hover{
+border-bottom: 2px solid black;
+}
+
 .featurelink{
-  color:blueviolet;
   font-size: 1.4rem;
   font-family: 'Share Tech Mono', monospace;
-  border-bottom: 2px solid blueviolet;
   margin:0;
   cursor:pointer;
 }
@@ -85,6 +84,14 @@
   cursor:pointer;
   margin: 0;
   padding:0;
+  font-family: 'Share Tech Mono', monospace;
+
+}
+
+.menunonsense{
+  margin: 0;
+  padding:0;
+  font-family: 'Share Tech Mono', monospace;
 
 }
 
@@ -113,6 +120,20 @@
   margin-left: 0;
 }
 
+.rowspacer_flex{
+  margin-top:5rem;
+  margin-bottom:5rem;
+  margin-right: 0;
+  margin-left: 0;
+}
+
+@media only screen and (max-width:799px){
+  .rowspacer_flex{
+ display:none;
+  }
+  }
+
+
 .decoimage{
   margin-top:3rem;
   margin-bottom:3rem;
@@ -125,13 +146,19 @@
   cursor:pointer;
 }
 
+.exlink:hover{
+  border-bottom: 3px solid black;
+  cursor:pointer;
+}
+
+
+
 /* DESKTOP AND TABLET STYLES */
 
 @media only screen and (min-width:800px){
 
 .main {
     padding: 0 8rem 0 8rem;
-    background-image: url('../public/lvm_bg_landscape.jpg');
     display:flex;
     flex-direction:row;
     gap:2rem;
@@ -179,7 +206,9 @@
     top: 2rem;
     right: 2rem;
     display:flex;
-    gap: 2rem;
+    justify-content:space-between;
+    align-items:center;
+    gap: 3rem;
     font-size: 1.5rem;
     padding: 0;
     z-index:110;
@@ -205,7 +234,7 @@
   gap: 2rem;
   justify-content: center;
   align-items: center;
-  background-image: linear-gradient(to top,#e3eeff 0%, #e3eeff 99%, #f3e7e9 100%);
+  background: none;
 }
 
 .footer a:hover {

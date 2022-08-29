@@ -1,6 +1,9 @@
 import styles from '../styles/Home.module.css'
 import styled, {css} from 'styled-components'
 import Link from 'next/link'
+import insta from '../public/insta.svg'
+import soundcloud from '../public/soundcloud.svg'
+import Image from 'next/image'
 
 export function Header({setViewMobileMenu}){
 
@@ -18,23 +21,38 @@ return(
 
 <div className={styles.desktopmenu}>
 
+
 <Link href="/">
+<MenuItemWrapper>
+<p className={styles.menunonsense}>°&nbsp;</p>
 <p className={styles.menuitem}>
 home
 </p>
+</MenuItemWrapper>
+
 </Link>
 
-<Link href="/releases">
+<Link href="/sound">
+<MenuItemWrapper>
+<p className={styles.menunonsense}>°&nbsp;</p>
 <p className={styles.menuitem}>
-releases
+sound
 </p>
+</MenuItemWrapper>
 </Link>
 
 <Link href="/about">
+<MenuItemWrapper>
+<p className={styles.menunonsense}>°&nbsp;</p>
 <p className={styles.menuitem}>
 about
 </p>
+</MenuItemWrapper>
 </Link>
+
+<Link href="https://soundcloud.com/lisavonmond" target="blank" rel="noopener"><Image  className={styles.menuitem} src={soundcloud} width="60" height="35" alt="soundcloud"></Image></Link>
+<Link href="https://instagram.com/lisavonmond" target="blank" rel="noopener"><Image  className={styles.menuitem} src={insta} width="30" height="30" alt="insta"></Image></Link>
+
 
 
 </div>
@@ -76,3 +94,7 @@ ${props =>
   `}
   
 `
+
+const MenuItemWrapper = styled.div`
+display:flex;
+flex-direction:row;`

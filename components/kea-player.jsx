@@ -7,6 +7,7 @@ export function KeaPlayer(){
 <ReactAudioPlayer
   src="/kea.mp3"
   controls
+  controlsList="nodownload"
 />
 </>
     )

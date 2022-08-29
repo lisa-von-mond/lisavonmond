@@ -12,7 +12,7 @@ body {
   padding: 0;
   margin: 0;
   font-family: 'Padauk', sans-serif;
-  background-image: linear-gradient(to top, #f3e7e9 0%, #e3eeff 99%, #e3eeff 100%);
+  background: linear-gradient(to top, #d8bcd2 0%, #e3eeff 50%, #e3eeff 100%);
 }
 
 a {
@@ -26,10 +26,6 @@ a {
 
 h2{
 
-  font-family: 'Bungee', cursive;
-  font-family: 'Racing Sans One', cursive;
-  font-family: 'Bungee Shade', cursive;
-  font-family: 'Koulen', cursive;
   font-family: 'Share Tech Mono', monospace;
   letter-spacing: 1rem;
   width:auto;
@@ -38,17 +34,74 @@ h2{
 }
 
 h3{
-
-  font-family: 'Bungee', cursive;
-  font-family: 'Racing Sans One', cursive;
-  font-family: 'Bungee Shade', cursive;
-  font-family: 'Koulen', cursive;
   font-family: 'Share Tech Mono', monospace;
   font-weight:300;
-  width:auto;
   text-align:left;
   margin-bottom: 2rem;
+  
 }
 
 
-/*font-family: 'Kosugi Maru', sans-serif;*/
+/* AUDIO PLAYER*/
+
+audio::-webkit-media-controls-panel{
+background:white;
+
+}
+
+audio::-webkit-media-controls-mute-button{
+
+}
+
+audio::-webkit-media-controls-play-button{
+
+}
+
+audio::-webkit-media-controls-timeline-container{
+  background-color:white;
+}
+
+audio::-webkit-media-controls-current-time-display{
+
+}
+
+audio::-webkit-media-controls-time-remaining-display{
+
+}
+
+audio::-webkit-media-controls-timeline{
+}
+
+audio::-webkit-media-controls-volume-slider-container{
+  color:white;
+}
+
+audio::-webkit-media-controls-volume-slider{
+  color:white;
+}
+
+audio::-webkit-media-controls-seek-back-button{
+  color:white;
+}
+
+audio::-webkit-media-controls-seek-forward-button{
+  color:white;
+}
+
+audio::-webkit-media-controls-fullscreen-button{
+  color:white;
+}
+
+audio::-webkit-media-controls-rewind-button{
+  color:white;
+}
+
+audio::-webkit-media-controls-return-to-realtime-button{
+  color:white;
+}
+
+audio::-webkit-media-controls-toggle-closed-captions-button{
+  color:white;
+}
+
+
