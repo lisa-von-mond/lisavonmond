@@ -4,9 +4,6 @@ import styles from '../styles/Home.module.css'
 import { MobileMenu } from '../components/mobile-menu'
 import { Header } from '../components/header'
 import { useState } from 'react'
-import testpic_one from '../public/test_circle.png'
-import insta from '../public/insta.svg'
-import soundcloud from '../public/soundcloud.svg'
 import styled, {css} from 'styled-components'
 import Link from 'next/link'
 import { Moon } from '../components/moon'
@@ -46,10 +43,6 @@ function seeMobileMenu(){
         <FixedIntro>
         <h2>LISA VON MOND</h2>
         <h3>ambient dub, dreamtunes, slow wave<br></br>sound production, composition and research</h3>
-        <ImageWrapper>
-        <Link href="https://soundcloud.com/lisavonmond" target="blank" rel="noopener"><Image src={soundcloud} width="70" height="50" alt="soundcloud"></Image></Link>
-        <Link href="https://instagram.com/lisavonmond" target="blank" rel="noopener"><Image src={insta} width="50" height="50" alt="insta"></Image></Link>
-        </ImageWrapper>
         </FixedIntro>
 
         </div>
@@ -79,13 +72,6 @@ function seeMobileMenu(){
 }
 
 
-
-
-const ImageWrapper = styled.div`
-display:flex;
-align-items:center;
-gap: 2rem;
-`
 
 const FixedIntro = styled.div`
 

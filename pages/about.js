@@ -42,6 +42,8 @@ function seeMobileMenu(){
         </div>
 
         <div className={styles.content}>
+        <div className={styles.rowspacer_flex}> </div>
+
 
         <h2>HI THERE, I AM LISA</h2>
 
@@ -92,7 +94,7 @@ display:flex;
 align-items:flex-start;
 justify-content:center;
 flex-direction:column;
-padding:2rem;
+padding:0;
 gap:0.5rem;
 
 

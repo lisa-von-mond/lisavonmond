@@ -47,6 +47,8 @@ function seeMobileMenu(){
 
         <div className={styles.content}>
 
+        <div className={styles.rowspacer_flex}> </div>
+
         <h2 id="releases">OFFICIAL RELEASES</h2>
         <h3>kea // vak.leipzig</h3>
         <div className={styles.decoimage}>
@@ -119,7 +121,6 @@ display:flex;
 align-items:flex-start;
 justify-content:center;
 flex-direction:column;
-padding:2rem;
 gap:1rem;
 
 `
