@@ -33,10 +33,10 @@ function seeMobileMenu(){
         <div className={styles.feature}>
         <div className={styles.featureinner}>
         <Cloud>
-        <Link href="https://www.soundcloud.com/lisavonmond" target="blank" rel="noopener"><p className={styles.featurelink}>soundcloud</p></Link>
-        <Link href="https://www.instagram.com/lisavonmond" target="blank" rel="noopener"><p className={styles.featurelink}>insta</p></Link>
-        <Link href="https://www.soundcloud.com/kosmosundkrawall" target="blank" rel="noopener"><p className={styles.featurelink}>Kosmos+Krawall</p></Link>
-        <Link href="https://www.soundcloud.com/lisadelune" target="blank" rel="noopener"><p className={styles.featurelink}>Lisa de Lune</p></Link>
+        <Link href="https://www.soundcloud.com/lisavonmond" target="blank" rel="noopener"><p className={styles.featurelink}>° <span className={styles.featurelink_inner}>soundcloud</span></p></Link>
+        <Link href="https://www.instagram.com/lisavonmond" target="blank" rel="noopener"><p className={styles.featurelink}>° <span className={styles.featurelink_inner}>insta</span></p></Link>
+        <Link href="https://www.soundcloud.com/kosmosundkrawall" target="blank" rel="noopener"><p className={styles.featurelink}>° <span className={styles.featurelink_inner}>Kosmos+Krawall</span></p></Link>
+        <Link href="https://www.soundcloud.com/lisadelune" target="blank" rel="noopener"><p className={styles.featurelink}>° <span className={styles.featurelink_inner}>Lisa de Lune</span></p></Link>
         </Cloud>
         </div>
         </div>
@@ -89,11 +89,10 @@ function seeMobileMenu(){
 
 const Cloud = styled.div`
 display:flex;
-align-items:center;
+align-items:flex-start;
 justify-content:center;
 flex-direction:column;
 padding:2rem;
-text-align:center;
 gap:0.5rem;
 
 

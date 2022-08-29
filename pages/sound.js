@@ -37,8 +37,9 @@ function seeMobileMenu(){
         <div className={styles.feature}>
         <div className={styles.featureinner}>
         <Cloud>
-        <p className={styles.featuretext}><b>UPCOMING</b></p>
-        <p className={styles.featuretext}>98/22 EP release<br></br>lovely planet<br></br>on HuL Berlin</p>
+        <p className={styles.featurelink}>° <span className={styles.featurelink_inner}>releases</span></p>
+        <p className={styles.featurelink}>° <span className={styles.featurelink_inner}>ambient works</span></p>
+        <p className={styles.featurelink}>° <span className={styles.featurelink_inner}>trailer</span></p>
         </Cloud>
         </div>
         </div>
@@ -94,11 +95,10 @@ function seeMobileMenu(){
 
 const Cloud = styled.div`
 display:flex;
-align-items:center;
+align-items:flex-start;
 justify-content:center;
 flex-direction:column;
 padding:2rem;
-text-align:center;
-gap:0.5rem;
+gap:1rem;
 
 `

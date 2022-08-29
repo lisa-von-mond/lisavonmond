@@ -24,9 +24,9 @@ home
 </p>
 </Link>
 
-<Link href="/releases">
+<Link href="/sound">
 <p className={styles.menuitem}>
-releases
+sound
 </p>
 </Link>
 
