@@ -14,8 +14,8 @@ return(
 <Link href="/" target="blank" rel="noopener">
 <p className={styles.menuitem} onClick={hideMobileMenu}>home</p>
 </Link>
-<Link href="/releases" target="blank" rel="noopener">
-<p className={styles.menuitem} onClick={hideMobileMenu}>releases</p>
+<Link href="/sound" target="blank" rel="noopener">
+<p className={styles.menuitem} onClick={hideMobileMenu}>sound</p>
 </Link>
 <Link href="/about" target="blank" rel="noopener">
 <p className={styles.menuitem} onClick={hideMobileMenu}>about</p>

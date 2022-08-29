@@ -18,22 +18,34 @@ return(
 
 <div className={styles.desktopmenu}>
 
+
+
 <Link href="/">
+<MenuItemWrapper>
+<p className={styles.menunonsense}>°&nbsp;</p>
 <p className={styles.menuitem}>
 home
 </p>
+</MenuItemWrapper>
+
 </Link>
 
 <Link href="/sound">
+<MenuItemWrapper>
+<p className={styles.menunonsense}>°&nbsp;</p>
 <p className={styles.menuitem}>
 sound
 </p>
+</MenuItemWrapper>
 </Link>
 
 <Link href="/about">
+<MenuItemWrapper>
+<p className={styles.menunonsense}>°&nbsp;</p>
 <p className={styles.menuitem}>
 about
 </p>
+</MenuItemWrapper>
 </Link>
 
 
@@ -76,3 +88,7 @@ ${props =>
   `}
   
 `
+
+const MenuItemWrapper = styled.div`
+display:flex;
+flex-direction:row;`

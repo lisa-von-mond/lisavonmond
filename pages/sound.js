@@ -4,17 +4,15 @@ import styles from '../styles/Home.module.css'
 import { MobileMenu } from '../components/mobile-menu'
 import { Header } from '../components/header'
 import { useState } from 'react'
-import testpic_one from '../public/test_circle.png'
 import kea from '../public/kea.gif'
 import youandme from '../public/you-and-me.gif'
 import lsftrailer from '../public/lsf_trailer.gif'
+import ambientimage from '../public/ambient_decopic.gif'
 import styled, {css} from 'styled-components'
 import { KeaPlayer } from '../components/kea-player'
 import { YouAndMePlayer } from '../components/you-and-me-player'
 import Link from 'next/link'
 import { AmbientWorksPlayer } from '../components/ambient-works-player'
-
-
 
 export default function Home() {
 
@@ -71,6 +69,9 @@ function seeMobileMenu(){
         <div className={styles.rowspacer}> </div>
 
         <h2 id="ambient_works">AMBIENT WORKS</h2>
+        <div className={styles.decoimage}>
+        <Image src={ambientimage} width="500" height="500" alt="lsf trailer screenshot"></Image>
+        </div>
         <p>A selection of ambient and downtempo tracks, that play with ambiences, soundscapes and nature sounds. Although I put a lot of work in developing and improving my sound - especially in technical aspects - my older works are an important part of my musical journey and still represent my individual composing style.</p>
         <AmbientWorksPlayer/>
 
@@ -78,7 +79,9 @@ function seeMobileMenu(){
 
         <h2 id="trailer_soundtrack">TRAILER SOUNDTRACK</h2>
         <h3>lesbian gay film days 2020</h3>
+        <div className={styles.decoimage}>
         <Image src={lsftrailer} width="500" height="500" alt="lsf trailer screenshot"></Image>
+        </div>
         <p>Together with <a href="https://soundcloud.com/smallfieldt" target="blank" rel="noopener" className={styles.exlink}>Nika Smallfieldt</a> I made the trailer soundtrack of Lesbian Gay film days in Hamburg 2020, which was organized under the motto "people in trouble".
         The creative team asked us to produce a track, which goes from an energetic and combative energy to something hopeful and positive. The result is a techno snippet with a transformation from moll and breakbeat to dur and straight.</p>
         <p>Trailer concept and cut by Evan Romero - thank you for the good cooperation!</p>

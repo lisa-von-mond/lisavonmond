@@ -60,6 +60,7 @@ gap: 2rem;
 const SingleTrackWrapper = styled.div`
 display:flex;
 flex-direction:row;
+flex-wrap:wrap;
 justify-content: space-between;
 align-items:center;
 `
