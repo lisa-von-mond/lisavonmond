@@ -84,7 +84,7 @@ function seeMobileMenu(){
         <div className={styles.decoimage}>
         <Image src={lsftrailer} width="500" height="500" alt="lsf trailer screenshot"></Image>
         </div>
-        <p>Together with <a href="https://soundcloud.com/smallfieldt" target="blank" rel="noopener" className={styles.exlink}>Nika Smallfieldt</a> I made the trailer soundtrack of Lesbian Gay film days in Hamburg 2020, which was organized under the motto "people in trouble".
+        <p>Together with <a href="https://soundcloud.com/smallfieldt" target="blank" rel="noopener" className={styles.exlink}>Nika Smallfieldt</a> I made the trailer soundtrack of Lesbian Gay film days in Hamburg 2020, which was organized under the motto  &quot people in trouble &quot.
         The creative team asked us to produce a track, which goes from an energetic and combative energy to something hopeful and positive. The result is a techno snippet with a transformation from moll and breakbeat to dur and straight.</p>
         <p>Trailer concept and cut by Evan Romero - thank you for the good cooperation!</p>
         <a href="https://www.facebook.com/watch/?v=2781349775443374" className={styles.exlink} target="blank" rel="noopener">view the trailer here</a>
