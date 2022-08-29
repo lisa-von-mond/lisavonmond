@@ -45,10 +45,15 @@ h3{
   font-family: 'Koulen', cursive;
   font-family: 'Share Tech Mono', monospace;
   font-weight:300;
-  width:auto;
   text-align:left;
   margin-bottom: 2rem;
+  
 }
 
 
-/*font-family: 'Kosugi Maru', sans-serif;*/
+/* AUDIO PLAYER*/
+
+audio::-webkit-media-controls-panel{
+  background-color:hotpink;
+}
+

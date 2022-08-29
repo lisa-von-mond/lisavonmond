@@ -127,6 +127,14 @@ border-bottom: 3px solid blueviolet;
   cursor:pointer;
 }
 
+.exlink:hover{
+  border-bottom: 2px solid black;
+  background:hotpink;
+  cursor:pointer;
+}
+
+
+
 /* DESKTOP AND TABLET STYLES */
 
 @media only screen and (min-width:800px){

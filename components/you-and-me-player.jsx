@@ -7,6 +7,7 @@ export function YouAndMePlayer(){
 <ReactAudioPlayer
   src="/you and me.mp3"
   controls
+  controlsList="nodownload"
 />
 </>
     )

@@ -7,9 +7,12 @@ import { useState } from 'react'
 import testpic_one from '../public/test_circle.png'
 import kea from '../public/kea.gif'
 import youandme from '../public/you-and-me.gif'
+import lsftrailer from '../public/lsf_trailer.gif'
 import styled, {css} from 'styled-components'
 import { KeaPlayer } from '../components/kea-player'
 import { YouAndMePlayer } from '../components/you-and-me-player'
+import Link from 'next/link'
+import { AmbientWorksPlayer } from '../components/ambient-works-player'
 
 
 
@@ -37,16 +40,16 @@ function seeMobileMenu(){
         <div className={styles.feature}>
         <div className={styles.featureinner}>
         <Cloud>
-        <p className={styles.featurelink}>° <span className={styles.featurelink_inner}>releases</span></p>
-        <p className={styles.featurelink}>° <span className={styles.featurelink_inner}>ambient works</span></p>
-        <p className={styles.featurelink}>° <span className={styles.featurelink_inner}>trailer</span></p>
+        <Link href="#releases"><p className={styles.featurelink}>° <span className={styles.featurelink_inner}>releases</span></p></Link>
+        <Link href="#ambient_works"><p className={styles.featurelink}>° <span className={styles.featurelink_inner}>ambient works</span></p></Link>
+        <Link href="#trailer_soundtrack"><p className={styles.featurelink}>° <span className={styles.featurelink_inner}>trailer soundtrack</span></p></Link>
         </Cloud>
         </div>
         </div>
 
         <div className={styles.content}>
 
-        <h2>RELEASES</h2>
+        <h2 id="releases">OFFICIAL RELEASES</h2>
         <h3>kea // vak.leipzig</h3>
         <div className={styles.decoimage}>
         <Image src={kea} width="500" height="500" alt="kea cover"></Image>
@@ -65,6 +68,21 @@ function seeMobileMenu(){
         <YouAndMePlayer/>
         <p>A warm and cosy downtempo track with influences of dub, house and ambient. Released may 2021 on the Bremen / Cologne label friendly connections</p>
         <p><a className={styles.exlink} href="https://soundcloud.com/friendlyconnections/lisa-von-mond-you-and-me" target="blank" rel="noopener">Listen to on soundcloud</a></p>
+        <div className={styles.rowspacer}> </div>
+
+        <h2 id="ambient_works">AMBIENT WORKS</h2>
+        <p>A selection of ambient and downtempo tracks, that play with ambiences, soundscapes and nature sounds. Although I put a lot of work in developing and improving my sound - especially in technical aspects - my older works are an important part of my musical journey and still represent my individual composing style.</p>
+        <AmbientWorksPlayer/>
+
+        <div className={styles.rowspacer}> </div>
+
+        <h2 id="trailer_soundtrack">TRAILER SOUNDTRACK</h2>
+        <h3>lesbian gay film days 2020</h3>
+        <Image src={lsftrailer} width="500" height="500" alt="lsf trailer screenshot"></Image>
+        <p>Together with <a href="https://soundcloud.com/smallfieldt" target="blank" rel="noopener" className={styles.exlink}>Nika Smallfieldt</a> I made the trailer soundtrack of Lesbian Gay film days in Hamburg 2020, which was organized under the motto "people in trouble".
+        The creative team asked us to produce a track, which goes from an energetic and combative energy to something hopeful and positive. The result is a techno snippet with a transformation from moll and breakbeat to dur and straight.</p>
+        <p>Trailer concept and cut by Evan Romero - thank you for the good cooperation!</p>
+        <a href="https://www.facebook.com/watch/?v=2781349775443374" className={styles.exlink} target="blank" rel="noopener">view the trailer here</a>
         <div className={styles.rowspacer}> </div>
   
        </div>
