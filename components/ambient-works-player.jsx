@@ -7,7 +7,7 @@ export function AmbientWorksPlayer(){
 <MultipleTracksWrapper>
 
 <SingleTrackWrapper>
-<h3>momo<br></br>// 2019</h3>
+<h3>momo<br></br>&#47;&#47; 2019</h3>
 <ReactAudioPlayer
   src="/momo.mp3"
   controls
@@ -17,7 +17,7 @@ export function AmbientWorksPlayer(){
 
 <SingleTrackWrapper>
 
-<h3>floating 2018<br></br>// 2019</h3>
+<h3>floating 2018<br></br>&#47;&#47; 2019</h3>
 <div>
 <ReactAudioPlayer
   src="/floating 2018.mp3"
@@ -28,7 +28,7 @@ export function AmbientWorksPlayer(){
 </SingleTrackWrapper>
 
 <SingleTrackWrapper>
-<h3>bin ich ein leuchtturm<br></br>// 2018</h3>
+<h3>bin ich ein leuchtturm<br></br>&#47;&#47; 2018</h3>
 <ReactAudioPlayer
   src="/bin ich ein leuchtturm.mp3"
   controls
@@ -37,7 +37,7 @@ export function AmbientWorksPlayer(){
 </SingleTrackWrapper>
 
 <SingleTrackWrapper>
-<h3>morning glory<br></br>// 2018</h3>
+<h3>morning glory<br></br>&#47;&#47; 2018</h3>
 <ReactAudioPlayer
   src="/morning glory.mp3"
   controls
