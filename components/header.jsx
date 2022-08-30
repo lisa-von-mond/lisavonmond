@@ -14,9 +14,9 @@ function showMobileMenu(){
 return(
   <>
 
- <h1 className={styles.title}>
-  <Link href="/">🌑</Link>
- </h1>
+ <p className={styles.title}>
+  <Link href="/">LvM°</Link>
+ </p>
 
 
 <div className={styles.desktopmenu}>
@@ -24,7 +24,7 @@ return(
 
 <Link href="/">
 <MenuItemWrapper>
-<p className={styles.menunonsense}>°&nbsp;</p>
+<p className={styles.menunonsense}>°</p>
 <p className={styles.menuitem}>
 home
 </p>
@@ -34,7 +34,7 @@ home
 
 <Link href="/sound">
 <MenuItemWrapper>
-<p className={styles.menunonsense}>°&nbsp;</p>
+<p className={styles.menunonsense}>°</p>
 <p className={styles.menuitem}>
 sound
 </p>
@@ -43,7 +43,7 @@ sound
 
 <Link href="/about">
 <MenuItemWrapper>
-<p className={styles.menunonsense}>°&nbsp;</p>
+<p className={styles.menunonsense}>°</p>
 <p className={styles.menuitem}>
 about
 </p>

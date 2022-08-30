@@ -13,6 +13,7 @@ import { KeaPlayer } from '../components/kea-player'
 import { YouAndMePlayer } from '../components/you-and-me-player'
 import Link from 'next/link'
 import { AmbientWorksPlayer } from '../components/ambient-works-player'
+import { Footer } from '../components/footer'
 
 export default function Home() {
 
@@ -38,16 +39,16 @@ function seeMobileMenu(){
         <div className={styles.feature}>
         <div className={styles.featureinner}>
         <Cloud>
-        <Link href="#releases"><p className={styles.featurelink}>° <span className={styles.featurelink_inner}>releases</span></p></Link>
-        <Link href="#ambient_works"><p className={styles.featurelink}>° <span className={styles.featurelink_inner}>ambient works</span></p></Link>
-        <Link href="#trailer_soundtrack"><p className={styles.featurelink}>° <span className={styles.featurelink_inner}>trailer soundtrack</span></p></Link>
+        <Link href="#releases"><p className={styles.featurelink}>°<span className={styles.featurelink_inner}>releases</span></p></Link>
+        <Link href="#ambient_works"><p className={styles.featurelink}>°<span className={styles.featurelink_inner}>ambient works</span></p></Link>
+        <Link href="#trailer_soundtrack"><p className={styles.featurelink}>°<span className={styles.featurelink_inner}>trailer soundtrack</span></p></Link>
         </Cloud>
         </div>
         </div>
 
         <div className={styles.content}>
 
-        <div className={styles.rowspacer_flex}> </div>
+        <div className={styles.rowspacer}></div>
 
         <h2 id="releases">OFFICIAL RELEASES</h2>
         <h3>kea // vak.leipzig</h3>
@@ -59,7 +60,7 @@ function seeMobileMenu(){
         <p><a href="https://soundcloud.com/vak-leipzig/sets/vak03" target="blank" rel="noopener" className={styles.exlink}>Listen to Sampler on soundcloud</a></p>
         <p><a href="https://vak-leipzig.bandcamp.com/album/vak03" target="blank" rel="noopener" className={styles.exlink}>buy sampler on bandcamp</a></p>
   
-        <div className={styles.rowspacer}> </div>
+        <div className={styles.rowspacer}></div>
 
         <h3>You and me // friendly connections</h3>
         <div className={styles.decoimage}>
@@ -74,10 +75,10 @@ function seeMobileMenu(){
         <div className={styles.decoimage}>
         <Image src={ambientimage} width="500" height="500" alt="lsf trailer screenshot"></Image>
         </div>
-        <p>A selection of ambient and downtempo tracks, that play with ambiences, soundscapes and nature sounds. Although I put a lot of work in developing and improving my sound - especially in technical aspects - my older works are an important part of my musical journey and still represent my individual composing style.</p>
+        <p>A few of my ambient and downtempo tracks, that play with ambiences, soundscapes and nature sounds. Although I put a lot of work in developing and improving my sound - especially in technical aspects - my older works are an important part of my musical journey and still represent my individual composing style.</p>
         <AmbientWorksPlayer/>
 
-        <div className={styles.rowspacer}> </div>
+        <div className={styles.rowspacer}></div>
 
         <h2 id="trailer_soundtrack">TRAILER SOUNDTRACK</h2>
         <h3>lesbian gay film days 2020</h3>
@@ -94,27 +95,10 @@ function seeMobileMenu(){
       
       </main>
 
-      <footer className={styles.footer}>
-        <a
-          href="/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-        legal notice
-        </a>
-        /
-        <a
-          href="/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-        privacy policy
-        </a>
-      </footer>
+    <Footer/>
     </div>
   )
 }
-
 
 const Cloud = styled.div`
 display:flex;
@@ -122,5 +106,4 @@ align-items:flex-start;
 justify-content:center;
 flex-direction:column;
 gap:1rem;
-
 `
