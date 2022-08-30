@@ -7,10 +7,11 @@ import { useState } from 'react'
 import styled, {css} from 'styled-components'
 import face from '../public/luni_face.png'
 import Link from 'next/link'
+import { Footer } from '../components/footer'
 
 
 
-export default function Home() {
+export default function About() {
 
 const [viewMobileMenu, setViewMobileMenu] = useState(false)
 
@@ -33,10 +34,10 @@ function seeMobileMenu(){
         <div className={styles.feature}>
         <div className={styles.featureinner}>
         <Cloud>
-        <Link href="https://www.soundcloud.com/lisavonmond" target="blank" rel="noopener"><p className={styles.featurelink}>° <span className={styles.featurelink_inner}>soundcloud</span></p></Link>
-        <Link href="https://www.instagram.com/lisavonmond" target="blank" rel="noopener"><p className={styles.featurelink}>° <span className={styles.featurelink_inner}>insta</span></p></Link>
-        <Link href="https://www.soundcloud.com/kosmosundkrawall" target="blank" rel="noopener"><p className={styles.featurelink}>° <span className={styles.featurelink_inner}>Kosmos+Krawall</span></p></Link>
-        <Link href="https://www.soundcloud.com/lisadelune" target="blank" rel="noopener"><p className={styles.featurelink}>° <span className={styles.featurelink_inner}>Lisa de Lune</span></p></Link>
+        <Link href="https://www.soundcloud.com/lisavonmond" target="blank" rel="noopener"><p className={styles.featurelink}>°<span className={styles.featurelink_inner}>soundcloud</span></p></Link>
+        <Link href="https://www.instagram.com/lisavonmond" target="blank" rel="noopener"><p className={styles.featurelink}>°<span className={styles.featurelink_inner}>insta</span></p></Link>
+        <Link href="https://www.soundcloud.com/kosmosundkrawall" target="blank" rel="noopener"><p className={styles.featurelink}>°<span className={styles.featurelink_inner}>Kosmos+Krawall</span></p></Link>
+        <Link href="https://www.soundcloud.com/lisadelune" target="blank" rel="noopener"><p className={styles.featurelink}>°<span className={styles.featurelink_inner}>Lisa de Lune</span></p></Link>
         </Cloud>
         </div>
         </div>
@@ -45,7 +46,7 @@ function seeMobileMenu(){
         <div className={styles.rowspacer_flex}> </div>
 
 
-        <h2>HI THERE, I AM LISA</h2>
+        <h1>HI THERE, I AM LISA</h1>
 
         <div className={styles.decoimage}>
         <Image src={face} width="600" height="500" alt="kea cover"></Image>
@@ -67,23 +68,7 @@ function seeMobileMenu(){
       
       </main>
 
-      <footer className={styles.footer}>
-        <a
-          href="/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-        legal notice
-        </a>
-        /
-        <a
-          href="/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-        privacy policy
-        </a>
-      </footer>
+     <Footer/>
     </div>
   )
 }

@@ -7,7 +7,8 @@ import { useState } from 'react'
 import styled, {css} from 'styled-components'
 import Link from 'next/link'
 import { Moon } from '../components/moon'
-import { KeaPlayer } from '../components/kea-player'
+import { Footer } from '../components/footer'
+import stars from '../public/stars_bubble.gif'
 
 
 
@@ -41,36 +42,19 @@ function seeMobileMenu(){
 
         <div className={styles.content}>
         <FixedIntro>
-        <h2>LISA VON MOND</h2>
+        <h1>LISA VON MOND</h1>
         <h3>ambient dub, dreamtunes, slow wave<br></br>sound production, composition and research</h3>
         </FixedIntro>
-
+        <FixedImageOne>
+          <Image src={stars} alt="stars" height="500" width="550"></Image>
+        </FixedImageOne>
         </div>
-
-      
       </main>
 
-      <footer className={styles.footer}>
-        <a
-          href="/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-        legal notice
-        </a>
-        /
-        <a
-          href="/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-        privacy policy
-        </a>
-      </footer>
+      <Footer/>
     </div>
   )
 }
-
 
 
 const FixedIntro = styled.div`
@@ -78,26 +62,40 @@ const FixedIntro = styled.div`
 position: block;
 display:flex;
 flex-direction: column;
-align-items: left;
+align-items: flex-start;
 justify-content:center;
 padding-left: 0;
-
+text-align:left;
+z-index:0;
 
 
 @media only screen and (min-width:800px)
 {
 position:fixed;
-height: 100vh;
+height: 80vh;
 width: 60vw;
-top: 0;
+top: 10vh;
 right: 0;
 padding-left: 6rem;
-z-index:80;
-
-}
 
 
-`
+}`
+
+const FixedImageOne = styled.div`
+
+position: fixed;
+top: 5%;
+left:0;
+display:flex;
+align-items:center;
+justify-content:center;
+padding: 2rem;
 
 
 
+
+@media only screen and (min-width:800px)
+{
+
+
+}`
