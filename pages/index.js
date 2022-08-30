@@ -46,7 +46,7 @@ function seeMobileMenu(){
         <h3>ambient dub, dreamtunes, slow wave<br></br>sound production, composition and research</h3>
         </FixedIntro>
         <FixedImageOne>
-          <Image src={stars} alt="stars" height="500" width="500"></Image>
+          <Image src={stars} alt="stars" height="500" width="550"></Image>
         </FixedImageOne>
         </div>
       </main>

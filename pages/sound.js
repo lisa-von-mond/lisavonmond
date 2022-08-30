@@ -75,7 +75,7 @@ function seeMobileMenu(){
         <div className={styles.decoimage}>
         <Image src={ambientimage} width="500" height="500" alt="lsf trailer screenshot"></Image>
         </div>
-        <p>A few of my ambient and downtempo tracks, that play with ambiences, soundscapes and nature sounds. Although I put a lot of work in developing and improving my sound - especially in technical aspects - my older works are an important part of my musical journey and still represent my individual composing style.</p>
+        <p>My early works: experimental ambient tracks, soundscapes and spheric dub vibes. Although my sound made a lot of transformation in the past few years, I reflect a lot on my older tracks as a part of my musical journey and source of inspiration. </p>
         <AmbientWorksPlayer/>
 
         <div className={styles.rowspacer}></div>
