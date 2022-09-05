@@ -45,7 +45,7 @@ const MMenuFrame = styled.div`
   justify-content:center; 
   align-items:center;
   text-align:center;
-  z-index:100;
+  z-index:800;
   gap: 2rem;
   border: 2px solid blue;
 
