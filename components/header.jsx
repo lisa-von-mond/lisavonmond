@@ -5,7 +5,7 @@ import insta from '../public/insta.svg'
 import soundcloud from '../public/soundcloud.svg'
 import Image from 'next/image'
 
-export function Header({setViewMobileMenu}){
+export function Header({setViewMobileMenu, currentPosition}){
 
 function showMobileMenu(){
     setViewMobileMenu(true)
@@ -18,13 +18,11 @@ return(
   <Link href="/">LvM°</Link>
  </p>
 
-
 <div className={styles.desktopmenu}>
 
-
 <Link href="/">
-<MenuItemWrapper text="home">
-<p className={styles.menunonsense}>°</p>
+<MenuItemWrapper>
+<MenuCircle text="home" current={currentPosition}>°</MenuCircle>
 <p className={styles.menuitem}>
 home
 </p>
@@ -33,8 +31,8 @@ home
 </Link>
 
 <Link href="/sound">
-<MenuItemWrapper text="sound">
-<p className={styles.menunonsense}>°</p>
+<MenuItemWrapper>
+<MenuCircle text="sound" current={currentPosition}>°</MenuCircle>
 <p className={styles.menuitem}>
 sound
 </p>
@@ -42,8 +40,8 @@ sound
 </Link>
 
 <Link href="/about">
-<MenuItemWrapper text="about">
-<p className={styles.menunonsense}>°</p>
+<MenuItemWrapper>
+<MenuCircle text="about" current={currentPosition}>°</MenuCircle>
 <p className={styles.menuitem}>
 about
 </p>
@@ -65,15 +63,20 @@ about
 const MenuItemWrapper = styled.div`
 display:flex;
 flex-direction:row;
-
-${props =>
-  props.visible === false &&
-  css`
- display:none;
-`}
-
 `
 
+const MenuCircle = styled.p`
+
+margin: 0;
+padding:0;
+font-family: 'Share Tech Mono', monospace;
+
+${props =>
+  props.text !== props.current &&
+  css`
+display:none;
+`}
+`
 
 const HeaderAll = styled.div`
 z-index:999;`

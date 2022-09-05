@@ -30,7 +30,7 @@ export default function Sound() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-    <Header setViewMobileMenu={setViewMobileMenu}/>
+    <Header setViewMobileMenu={setViewMobileMenu} currentPosition="sound"/>
       <MobileMenu viewMobileMenu={viewMobileMenu} setViewMobileMenu={setViewMobileMenu}/>
 
      <main className={styles.main}>
@@ -38,9 +38,9 @@ export default function Sound() {
         <div className={styles.feature}>
         <div className={styles.featureinner}>
         <Cloud>
-        <Link href="#releases"><p className={styles.featurelink}>°<span className={styles.featurelink_inner}>releases</span></p></Link>
-        <Link href="#ambient_works"><p className={styles.featurelink}>°<span className={styles.featurelink_inner}>ambient works</span></p></Link>
-        <Link href="#trailer_soundtrack"><p className={styles.featurelink}>°<span className={styles.featurelink_inner}>trailer soundtrack</span></p></Link>
+        <Link href="#releases"><p className={styles.featurelink}>releases</p></Link>
+        <Link href="#ambient_works"><p className={styles.featurelink}>ambient works</p></Link>
+        <Link href="#trailer_soundtrack"><p className={styles.featurelink}>trailer soundtrack</p></Link>
         </Cloud>
         </div>
         </div>

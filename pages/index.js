@@ -24,7 +24,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <Header setViewMobileMenu={setViewMobileMenu}/>
+      <Header setViewMobileMenu={setViewMobileMenu} currentPosition="home"/>
         <MobileMenu viewMobileMenu={viewMobileMenu} setViewMobileMenu={setViewMobileMenu}/>
 
       <main className={styles.main}>
@@ -33,7 +33,7 @@ export default function Home() {
 
       <div className={styles.content}>
       <VarImageOne>
-          <Image src={bowl} alt="bowl" height="600" width="600"></Image>
+          <Image src={bowl} alt="bowl" height="700" width="700"></Image>
       </VarImageOne>
       <VarIntro>
       <h1>LISA VON MOND</h1>
@@ -82,11 +82,12 @@ position: block;
 
 position: fixed;
 height: 100vh;
+width: 45%;
 top: 0;
-left:3rem;
+left:0;
 display:flex;
 align-items:center;
 justify-content:center;
-padding: 2rem;
+padding: 0;
 
 }`
