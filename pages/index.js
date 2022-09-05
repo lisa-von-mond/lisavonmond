@@ -8,17 +8,13 @@ import styled, {css} from 'styled-components'
 import Link from 'next/link'
 import { Moon } from '../components/moon'
 import { Footer } from '../components/footer'
-import stars from '../public/stars_bubble.gif'
-
+import stars from '../public/stars_gradientshape.png'
+import bowl from '../public/bowl.png'
 
 
 export default function Home() {
-
-const [viewMobileMenu, setViewMobileMenu] = useState(false)
-
-function seeMobileMenu(){
-  setViewMobileMenu(true)
-}
+  
+  const [viewMobileMenu, setViewMobileMenu] = useState(false)
 
   return (
     <div className={styles.container}>
@@ -32,22 +28,19 @@ function seeMobileMenu(){
         <MobileMenu viewMobileMenu={viewMobileMenu} setViewMobileMenu={setViewMobileMenu}/>
 
       <main className={styles.main}>
-        <div className={styles.feature}>
-        <div className={styles.featureinner}>
- 
+
+
         <Moon/>
 
-        </div>
-        </div>
 
         <div className={styles.content}>
-        <FixedIntro>
+        <VarImageOne>
+          <Image src={bowl} alt="bowl" height="500" width="500"></Image>
+        </VarImageOne>
+        <VarIntro>
         <h1>LISA VON MOND</h1>
         <h3>ambient dub, dreamtunes, slow wave<br></br>sound production, composition and research</h3>
-        </FixedIntro>
-        <FixedImageOne>
-          <Image src={stars} alt="stars" height="500" width="550"></Image>
-        </FixedImageOne>
+        </VarIntro>
         </div>
       </main>
 
@@ -57,7 +50,7 @@ function seeMobileMenu(){
 }
 
 
-const FixedIntro = styled.div`
+const VarIntro = styled.div`
 
 position: block;
 display:flex;
@@ -81,21 +74,21 @@ padding-left: 6rem;
 
 }`
 
-const FixedImageOne = styled.div`
+const VarImageOne = styled.div`
 
-position: fixed;
-top: 5%;
-left:0;
-display:flex;
-align-items:center;
-justify-content:center;
-padding: 2rem;
-
-
+position: block;
 
 
 @media only screen and (min-width:800px)
 {
 
+position: fixed;
+height: 100vh;
+top: 0;
+left:3rem;
+display:flex;
+align-items:center;
+justify-content:center;
+padding: 2rem;
 
 }`

@@ -13,15 +13,12 @@ import { KeaPlayer } from '../components/kea-player'
 import { YouAndMePlayer } from '../components/you-and-me-player'
 import Link from 'next/link'
 import { AmbientWorksPlayer } from '../components/ambient-works-player'
-import { Footer } from '../components/footer'
+import { Footer } from '../components/footer';
 
-export default function Home() {
+export default function Sound() {  
+  
+  const [viewMobileMenu, setViewMobileMenu] = useState(false)
 
-const [viewMobileMenu, setViewMobileMenu] = useState(false)
-
-function seeMobileMenu(){
-  setViewMobileMenu(true)
-}
 
   return (
     <div className={styles.container}>
@@ -52,9 +49,11 @@ function seeMobileMenu(){
 
         <h2 id="releases">OFFICIAL RELEASES</h2>
         <h3>kea // vak.leipzig</h3>
+
         <div className={styles.decoimage}>
         <Image src={kea} width="500" height="500" alt="kea cover"></Image>
         </div>
+
         <KeaPlayer/>
         <p>A smooth soundscape chillout, released may 2022 on Solisampler VAK03 of vak.leipzig collective. Revenues from the sampler go to SeaWatch e.B. and Blindspots e.V. - an organization that supports volunteer structures for Balkan and Ukraine refugees.</p>
         <p><a href="https://soundcloud.com/vak-leipzig/sets/vak03" target="blank" rel="noopener" className={styles.exlink}>Listen to Sampler on soundcloud</a></p>
@@ -63,9 +62,11 @@ function seeMobileMenu(){
         <div className={styles.rowspacer}></div>
 
         <h3>You and me // friendly connections</h3>
+
         <div className={styles.decoimage}>
         <Image src={youandme} width="500" height="500" alt="you and me cover"></Image>
         </div>
+
         <YouAndMePlayer/>
         <p>A warm and cosy downtempo track with influences of dub, house and ambient. Released may 2021 on the Bremen / Cologne label friendly connections</p>
         <p><a className={styles.exlink} href="https://soundcloud.com/friendlyconnections/lisa-von-mond-you-and-me" target="blank" rel="noopener">Listen to on soundcloud</a></p>

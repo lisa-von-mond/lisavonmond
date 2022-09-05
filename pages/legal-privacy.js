@@ -13,10 +13,6 @@ export default function LegalPrivacy() {
 
 const [viewMobileMenu, setViewMobileMenu] = useState(false)
 
-function seeMobileMenu(){
-  setViewMobileMenu(true)
-}
-
   return (
     <div className={styles.container}>
       <Head>
