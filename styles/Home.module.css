@@ -10,6 +10,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  z-index:500;
 }
 
 .maintext {
@@ -37,7 +38,6 @@
   }
 
 .featureinner{
-
   display:flex;
   align-items:center;
   justify-content:center;
@@ -75,7 +75,7 @@ border-bottom: 2px solid pink;
   flex-direction:column;
   align-items:flex-start;
   justify-content:flex-start;
-  
+  z-index: 500;
   }
 
 .desktopmenu {
@@ -102,7 +102,6 @@ border-bottom: 2px solid pink;
   margin: 0;
   padding:0;
   font-family: 'Share Tech Mono', monospace;
-
 }
 
 .menuitem:hover{
@@ -143,22 +142,11 @@ border-bottom: 2px solid pink;
   }
   }
 
-
 .decoimage{
   margin-top:3rem;
   margin-bottom:3rem;
   margin-left: 0;
   margin-right: 0;
-}
-
-.scrolltest{
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 10px;
-  background: green;
-  transform-origin: 0%;
 }
 
 .exlink{
@@ -171,6 +159,25 @@ border-bottom: 2px solid pink;
   cursor:pointer;
 }
 
+.pink_circle{
+  height: 80vh;
+  width: 3rem;
+  order: 2px solid black;
+  position: fixed;
+  top: 10vh;
+  left:33%;
+  transform-origin: 0 0;
+  display: flex;
+  justify-content:center;
+  align-items:center;
+  padding: 0.3rem;
+}
+
+.black_ball{
+  height: 2rem !important;
+  width: 2rem;
+  background-color:hotpink;
+}
 
 /* DESKTOP AND TABLET STYLES */
 
@@ -204,7 +211,6 @@ border-bottom: 2px solid pink;
   }
 
 .featureinner{
-
     position:fixed;
     height: 100vh;
     width:30vw;
@@ -214,7 +220,6 @@ border-bottom: 2px solid pink;
     align-items:center;
     justify-content:center;
     z-index:90;
-
   }
 
 
@@ -228,7 +233,7 @@ border-bottom: 2px solid pink;
     gap: 3rem;
     font-size: 1.5rem;
     padding: 0;
-    z-index:110;
+    z-index:999;
         }
 
 .menusign {

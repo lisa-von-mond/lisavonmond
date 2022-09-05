@@ -117,3 +117,8 @@ audio::-webkit-media-controls-toggle-closed-captions-button{
 }
 
 
+::-webkit-scrollbar {
+  display: none;
+  }
+
+

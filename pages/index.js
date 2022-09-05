@@ -29,19 +29,17 @@ export default function Home() {
 
       <main className={styles.main}>
 
-
         <Moon/>
 
-
-        <div className={styles.content}>
-        <VarImageOne>
+      <div className={styles.content}>
+      <VarImageOne>
           <Image src={bowl} alt="bowl" height="500" width="500"></Image>
-        </VarImageOne>
-        <VarIntro>
-        <h1>LISA VON MOND</h1>
-        <h3>ambient dub, dreamtunes, slow wave<br></br>sound production, composition and research</h3>
-        </VarIntro>
-        </div>
+      </VarImageOne>
+      <VarIntro>
+      <h1>LISA VON MOND</h1>
+      <h3>ambient dub, dreamtunes, slow wave<br></br>sound production, composition and research</h3>
+      </VarIntro>
+      </div>
       </main>
 
       <Footer/>
