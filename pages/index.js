@@ -58,6 +58,7 @@ justify-content:center;
 padding-left: 0;
 text-align:left;
 z-index:0;
+animation: fade 2s;
 
 
 @media only screen and (min-width:800px)
@@ -75,7 +76,7 @@ padding-left: 6rem;
 const VarImageOne = styled.div`
 
 position: block;
-
+animation: fade 2s;
 
 @media only screen and (min-width:800px)
 {

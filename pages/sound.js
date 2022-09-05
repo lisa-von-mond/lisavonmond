@@ -21,6 +21,7 @@ export default function Sound() {
   const [viewMobileMenu, setViewMobileMenu] = useState(false)
   const { scrollYProgress } = useScroll();
   const scaleY = useTransform(scrollYProgress, [0, 100], [0, 100]);
+  
 
   return (
     <div className={styles.container}>
