@@ -69,7 +69,7 @@ export default function Sound() {
 
         <motion.div className={styles.decoimage}
             initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}>>
+            whileInView={{ opacity: 1 }}>
         <Image src={youandme} width="500" height="500" alt="you and me cover"></Image>
         </motion.div>
 
@@ -91,7 +91,7 @@ export default function Sound() {
         <h3>lesbian gay film days 2020</h3>
         <motion.div className={styles.decoimage}
               initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}>>
+              whileInView={{ opacity: 1 }}>
         <Image src={lsftrailer} width="500" height="500" alt="lsf trailer screenshot"></Image>
         </motion.div>
         <p>Together with <a href="https://soundcloud.com/smallfieldt" target="blank" rel="noopener" className={styles.exlink}>Nika Smallfieldt</a> I made the trailer soundtrack of Lesbian Gay film days in Hamburg 2020, which was organized under the motto  &quot people in trouble &quot.
