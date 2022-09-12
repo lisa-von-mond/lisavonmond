@@ -1,118 +1,5 @@
 export const mooncalendar = [
 
-   
-    {date:"15/8/2022",
-    state:"waning moon",
-    },
-
-    {date:"16/8/2022",
-    state:"waning moon",
-    },
-
-    {date:"17/8/2022",
-    state:"waning moon",
-    },
-
-    {date:"18/08/2022",
-    state:"waning moon",
-    },
-
-    {date:"19/8/22",
-    state:"waning moon",
-    },
-
-    {date:"20/8/2022",
-    state:"waning moon",
-    },
-
-    {date:"21/8/2022",
-    state:"waning moon",
-    },
-
-    {date:"22/8/2022",
-    state:"waning moon",
-    },
-
-    {date:"23/8/2022",
-    state:"waning moon",
-    },
-
-    {date:"24/8/2022",
-    state:"waning moon",
-    },
-
-    {date:"25/8/22",
-    state:"increasing moon",
-    },
-
-    {date:"26/8/2022",
-    state:"waning moon",
-    },
-
-    {date:"27/8/2022",
-    state:"new moon",
-    },
-
-    {date:"28/8/2022",
-    state:"increasing moon",
-    },
-
-    {date:"29/8/2022",
-    state:"increasing moon",
-    },
-
-    {date:"30/8/2022",
-    state:"increasing moon",
-    },
-
-    {date:"31/8/2022",
-    state:"increasing moon",
-    },
-
-    {date:"1/9/2022",
-    state:"increasing moon",
-    },
-
-    {date:"2/9/2022",
-    state:"increasing moon",
-    },
-
-    {date:"3/9/2022",
-    state:"increasing moon",
-    },
-
-    {date:"4/9/2022",
-    state:"increasing moon",
-    },
-
-    {date:"1/9/2022",
-    state:"increasing moon",
-    },
-
-    {date:"1/9/2022",
-    state:"increasing moon",
-    },
-
-    {date:"5/9/2022",
-    state:"increasing moon",
-    },
-
-    {date:"6/9/2022",
-    state:"increasing moon",
-    },
-
-    {date:"7/9/2022",
-    state:"increasing moon",
-    },
-
-    {date:"8/9/2022",
-    state:"increasing moon",
-    },
-
-    {date:"10/9/2022",
-    state:"full moon",
-    },
-
     {date:"11/9/2022",
     state:"waning moon",
     },
@@ -179,6 +66,58 @@ export const mooncalendar = [
 
     {date:"25/9/2022",
     state:"new moon",
+    },
+
+    {date:"27/9/2022",
+    state:"increasing moon",
+    },
+
+    {date:"28/9/2022",
+    state:"increasing moon",
+    },
+
+    {date:"29/9/2022",
+    state:"increasing moon",
+    },
+
+    {date:"30/9/2022",
+    state:"increasing moon",
+    },
+
+    {date:"1/10/2022",
+    state:"half moon",
+    },
+
+    {date:"2/10/2022",
+    state:"increasing moon",
+    },
+
+    {date:"3/10/2022",
+    state:"increasing moon",
+    },
+
+    {date:"4/10/2022",
+    state:"increasing moon",
+    },
+
+    {date:"5/10/2022",
+    state:"increasing moon",
+    },
+
+    {date:"6/10/2022",
+    state:"increasing moon",
+    },
+
+    {date:"7/10/2022",
+    state:"increasing moon",
+    },
+
+    {date:"8/10/2022",
+    state:"increasing moon",
+    },
+
+    {date:"9/10/2022",
+    state:"full moon",
     },
 
 ]

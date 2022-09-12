@@ -46,7 +46,9 @@ function seeMobileMenu(){
         <div className={styles.rowspacer_flex}> </div>
 
 
-        <h1>HI THERE, I AM LISA</h1>
+        <h1 className={styles.headline_d}>HI THERE, I AM LISA</h1>
+        <h1 className={styles.headline_m}>HI THERE,</h1>
+        <h1 className={styles.headline_m}>I AM LISA</h1>
 
         <div className={styles.decoimage}>
         <Image src={face} width="600" height="500" alt="kea cover"></Image>
