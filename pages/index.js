@@ -8,14 +8,10 @@ import styled, {css} from 'styled-components'
 import Link from 'next/link'
 import { Moon } from '../components/moon'
 import { Footer } from '../components/footer'
-import stars from '../public/stars_gradientshape.png'
 import bowl from '../public/bowl_pure.png'
-
 
 export default function Home() {
   
-  const [viewMobileMenu, setViewMobileMenu] = useState(false)
-
   return (
     <div className={styles.container}>
       <Head>
@@ -24,21 +20,20 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <Header setViewMobileMenu={setViewMobileMenu} currentPosition="home"/>
-        <MobileMenu viewMobileMenu={viewMobileMenu} setViewMobileMenu={setViewMobileMenu}/>
+      <Header currentPosition="home"/>
 
       <main className={styles.main}>
 
-        <Moon/>
-
+      
+      <div className={styles.feature}>
+        <Image className={styles.anim_pic} src={bowl} alt="bowl" height="700" width="700"></Image>
+      </div>
       <div className={styles.content}>
-      <VarImageOne>
-          <Image src={bowl} alt="bowl" height="700" width="700"></Image>
-      </VarImageOne>
-      <VarIntro>
+      <Intro>
       <h1>LISA VON MOND</h1>
       <h3>ambient dub, dreamtunes, slow wave<br></br>sound production, composition and research</h3>
-      </VarIntro>
+      </Intro>
+
       </div>
       </main>
 
@@ -48,47 +43,23 @@ export default function Home() {
 }
 
 
-const VarIntro = styled.div`
+const Intro = styled.div`
 
 position: block;
 display:flex;
 flex-direction: column;
 align-items: flex-start;
 justify-content:center;
-padding-left: 0;
 text-align:left;
 z-index:0;
 animation: fade 2s;
-
 
 @media only screen and (min-width:800px)
 {
 position:fixed;
 height: 80vh;
-width: 60vw;
+width: 50vw;
 top: 10vh;
 right: 0;
-padding-left: 6rem;
-
-
 }`
 
-const VarImageOne = styled.div`
-
-position: block;
-animation: fade 2s;
-
-@media only screen and (min-width:800px)
-{
-
-position: fixed;
-height: 100vh;
-width: 45%;
-top: 0;
-left:0;
-display:flex;
-align-items:center;
-justify-content:center;
-padding: 0;
-
-}`

@@ -11,7 +11,6 @@ import { KeaPlayer } from '../components/kea-player'
 
 export default function LegalPrivacy() {
 
-const [viewMobileMenu, setViewMobileMenu] = useState(false)
 
   return (
     <div className={styles.container}>
@@ -21,9 +20,8 @@ const [viewMobileMenu, setViewMobileMenu] = useState(false)
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <Header setViewMobileMenu={setViewMobileMenu}/>
-      <MobileMenu viewMobileMenu={viewMobileMenu} setViewMobileMenu={setViewMobileMenu}/>
-
+      <Header/>
+  
       <main className={styles.maintext}>
       
       <div className={styles.rowspacer}> </div>

@@ -4,80 +4,169 @@ import Link from 'next/link'
 import insta from '../public/insta.svg'
 import soundcloud from '../public/soundcloud.svg'
 import Image from 'next/image'
+import { MobileMenu } from './mobile-menu'
+import { useState } from 'react'
+import { DesktopSubMenu } from './desktop-sub-menu'
 
-export function Header({setViewMobileMenu, currentPosition}){
+export function Header({currentPosition}){
+
+const [viewMobileMenu, setViewMobileMenu] = useState(false)
+const [viewSubMenu, setViewSubMenu] = useState(false)
 
 function showMobileMenu(){
     setViewMobileMenu(true)
       }
 
+function showSubMenu(){
+    setViewSubMenu(true)
+      }
+      
 return(
-  <HeaderAll>
+<>
+<div className={styles.background}></div>
+<MobileMenu viewMobileMenu={viewMobileMenu} setViewMobileMenu={setViewMobileMenu}/>
+
+<HeaderFrame>
 
  <p className={styles.title}>
-  <Link href="/">LvM°</Link>
+  <Link href="/"><b>◯</b></Link>
  </p>
 
-<div className={styles.desktopmenu}>
+<DesktopMenu>
 
 <Link href="/">
 <MenuItemWrapper>
-<MenuCircle text="home" current={currentPosition}>°</MenuCircle>
-<p className={styles.menuitem}>
+<MenuCircle text="home" current={currentPosition}>◯</MenuCircle>
+<MenuItem>
 home
-</p>
+</MenuItem>
 </MenuItemWrapper>
 
 </Link>
 
+<div>
 <Link href="/sound">
-<MenuItemWrapper>
-<MenuCircle text="sound" current={currentPosition}>°</MenuCircle>
-<p className={styles.menuitem}>
+<MenuItemWrapper onMouseEnter={() => setViewSubMenu(true)}>
+<MenuCircle text="sound" current={currentPosition}>◯</MenuCircle>
+<MenuItem>
 sound
-</p>
+</MenuItem>
 </MenuItemWrapper>
 </Link>
+<DesktopSubMenu viewSubMenu={viewSubMenu} setViewSubMenu={setViewSubMenu}/>
+</div>
 
 <Link href="/about">
 <MenuItemWrapper>
-<MenuCircle text="about" current={currentPosition}>°</MenuCircle>
-<p className={styles.menuitem}>
+<MenuCircle text="about" current={currentPosition}>◯</MenuCircle>
+<MenuItem>
 about
-</p>
+</MenuItem>
 </MenuItemWrapper>
 </Link>
 
-<Link href="https://soundcloud.com/lisavonmond" target="blank" rel="noopener"><Image  className={styles.menuitem} src={soundcloud} width="60" height="35" alt="soundcloud"></Image></Link>
-<Link href="https://instagram.com/lisavonmond" target="blank" rel="noopener"><Image  className={styles.menuitem} src={insta} width="30" height="30" alt="insta"></Image></Link>
-
-</div>
+</DesktopMenu>
 
 <div className={styles.menusign} onClick={showMobileMenu}>
 ☰
 </div>
-</HeaderAll>
+
+
+<SocialsFrame>
+<SocialsItem>
+<Link href="https://soundcloud.com/lisavonmond" target="blank" rel="noopener"><Image src={soundcloud} width="60" height="35" alt="soundcloud"></Image></Link>
+</SocialsItem>
+<SocialsItem>
+<Link href="https://instagram.com/lisavonmond" target="blank" rel="noopener"><Image src={insta} width="30" height="30" alt="insta"></Image></Link>
+</SocialsItem>
+</SocialsFrame>
+</HeaderFrame>
+</>
 )    
 }
+
+const HeaderFrame = styled.div`
+position:fixed;height: 0.1rem;
+z-index:999;
+box-sizing:content-box;
+color:white;
+`
+
+const DesktopMenu = styled.div`
+position:fixed;
+width:50%;
+top:10rem;
+left: 2rem;
+padding-right: 3rem;
+display:flex;
+flex-direction:column;
+justify-content:space-between;
+align-items:flex-start;
+gap:1.2rem;
+z-index:999;
+text-transform:uppercase;
+letter-spacing: 0.2rem;
+
+@media only screen and (max-width:700px){
+  display:none;
+}
+`
 
 const MenuItemWrapper = styled.div`
 display:flex;
 flex-direction:row;
+width:15rem;
 `
 
 const MenuCircle = styled.p`
 
 margin: 0;
 padding:0;
-font-family: 'Share Tech Mono', monospace;
+font-size: 1.1rem;
+font-weight: 600;
+margin-right: 0.6rem;
 
 ${props =>
   props.text !== props.current &&
   css`
-display:none;
+opacity:0;
 `}
 `
 
-const HeaderAll = styled.div`
-z-index:999;`
+const MenuItem = styled.div`
+
+  cursor:pointer;
+  margin: 0;
+  padding:0;
+  height: 2.4rem;
+  font-size: 1.3rem;
+  letter-spacing: 0.3rem;
+
+&:hover{
+  list-style-type: none;
+  border-bottom: 3px solid #f5ff00;
+  
+  }
+`
+
+const SocialsFrame = styled.div`
+
+position:fixed;
+right: 2rem;
+top: 2rem;
+display:flex;
+align-items:center;
+gap: 2rem;
+
+@media only screen and (max-width:799px){
+  display:none;
+}
+
+`
+
+const SocialsItem = styled.div`
+
+cursor:pointer;
+
+`
 
