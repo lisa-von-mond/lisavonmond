@@ -4,15 +4,28 @@ import Link from 'next/link'
 import insta from '../public/insta.svg'
 import soundcloud from '../public/soundcloud.svg'
 import Image from 'next/image'
+import { MobileMenu } from './mobile-menu'
+import { useState } from 'react'
+import { DesktopSubMenu } from './desktop-sub-menu'
 
-export function Header({setViewMobileMenu, currentPosition}){
+export function Header({currentPosition}){
+
+const [viewMobileMenu, setViewMobileMenu] = useState(false)
+const [viewSubMenu, setViewSubMenu] = useState(false)
 
 function showMobileMenu(){
     setViewMobileMenu(true)
       }
 
+function showSubMenu(){
+    setViewSubMenu(true)
+      }
+      
 return(
-  <HeaderAll>
+<>
+<MobileMenu viewMobileMenu={viewMobileMenu} setViewMobileMenu={setViewMobileMenu}/>
+
+<HeaderAll>
 
  <p className={styles.title}>
   <Link href="/">LvM°</Link>
@@ -30,14 +43,17 @@ home
 
 </Link>
 
+<div>
 <Link href="/sound">
-<MenuItemWrapper>
+<MenuItemWrapper onMouseEnter={() => setViewSubMenu(true)}>
 <MenuCircle text="sound" current={currentPosition}>°</MenuCircle>
 <p className={styles.menuitem}>
 sound
 </p>
 </MenuItemWrapper>
 </Link>
+<DesktopSubMenu viewSubMenu={viewSubMenu} setViewSubMenu={setViewSubMenu}/>
+</div>
 
 <Link href="/about">
 <MenuItemWrapper>
@@ -57,6 +73,7 @@ about
 ☰
 </div>
 </HeaderAll>
+</>
 )    
 }
 

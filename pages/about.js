@@ -13,11 +13,6 @@ import { Footer } from '../components/footer'
 
 export default function About() {
 
-const [viewMobileMenu, setViewMobileMenu] = useState(false)
-
-function seeMobileMenu(){
-  setViewMobileMenu(true)
-}
 
   return (
     <div className={styles.container}>
@@ -27,9 +22,8 @@ function seeMobileMenu(){
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <Header setViewMobileMenu={setViewMobileMenu} currentPosition="about"/>
-        <MobileMenu viewMobileMenu={viewMobileMenu} setViewMobileMenu={setViewMobileMenu}/>
-
+      <Header currentPosition="about"/>
+       
       <main className={styles.main}>
         <div className={styles.feature}>
         <div className={styles.featureinner}>

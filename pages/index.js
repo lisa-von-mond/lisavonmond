@@ -8,13 +8,11 @@ import styled, {css} from 'styled-components'
 import Link from 'next/link'
 import { Moon } from '../components/moon'
 import { Footer } from '../components/footer'
-import stars from '../public/stars_gradientshape.png'
 import bowl from '../public/bowl_pure.png'
 
 
 export default function Home() {
   
-  const [viewMobileMenu, setViewMobileMenu] = useState(false)
 
   return (
     <div className={styles.container}>
@@ -24,8 +22,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <Header setViewMobileMenu={setViewMobileMenu} currentPosition="home"/>
-        <MobileMenu viewMobileMenu={viewMobileMenu} setViewMobileMenu={setViewMobileMenu}/>
+      <Header currentPosition="home"/>
 
       <main className={styles.main}>
 

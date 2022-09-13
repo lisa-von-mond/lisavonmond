@@ -1,7 +1,6 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
-import { MobileMenu } from '../components/mobile-menu'
 import { Header } from '../components/header'
 import { useState } from 'react'
 import kea from '../public/kea.gif'
@@ -18,7 +17,6 @@ import { motion, useScroll, useViewportScroll, useTransform } from "framer-motio
 
 export default function Sound() {  
   
-  const [viewMobileMenu, setViewMobileMenu] = useState(false)
   const { scrollYProgress } = useScroll();
   const scaleY = useTransform(scrollYProgress, [0, 100], [0, 100]);
   
@@ -31,9 +29,8 @@ export default function Sound() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-    <Header setViewMobileMenu={setViewMobileMenu} currentPosition="sound"/>
-      <MobileMenu viewMobileMenu={viewMobileMenu} setViewMobileMenu={setViewMobileMenu}/>
-
+    <Header currentPosition="sound"/>
+ 
      <main className={styles.main}>
 
         <div className={styles.feature}>
