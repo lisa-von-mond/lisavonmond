@@ -59,20 +59,17 @@ export default function Sound() {
         <p><a href="https://soundcloud.com/vak-leipzig/sets/vak03" target="blank" rel="noopener" className={styles.exlink}>Listen to Sampler on soundcloud</a></p>
         <p><a href="https://vak-leipzig.bandcamp.com/album/vak03" target="blank" rel="noopener" className={styles.exlink}>buy sampler on bandcamp</a></p>
   
-        <div className={styles.rowspacer}></div>
 
         <h3 onEnterViewport={()=>setPic("youandme")}>You and me // friendly connections</h3>
 
         <YouAndMePlayer/>
         <p>A warm and cosy downtempo track with influences of dub, house and ambient. Released may 2021 on the Bremen / Cologne label friendly connections</p>
         <p><a className={styles.exlink} href="https://soundcloud.com/friendlyconnections/lisa-von-mond-you-and-me" target="blank" rel="noopener">Listen to on soundcloud</a></p>
-        <div className={styles.rowspacer}> </div>
+   
 
         <h2 id="ambient_works">AMBIENT WORKS</h2>
         <p>My early works: experimental ambient tracks, soundscapes and spheric dub vibes. Although my sound made a lot of transformation in the past few years, I reflect a lot on my older tracks as a part of my musical journey and source of inspiration. </p>
         <AmbientWorksPlayer/>
-
-        <div className={styles.rowspacer}></div>
 
         <h2 id="trailer_soundtrack">TRAILER SOUNDTRACK</h2>
         <h3>lesbian gay film days 2020</h3>
@@ -80,7 +77,6 @@ export default function Sound() {
         The creative team asked us to produce a track, which goes from an energetic and combative energy to something hopeful and positive. The result is a techno snippet with a transformation from moll and breakbeat to dur and straight.</p>
         <p>Trailer concept and cut by Evan Romero - thank you for the good cooperation!</p>
         <a href="https://www.facebook.com/watch/?v=2781349775443374" className={styles.exlink} target="blank" rel="noopener">view the trailer here</a>
-        <div className={styles.rowspacer}> </div>
   
        </div>
       

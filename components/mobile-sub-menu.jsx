@@ -1,44 +1,41 @@
 import styles from '../styles/Home.module.css'
 import styled, {css} from 'styled-components'
 import Link from 'next/link'
-import Image from 'next/image'
-import insta from '../public/insta.svg'
-import soundcloud from '../public/soundcloud.svg'
 
-export function DesktopSubMenu({viewSubMenu, setViewSubMenu}){
+export function MobileSubMenu({viewMSubMenu, setViewMSubMenu, setViewMobileMenu}){
 
-function hideSubMenu(){
-  setViewSubMenu(false)
+function hideMSubMenu(){
+  setViewMSubMenu(false)
+  setViewMobileMenu(false)
 }
 
 return(
         
-<SubMenuFrame visible={viewSubMenu} onMouseLeave={()=>(setViewSubMenu(false))}>
+<SubMMenuFrame visible={viewMSubMenu} onMouseLeave={()=>(setViewMSubMenu(false))}>
 <Link href="/sound/#releases" target="blank" rel="noopener">
-<SubMenuItem onClick={hideSubMenu}>releases</SubMenuItem>
+<SubMMenuItem onClick={hideMSubMenu}>releases</SubMMenuItem>
 </Link>
 <Link href="/sound/#ambient_works" target="blank" rel="noopener">
-<SubMenuItem onClick={hideSubMenu}>ambient works</SubMenuItem>
+<SubMMenuItem onClick={hideMSubMenu}>ambient works</SubMMenuItem>
 </Link>
 <Link href="/sound/#trailer_soundtrack" target="blank" rel="noopener">
-<SubMenuItem onClick={hideSubMenu}>soundtrack</SubMenuItem>
+<SubMMenuItem onClick={hideMSubMenu}>soundtrack</SubMMenuItem>
 </Link>
-</SubMenuFrame>
+</SubMMenuFrame>
 )    
 }
 
-const SubMenuFrame = styled.div`
+const SubMMenuFrame = styled.div`
 
   display:flex;
   flex-direction:column;
   justify-content:center; 
-  align-items:flex-start;
-  text-align:left;
+  align-items:center;
+  text-align:center;
   z-index:800;
   gap: 1.2rem;
-  margin-top: -3rem;
+  margin-top: -4rem;
   padding-top: 4rem;
-  margin-left: 3rem;
 
 
 ${props =>
@@ -48,13 +45,15 @@ ${props =>
   `}
   
 `
-const SubMenuItem = styled.div`
+const SubMMenuItem = styled.div`
 
 cursor:pointer;
 margin: 0;
 padding:0;
 height: 2.3rem;
 font-size: 1.3rem;
+text-transform: uppercase;
+letter-spacing: 0.3rem;
 
 &:hover{
 border-bottom: 3px solid black;

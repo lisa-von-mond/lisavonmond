@@ -25,17 +25,17 @@ return(
 <>
 <MobileMenu viewMobileMenu={viewMobileMenu} setViewMobileMenu={setViewMobileMenu}/>
 
-<HeaderAll>
+<HeaderFrame>
 
  <p className={styles.title}>
-  <Link href="/">LvM°</Link>
+  <Link href="/"><b>◯</b></Link>
  </p>
 
 <DesktopMenu>
 
 <Link href="/">
 <MenuItemWrapper>
-<MenuCircle text="home" current={currentPosition}>°</MenuCircle>
+<MenuCircle text="home" current={currentPosition}>◯</MenuCircle>
 <MenuItem>
 home
 </MenuItem>
@@ -46,7 +46,7 @@ home
 <div>
 <Link href="/sound">
 <MenuItemWrapper onMouseEnter={() => setViewSubMenu(true)}>
-<MenuCircle text="sound" current={currentPosition}>°</MenuCircle>
+<MenuCircle text="sound" current={currentPosition}>◯</MenuCircle>
 <MenuItem>
 sound
 </MenuItem>
@@ -57,37 +57,50 @@ sound
 
 <Link href="/about">
 <MenuItemWrapper>
-<MenuCircle text="about" current={currentPosition}>°</MenuCircle>
+<MenuCircle text="about" current={currentPosition}>◯</MenuCircle>
 <MenuItem>
 about
 </MenuItem>
 </MenuItemWrapper>
 </Link>
 
-<Link href="https://soundcloud.com/lisavonmond" target="blank" rel="noopener"><Image  className={styles.menuitem} src={soundcloud} width="60" height="35" alt="soundcloud"></Image></Link>
-<Link href="https://instagram.com/lisavonmond" target="blank" rel="noopener"><Image  className={styles.menuitem} src={insta} width="30" height="30" alt="insta"></Image></Link>
-
 </DesktopMenu>
 
 <div className={styles.menusign} onClick={showMobileMenu}>
 ☰
 </div>
-</HeaderAll>
+
+
+<SocialsFrame>
+<SocialsItem>
+<Link href="https://soundcloud.com/lisavonmond" target="blank" rel="noopener"><Image src={soundcloud} width="60" height="35" alt="soundcloud"></Image></Link>
+</SocialsItem>
+<SocialsItem>
+<Link href="https://instagram.com/lisavonmond" target="blank" rel="noopener"><Image src={insta} width="30" height="30" alt="insta"></Image></Link>
+</SocialsItem>
+</SocialsFrame>
+</HeaderFrame>
 </>
 )    
 }
 
+const HeaderFrame = styled.div`
+position:fixed;height: 0.1rem;
+z-index:999;
+box-sizing:content-box;
+`
 
 const DesktopMenu = styled.div`
 position:fixed;
-top: 3rem;
-right: 3rem;
+width:50%;
+top:10rem;
+left: 2rem;
+padding-right: 3rem;
 display:flex;
+flex-direction:column;
 justify-content:space-between;
 align-items:flex-start;
-gap:0;
-font-size: 1.5rem;
-padding: 0;
+gap:1.2rem;
 z-index:999;
 text-transform:uppercase;
 letter-spacing: 0.2rem;
@@ -107,19 +120,15 @@ const MenuCircle = styled.p`
 
 margin: 0;
 padding:0;
-font-family: 'Share Tech Mono', monospace;
+font-size: 1.1rem;
+font-weight: 600;
+margin-right: 0.6rem;
 
 ${props =>
   props.text !== props.current &&
   css`
-display:none;
+opacity:0;
 `}
-`
-
-const HeaderAll = styled.div`
-z-index:1;
-height: 6rem;
-box-sizing:content-box;
 `
 
 const MenuItem = styled.div`
@@ -127,16 +136,35 @@ const MenuItem = styled.div`
   cursor:pointer;
   margin: 0;
   padding:0;
-  font-size: 1.4rem;
-  line-height: 1.4rem;
-  height: 2rem;
-
+  height: 2.4rem;
+  font-size: 1.3rem;
+  letter-spacing: 0.3rem;
 
 &:hover{
   list-style-type: none;
-  border-bottom: 4px solid black;
+  border-bottom: 3px solid black;
   
   }
 `
 
+const SocialsFrame = styled.div`
+
+position:fixed;
+right: 2rem;
+top: 2rem;
+display:flex;
+align-items:center;
+gap: 2rem;
+
+@media only screen and (max-width:799px){
+  display:none;
+}
+
+`
+
+const SocialsItem = styled.div`
+
+cursor:pointer;
+
+`
 

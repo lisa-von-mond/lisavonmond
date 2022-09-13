@@ -10,10 +10,8 @@ import { Moon } from '../components/moon'
 import { Footer } from '../components/footer'
 import bowl from '../public/bowl_pure.png'
 
-
 export default function Home() {
   
-
   return (
     <div className={styles.container}>
       <Head>
@@ -26,7 +24,6 @@ export default function Home() {
 
       <main className={styles.main}>
 
-      <Moon/>
       
       <div className={styles.feature}>
         <Image src={bowl} alt="bowl" height="700" width="700"></Image>
