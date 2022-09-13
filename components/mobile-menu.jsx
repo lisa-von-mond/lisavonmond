@@ -13,7 +13,9 @@ const [viewMSubMenu, setViewMSubMenu] = useState(false)
 
 return(
         
+
 <MMenuFrame visible={viewMobileMenu}>
+<div className={styles.m_background}></div>
 <Link href="/" target="blank" rel="noopener">
 <MenuItem onClick={()=>setViewMobileMenu(false)} >home</MenuItem>
 </Link>
@@ -51,6 +53,7 @@ const MMenuFrame = styled.div`
   text-align:center;
   z-index:800;
   gap: 2rem;
+  color:white;
 
 @media only screen and (min-width:800px){
     display:none;
@@ -73,9 +76,10 @@ letter-spacing: 0.3rem;
 font-weight: 500;
 height: 2rem;
 cursor:pointer;
+z-index:90;
 
 &:hover{
-  border-bottom: 3px solid black;
+  border-bottom: 3px solid #f5ff00;
 
 }
 
@@ -85,6 +89,8 @@ const MenuItemSocials = styled.div`
 
 height: 2rem;
 cursor:pointer;
+-webkit-filter: invert(1);
+filter: invert(1);
 
 
 `

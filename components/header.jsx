@@ -23,6 +23,7 @@ function showSubMenu(){
       
 return(
 <>
+<div className={styles.background}></div>
 <MobileMenu viewMobileMenu={viewMobileMenu} setViewMobileMenu={setViewMobileMenu}/>
 
 <HeaderFrame>
@@ -88,6 +89,7 @@ const HeaderFrame = styled.div`
 position:fixed;height: 0.1rem;
 z-index:999;
 box-sizing:content-box;
+color:white;
 `
 
 const DesktopMenu = styled.div`
@@ -142,7 +144,7 @@ const MenuItem = styled.div`
 
 &:hover{
   list-style-type: none;
-  border-bottom: 3px solid black;
+  border-bottom: 3px solid #f5ff00;
   
   }
 `
