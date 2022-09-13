@@ -12,7 +12,7 @@ body {
   padding: 0;
   margin: 0;
   font-family: 'Padauk', sans-serif;
-  background: linear-gradient(to top, #d8bcd2 0%, #e3eeff 50%, #e3eeff 100%);
+  background: rgb(247, 247, 247);
 }
 
 a {
@@ -30,7 +30,7 @@ h1{
   font-size:2rem;
   letter-spacing: 0.3rem;
   margin-bottom: 2rem;
-  border-bottom: 4px solid pink;
+  border-bottom: 4px solid black;
   width:auto;
   
 }
@@ -49,12 +49,16 @@ h2{
   width:auto;
   text-align:left;
   margin-bottom: 2rem;
+  border-bottom: 3px solid black;
 }
 
 h3{
+  font-size: 1.3rem;
   font-weight:300;
   text-align:left;
   margin-bottom: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 0.3rem;
   
 }
 

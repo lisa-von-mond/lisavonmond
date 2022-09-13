@@ -79,5 +79,8 @@ display:none;
 `
 
 const HeaderAll = styled.div`
-z-index:999;`
+z-index:1;
+height: 6rem;
+box-sizing:content-box;
+`
 

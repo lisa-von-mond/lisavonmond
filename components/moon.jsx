@@ -44,7 +44,7 @@ justify-content:flex-end;
 flex-direction:column;
 aspect-ratio:1;
 text-align:left;
-gap:0.5rem;
+gap:0.2rem;
 
 @media only screen and (max-width:799px){
 display:none;

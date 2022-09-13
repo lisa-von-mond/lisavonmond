@@ -25,9 +25,20 @@
   top: 1rem;
   left:1rem;
   margin: 0;
-  font-size: 1.3rem;
+  font-size: 1rem;
   font-weight:200;
   text-align: center;
+  background:black;
+  height: 6rem;
+  width: 6rem;
+  color:white;
+  letter-spacing: 0.2rem;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  border-radius:100%;
+  padding: 0 0 0 0.5rem;
+
 }
 
 .headline_d{
@@ -36,6 +47,8 @@
 
 .headline_m{
 display:block;
+padding:0;
+margin:0;
     }  
 
 @media only screen and (min-width:800px){
@@ -70,12 +83,12 @@ display:block;
 }
 
 .featurelink:hover{
-  border-bottom: 2px solid pink;
+  border-bottom: 3px solid black;
   box-sizing:content-box;
 }
 
 .featurelink:active{
-  border-bottom: 2px solid blue;
+  border-bottom: 3px solid black;
   box-sizing:content-box;
 }
 
@@ -120,7 +133,7 @@ display:block;
 
 .menuitem:hover{
   list-style-type: none;
-  border-bottom: 2px solid pink;
+  border-bottom: 4px solid black;
   
   }
 
@@ -239,8 +252,8 @@ display:block;
 
 .desktopmenu {
     position:fixed;
-    top: 2rem;
-    right: 2rem;
+    top: 3rem;
+    right: 3rem;
     display:flex;
     justify-content:space-between;
     align-items:center;
@@ -248,6 +261,8 @@ display:block;
     font-size: 1.5rem;
     padding: 0;
     z-index:999;
+    text-transform:uppercase;
+    letter-spacing: 0.2rem;
         }
 
 .menusign {

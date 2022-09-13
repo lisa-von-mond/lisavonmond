@@ -26,7 +26,7 @@ export default function Sound() {
   return (
     <div className={styles.container}>
       <Head>
-        <title>Lisa von Mond</title>
+        <title>Sound / Lisa von Mond</title>
         <meta name="Lisa von Mond" content="" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
