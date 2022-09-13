@@ -31,14 +31,14 @@ return(
   <Link href="/">LvM°</Link>
  </p>
 
-<div className={styles.desktopmenu}>
+<DesktopMenu>
 
 <Link href="/">
 <MenuItemWrapper>
 <MenuCircle text="home" current={currentPosition}>°</MenuCircle>
-<p className={styles.menuitem}>
+<MenuItem>
 home
-</p>
+</MenuItem>
 </MenuItemWrapper>
 
 </Link>
@@ -47,9 +47,9 @@ home
 <Link href="/sound">
 <MenuItemWrapper onMouseEnter={() => setViewSubMenu(true)}>
 <MenuCircle text="sound" current={currentPosition}>°</MenuCircle>
-<p className={styles.menuitem}>
+<MenuItem>
 sound
-</p>
+</MenuItem>
 </MenuItemWrapper>
 </Link>
 <DesktopSubMenu viewSubMenu={viewSubMenu} setViewSubMenu={setViewSubMenu}/>
@@ -58,16 +58,16 @@ sound
 <Link href="/about">
 <MenuItemWrapper>
 <MenuCircle text="about" current={currentPosition}>°</MenuCircle>
-<p className={styles.menuitem}>
+<MenuItem>
 about
-</p>
+</MenuItem>
 </MenuItemWrapper>
 </Link>
 
 <Link href="https://soundcloud.com/lisavonmond" target="blank" rel="noopener"><Image  className={styles.menuitem} src={soundcloud} width="60" height="35" alt="soundcloud"></Image></Link>
 <Link href="https://instagram.com/lisavonmond" target="blank" rel="noopener"><Image  className={styles.menuitem} src={insta} width="30" height="30" alt="insta"></Image></Link>
 
-</div>
+</DesktopMenu>
 
 <div className={styles.menusign} onClick={showMobileMenu}>
 ☰
@@ -77,9 +77,30 @@ about
 )    
 }
 
+
+const DesktopMenu = styled.div`
+position:fixed;
+top: 3rem;
+right: 3rem;
+display:flex;
+justify-content:space-between;
+align-items:flex-start;
+gap:0;
+font-size: 1.5rem;
+padding: 0;
+z-index:999;
+text-transform:uppercase;
+letter-spacing: 0.2rem;
+
+@media only screen and (max-width:700px){
+  display:none;
+}
+`
+
 const MenuItemWrapper = styled.div`
 display:flex;
 flex-direction:row;
+width:15rem;
 `
 
 const MenuCircle = styled.p`
@@ -100,4 +121,22 @@ z-index:1;
 height: 6rem;
 box-sizing:content-box;
 `
+
+const MenuItem = styled.div`
+
+  cursor:pointer;
+  margin: 0;
+  padding:0;
+  font-size: 1.4rem;
+  line-height: 1.4rem;
+  height: 2rem;
+
+
+&:hover{
+  list-style-type: none;
+  border-bottom: 4px solid black;
+  
+  }
+`
+
 

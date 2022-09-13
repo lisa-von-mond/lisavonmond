@@ -28,15 +28,14 @@
   font-size: 1rem;
   font-weight:200;
   text-align: center;
-  background:black;
   height: 6rem;
   width: 6rem;
-  color:white;
   letter-spacing: 0.2rem;
   display:flex;
   justify-content:center;
   align-items:center;
   border-radius:100%;
+  border: 3px solid black;
   padding: 0 0 0 0.5rem;
 
 }
@@ -53,11 +52,11 @@ margin:0;
 
 @media only screen and (min-width:800px){
 
-  .headline_m{
+.headline_m{
   display:none;
     }  
       
-  .headline_d{
+.headline_d{
   display:block;
   }  }
 
@@ -123,19 +122,6 @@ margin:0;
   font-size: 1.3rem;
   cursor:pointer;
 }
-
-.menuitem{
-  cursor:pointer;
-  margin: 0;
-  padding:0;
-  font-size: 1.4rem;
-}
-
-.menuitem:hover{
-  list-style-type: none;
-  border-bottom: 4px solid black;
-  
-  }
 
 .invi{
   display:none !important;
@@ -249,22 +235,6 @@ margin:0;
   justify-content:center;
   z-index:90;
   }
-
-
-.desktopmenu {
-    position:fixed;
-    top: 3rem;
-    right: 3rem;
-    display:flex;
-    justify-content:space-between;
-    align-items:flex-start;
-    gap: 3rem;
-    font-size: 1.5rem;
-    padding: 0;
-    z-index:999;
-    text-transform:uppercase;
-    letter-spacing: 0.2rem;
-        }
 
 .menusign {
     display:none;

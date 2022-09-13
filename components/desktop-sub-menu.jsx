@@ -15,18 +15,17 @@ return(
         
 <SubMenuFrame visible={viewSubMenu} onMouseLeave={()=>(setViewSubMenu(false))}>
 <Link href="/sound/#releases" target="blank" rel="noopener">
-<p className={styles.menuitem} onClick={hideSubMenu}>releases</p>
+<SubMenuItem onClick={hideSubMenu}>releases</SubMenuItem>
 </Link>
 <Link href="/sound/#ambient_works" target="blank" rel="noopener">
-<p className={styles.menuitem} onClick={hideSubMenu}>ambient works</p>
+<SubMenuItem onClick={hideSubMenu}>ambient works</SubMenuItem>
 </Link>
 <Link href="/sound/#trailer_soundtrack" target="blank" rel="noopener">
-<p className={styles.menuitem} onClick={hideSubMenu}>soundtrack</p>
+<SubMenuItem onClick={hideSubMenu}>soundtrack</SubMenuItem>
 </Link>
 </SubMenuFrame>
 )    
 }
-
 
 const SubMenuFrame = styled.div`
 
@@ -38,16 +37,31 @@ const SubMenuFrame = styled.div`
   text-align:left;
   z-index:800;
   gap: 1rem;
-  margin-top: 0.7rem;
-  width: 7rem;
-  padding-left: 0.8rem;
-  border: 2px solid blue;
-
+  margin-top: 1rem;
+  width: 15rem;
+  background: rgb(247, 247, 247);
 
 ${props =>
     props.visible === false &&
     css`
    display:none;
   `}
+  
+`
+
+const SubMenuItem = styled.div`
+
+cursor:pointer;
+margin: 0;
+padding:0;
+font-size: 1.4rem;
+line-height: 1.4rem;
+height: 2rem;
+
+
+&:hover{
+border-bottom: 4px solid black;
+
+}
   
 `
