@@ -25,19 +25,14 @@ export default function About() {
       <Header currentPosition="about"/>
        
       <main className={styles.main}>
+
         <div className={styles.feature}>
-        <div className={styles.featureinner}>
-        <Cloud>
-        <div className={styles.decoimage}>
-        <Image src={face} width="700" height="600" alt="lisa face"></Image>
+        <Image src={face} width="600" height="500" alt="lisa face"></Image>
         </div>
-        </Cloud>
-        </div>
-        </div>
+        
+        <div className={styles.emptyspace}></div>
 
         <div className={styles.content}>
-        <div className={styles.rowspacer_flex}> </div>
-
 
         <h1 className={styles.headline_d}>HI THERE, I AM LISA</h1>
         <h1 className={styles.headline_m}>HI THERE,</h1>
@@ -66,11 +61,3 @@ export default function About() {
 }
 
 
-const Cloud = styled.div`
-display:flex;
-align-items:flex-start;
-justify-content:center;
-flex-direction:column;
-padding:0;
-gap:2rem;
-`
