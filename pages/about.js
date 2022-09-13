@@ -27,9 +27,9 @@ export default function About() {
       <main className={styles.main}>
 
         <div className={styles.feature}>
-        <Image src={face} width="600" height="500" alt="lisa face"></Image>
+        <Image className={styles.anim_pic} src={face} width="600" height="500" alt="lisa face"></Image>
         </div>
-        
+
         <div className={styles.emptyspace}></div>
 
         <div className={styles.content}>

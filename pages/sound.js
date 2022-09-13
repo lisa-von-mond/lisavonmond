@@ -36,16 +36,16 @@ export default function Sound() {
 
         <div className={styles.feature}>
         <ImageWrapper current={pic} thispic="kea">
-        <Image src={kea} width="500" height="500" alt="kea cover"></Image>
+        <Image className={styles.anim_pic} src={kea} width="500" height="500" alt="kea cover"></Image>
         </ImageWrapper>
         <ImageWrapper current={pic} thispic="youandme">
-        <Image src={youandme} width="500" height="500" alt="you and me cover" ></Image>
+        <Image className={styles.anim_pic} src={youandme} width="500" height="500" alt="you and me cover" ></Image>
         </ImageWrapper>
         <ImageWrapper current={pic} thispic="lsf">
-        <Image src={lsftrailer} width="500" height="500" alt="lsf trailer screenshot"></Image>
+        <Image className={styles.anim_pic} src={lsftrailer} width="500" height="500" alt="lsf trailer screenshot"></Image>
         </ImageWrapper>
         <ImageWrapper current={pic} thispic="ambient">
-        <Image src={ambientimage} width="500" height="500" alt="lsf trailer screenshot"></Image>
+        <Image className={styles.anim_pic} src={ambientimage} width="500" height="500" alt="lsf trailer screenshot"></Image>
         </ImageWrapper>
         </div>
         <div className={styles.emptyspace}></div>
@@ -56,8 +56,8 @@ export default function Sound() {
 
         <KeaPlayer/>
         <p>A smooth soundscape chillout, released may 2022 on Solisampler VAK03 of vak.leipzig collective. Revenues from the sampler go to SeaWatch e.B. and Blindspots e.V. - an organization that supports volunteer structures for Balkan and Ukraine refugees.</p>
-        <p><a href="https://soundcloud.com/vak-leipzig/sets/vak03" target="blank" rel="noopener" className={styles.exlink}>Listen to Sampler on soundcloud</a></p>
-        <p><a href="https://vak-leipzig.bandcamp.com/album/vak03" target="blank" rel="noopener" className={styles.exlink}>buy sampler on bandcamp</a></p>
+        <p className={styles.exlink}><a href="https://soundcloud.com/vak-leipzig/sets/vak03" target="blank" rel="noopener">Listen to Sampler on soundcloud</a></p>
+        <p className={styles.exlink}><a href="https://vak-leipzig.bandcamp.com/album/vak03" target="blank" rel="noopener">buy sampler on bandcamp</a></p>
   
 
         <h3 onEnterViewport={()=>setPic("youandme")}>You and me // friendly connections</h3>

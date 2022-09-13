@@ -26,13 +26,14 @@ export default function Home() {
 
       
       <div className={styles.feature}>
-        <Image src={bowl} alt="bowl" height="700" width="700"></Image>
+        <Image className={styles.anim_pic} src={bowl} alt="bowl" height="700" width="700"></Image>
       </div>
       <div className={styles.content}>
       <Intro>
       <h1>LISA VON MOND</h1>
       <h3>ambient dub, dreamtunes, slow wave<br></br>sound production, composition and research</h3>
       </Intro>
+
       </div>
       </main>
 
