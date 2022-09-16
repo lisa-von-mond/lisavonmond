@@ -8,10 +8,9 @@
   left: -10vw;
   height: 120vh;
   width: 120vw;
-  background: url(../public/background_w_mask.png);
+  background: url(../public/gradient_bg.jpg);
   background-size: cover;
   z-index:0;
-  mask-image: radial-gradient(linear gradient(to left top, black, rgba(255, 255, 255, 0.1)));
 }
 
 .m_background{
@@ -20,7 +19,7 @@
   left: -10vw;
   height: 120vh;
   width: 120vw;
-  background: url(../public/background_w_out_mask.png);
+  background: url(../public/gradient_bg.jpg);
   background-size: cover;
   z-index:0;
 }
@@ -270,7 +269,7 @@ margin:0;
   justify-content:center;
   gap: 3rem;
   z-index:200;
-  color:white;
+  color:black;
   
   }
 
@@ -296,6 +295,6 @@ margin:0;
 
 
 .footer_link:hover{
-  border-bottom: 3px solid white;
+  border-bottom: 3px solid black;
   cursor:pointer;
 }

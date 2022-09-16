@@ -89,7 +89,7 @@ const HeaderFrame = styled.div`
 position:fixed;height: 0.1rem;
 z-index:999;
 box-sizing:content-box;
-color:white;
+color:black;
 `
 
 const DesktopMenu = styled.div`
@@ -144,7 +144,7 @@ const MenuItem = styled.div`
 
 &:hover{
   list-style-type: none;
-  border-bottom: 3px solid #f5ff00;
+  border-bottom: 3px solid black;
   
   }
 `

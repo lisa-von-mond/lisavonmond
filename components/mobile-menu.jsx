@@ -45,7 +45,6 @@ const MMenuFrame = styled.div`
   right: 0;
   top:0;
   font-size: 1.3rem;
-  background-image: linear-gradient(to top, #dad4ec 0%, #dad4ec 1%, #f3e7e9 100%);
   display:flex;
   flex-direction:column;
   justify-content:center; 
@@ -53,7 +52,7 @@ const MMenuFrame = styled.div`
   text-align:center;
   z-index:800;
   gap: 2rem;
-  color:white;
+  color:black;
 
 @media only screen and (min-width:800px){
     display:none;
@@ -79,18 +78,16 @@ cursor:pointer;
 z-index:90;
 
 &:hover{
-  border-bottom: 3px solid #f5ff00;
+  border-bottom: 3px solid black;
 
 }
-
 `
 
 const MenuItemSocials = styled.div`
 
 height: 2rem;
 cursor:pointer;
--webkit-filter: invert(1);
-filter: invert(1);
+
 
 
 `

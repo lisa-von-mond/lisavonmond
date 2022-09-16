@@ -56,7 +56,7 @@ text-transform: uppercase;
 letter-spacing: 0.3rem;
 
 &:hover{
-  border-bottom: 3px solid #f5ff00;
+  border-bottom: 3px solid black;
 
 }
   
