@@ -1,14 +1,7 @@
 import Head from 'next/head'
-import Image from 'next/image'
 import styles from '../styles/Home.module.css'
-import { MobileMenu } from '../components/mobile-menu'
 import { Header } from '../components/header'
-import { useState } from 'react'
 import styled, {css} from 'styled-components'
-import Link from 'next/link'
-import { Moon } from '../components/moon'
-import { Footer } from '../components/footer'
-import bowl from '../public/bowl_pure.png'
 
 export default function Home() {
   
@@ -23,50 +16,36 @@ export default function Home() {
       <Header currentPosition="home"/>
 
       <main className={styles.main}>
-      <IntroPic>
-      <Image className={styles.anim_pic} src={bowl} alt="bowl" height="700" width="700"></Image>
-      </IntroPic>
-      <Intro>
-      <h1>LISA VON MOND</h1>
-      <h3>ambient dub, dreamtunes, slow wave<br></br>sound production, composition and research</h3>
-      </Intro>
-      </main>
 
-      <Footer/>
+      <Intro>
+      <h4>ambient dub, dreamtunes, slow wave<br></br>sound production, composition and research</h4>
+      </Intro>
+
+      <ContentAll>
+      Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+      </ContentAll>
+
+
+      </main>
     </div>
   )
 }
 
-const IntroPic = styled.div`
-width:100%;
-
-display:flex;
-align-items: center;
-justify-content:center;
-text-align:left;
-z-index:0;
-animation: fade 2s;
-
-@media only screen and (min-width:800px)
-{
-width: 50%;
-height: 80vh;
-}`
-
 
 const Intro = styled.div`
-
+height: 100vh;
+width: 100%;
 display:flex;
 flex-direction: column;
 align-items: flex-start;
-justify-content:center;
+justify-content:flex-end;
 text-align:left;
-z-index:0;
 animation: fade 2s;
+color: blueviolet;
+padding: 2rem;
+`
 
-@media only screen and (min-width:800px)
-{
-width: 50%;
-
-}`
-
+const ContentAll = styled.div`
+height: 2000px;
+padding: 2rem;
+`

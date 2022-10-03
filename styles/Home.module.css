@@ -2,28 +2,6 @@
   padding: 0;
 }
 
-.background{
-  position:fixed;
-  top:-10vh;
-  left: -10vw;
-  height: 120vh;
-  width: 120vw;
-  background: url(../public/gradient_bg.jpg);
-  background-size: cover;
-  z-index:0;
-}
-
-.m_background{
-  position:fixed;
-  top:-10vh;
-  left: -10vw;
-  height: 120vh;
-  width: 120vw;
-  background: url(../public/gradient_bg.jpg);
-  background-size: cover;
-  z-index:0;
-}
-
 @media only screen and (max-width:799px){
 .background{
   display:none;
@@ -62,25 +40,8 @@
 
 }
 
-.headline_d{
-  display:none;
-  }  
-
-.headline_m{
-display:block;
-padding:0;
-margin:0;
-    }  
-
 @media only screen and (min-width:800px) and (orientation:landscape){
 
-.headline_m{
-  display:none;
-    }  
-      
-.headline_d{
-  display:block;
-  }  }
 
 .exlink{
   border-bottom: 3px solid black;
@@ -91,14 +52,11 @@ margin:0;
 
 .exlink:hover{
   border-bottom: 4px solid black;
-}
+}}
 
 /* LAYOUT ELEMENTS MOBILE*/
 
 .main {
-  min-height: 100vh;
-  padding: 1rem;
-  flex: 1;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -190,8 +148,7 @@ margin:0;
 
 
 .main {
-  flex-direction:row;
-  padding: 2rem;
+  margin-left: 20vw;
   }
 
 .title {
@@ -214,7 +171,6 @@ margin:0;
   width:50%;
   height:200px;
     }
-
 
 .feature {
   position:fixed;

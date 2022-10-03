@@ -1,4 +1,3 @@
-import styles from '../styles/Home.module.css'
 import styled, {css} from 'styled-components'
 import Link from 'next/link'
 
@@ -33,9 +32,9 @@ const SubMMenuFrame = styled.div`
   align-items:center;
   text-align:center;
   z-index:800;
-  gap: 1.2rem;
-  margin-top: -4rem;
-  padding-top: 4rem;
+  gap: 0.6rem;
+  padding-top: 1.3rem;
+  padding-bottom: 1.3rem;
 
 
 ${props =>
@@ -50,14 +49,12 @@ const SubMMenuItem = styled.div`
 cursor:pointer;
 margin: 0;
 padding:0;
-height: 2.3rem;
-font-size: 1.3rem;
-text-transform: uppercase;
+height: 2rem;
+font-size: 1.2rem;
 letter-spacing: 0.3rem;
 
 &:hover{
   border-bottom: 3px solid black;
-
 }
   
 `

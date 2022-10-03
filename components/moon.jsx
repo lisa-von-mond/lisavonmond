@@ -27,7 +27,6 @@ return(
   <p className={styles.featuretext}>{nextFullMoon}</p>
   </MoonCircle>
 
-
 )    
 }
 
@@ -48,7 +47,6 @@ gap:0.2rem;
 
 @media only screen and (max-width:799px){
 display:none;
-
 }
 
 `

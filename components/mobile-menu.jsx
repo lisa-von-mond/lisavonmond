@@ -26,12 +26,21 @@ return(
 <Link href="/about" target="blank" rel="noopener">
 <MenuItem onClick={()=>setViewMobileMenu(false)}>about</MenuItem>
 </Link>
-<MenuItemSocials>
-<Link href="https://soundcloud.com/lisavonmond" target="blank" rel="noopener"><Image src={soundcloud} width="60" height="35" alt="soundcloud"></Image></Link>
-</MenuItemSocials>
-<MenuItemSocials>
-<Link href="https://instagram.com/lisavonmond" target="blank" rel="noopener"><Image src={insta} width="30" height="30" alt="insta"></Image></Link>
-</MenuItemSocials>
+<Spacer></Spacer>
+<Link href="/facebook" target="blank" rel="noopener">
+<MenuItem onClick={()=>setViewMobileMenu(false)}>facebook</MenuItem>
+</Link>
+<Link href="/insta" target="blank" rel="noopener">
+<MenuItem onClick={()=>setViewMobileMenu(false)}>insta</MenuItem>
+</Link>
+<Link href="/contact" target="blank" rel="noopener">
+<MenuItem onClick={()=>setViewMobileMenu(false)}>contact</MenuItem>
+</Link>
+<Spacer></Spacer>
+<Link href="/lisadelune" target="blank" rel="noopener">
+<MenuItem onClick={()=>setViewMobileMenu(false)}>Lisa de Lune</MenuItem>
+</Link>
+<XButton onClick={()=>setViewMobileMenu(false)}>x</XButton>
 </MMenuFrame>
 )    
 }
@@ -50,9 +59,10 @@ const MMenuFrame = styled.div`
   justify-content:center; 
   align-items:center;
   text-align:center;
-  z-index:800;
-  gap: 2rem;
+  z-index:2000;
+  gap: 0.6rem;
   color:black;
+  background:skyblue;
 
 @media only screen and (min-width:800px){
     display:none;
@@ -63,14 +73,11 @@ ${props =>
     css`
    display:none;
   `}
-  
 `
-
 
 const MenuItem = styled.div`
 
-font-size: 1.3rem;
-text-transform: uppercase;
+font-size: 1.2rem;
 letter-spacing: 0.3rem;
 font-weight: 500;
 height: 2rem;
@@ -79,15 +86,29 @@ z-index:90;
 
 &:hover{
   border-bottom: 3px solid black;
-
 }
 `
 
-const MenuItemSocials = styled.div`
+const Spacer = styled.div`
+height: 1rem;
+`
 
+const XButton = styled.div`
+position:fixed;
+top: 1rem;
+right: 1rem;
 height: 2rem;
+width: 2rem;
+border: 2px solid black;
+display: flex;
+align-items:center;
+justify-content:center;
+border-radius: 0.3rem;
+font-size: 1.6rem;
 cursor:pointer;
 
-
-
+&:hover{
+color: skyblue;
+background:black;
+}
 `

@@ -1,8 +1,7 @@
 import styles from '../styles/Home.module.css'
 import Link from 'next/link'
 
-export function Footer({setViewMobileMenu}){
-
+export function Footer(){
 
 return(
 

@@ -49,8 +49,7 @@ export default function About() {
       
         <div className={styles.rowspacer}> </div>
 
-      
-  
+
        </div>
       
       </main>
