@@ -14,6 +14,7 @@ import { AmbientWorksPlayer } from '../components/ambient-works-player'
 import { Footer } from '../components/footer';
 import { motion, useScroll, useViewportScroll, useTransform } from "framer-motion"
 import handleViewport from 'react-in-viewport';
+import { InlineFooter } from '../components/footer'
 
 export default function Sound() {  
   
@@ -30,13 +31,11 @@ export default function Sound() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <div className={styles.background_fix}></div>
-
     <Header currentPosition="sound"/>
  
-     <main className={styles.main}>
+     <div className={styles.content}>
 
-        <div className={styles.content}>
+        <main className={styles.main}>
 
         <h2 id="releases">OFFICIAL RELEASES</h2>
 
@@ -71,9 +70,12 @@ export default function Sound() {
         <SoundLink>
         <a href="https://www.facebook.com/watch/?v=2781349775443374" target="blank" rel="noopener">↗ view the trailer here</a>
         </SoundLink>
-       </div>
+        <Spacer></Spacer>
+       </main>
+
+       <InlineFooter/>
       
-      </main>
+      </div>
 
     </div>
   )

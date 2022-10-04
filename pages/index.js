@@ -13,15 +13,12 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <div className={styles.background_fix}></div>
-      
       <Header currentPosition="home"/>
 
       <main className={styles.main}>
 
-   
-
       </main>
+
     </div>
   )
 }

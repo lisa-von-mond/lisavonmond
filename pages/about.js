@@ -5,9 +5,8 @@ import { MobileMenu } from '../components/mobile-menu'
 import { Header } from '../components/header'
 import { useState } from 'react'
 import styled, {css} from 'styled-components'
-
-import { Footer } from '../components/footer'
 import AboutMe from '../components/about-text'
+import { InlineFooter } from '../components/footer'
 
 
 export default function About() {
@@ -21,19 +20,19 @@ export default function About() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <div className={styles.background_fix}></div>
-
       <Header currentPosition="about"/>
        
-      <main className={styles.main}>
-
       <div className={styles.content}>
+
+      <main className={styles.main}>
 
           <AboutMe/>
 
-       </div>
+       </main>
+
+       <InlineFooter/>
       
-      </main>
+      </div>
 
     </div>
   )

@@ -6,7 +6,7 @@ import Image from "next/image"
 export default function AboutMe(){
     return(
         <>
-        <h1 className={styles.headline_d}>HI THERE, I AM LISA</h1>
+        <h1>HI THERE, I AM LISA</h1>
 
         <Image className={styles.anim_pic} src={face} width="600" height="500" alt="lisa face"></Image>
   

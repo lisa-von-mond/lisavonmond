@@ -75,7 +75,7 @@
 
 /* LAYOUT ELEMENTS MOBILE*/
 
-.main {
+.content {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -85,7 +85,7 @@
   }
 
 
-.content {
+.main {
   line-height: 1.5;
   font-size: 1.2rem;
   text-align: justify;
@@ -160,7 +160,7 @@
 @media only screen and (min-width:900px){
 
 
-.main {
+.content {
   margin-left: 20vw;
   }
 
@@ -171,7 +171,7 @@
   left:2rem;
   }
 
-.content {
+.main {
   line-height: 1.5;
   font-size: 1.3rem;
   text-align: justify;
@@ -212,58 +212,3 @@
         }
 }
 
-/* FOOTER */
-
-.footer {
-  font-size: 1rem;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  gap: 0;
-  z-index:200;
-  flex-direction:column;
-
-}
-
-@media only screen and (min-width:800px){
-
-.footer {
-  position:fixed;
-  left: 2rem;
-  bottom: 1rem;
-  font-size: 1rem;
-  display:flex;
-  flex-direction:row;
-  align-items:center;
-  justify-content:center;
-  gap: 3rem;
-  z-index:200;
-  color:black;
-  
-  }
-
-}
-
-.footer_link{
-  cursor:pointer;
-  height: 1.7rem;
-}
-
-
-@media only screen and (max-width:799px){
-  .footer_link{
-  margin-top:0;
-  color:black;
-  }
-
-  .footer_link:hover{
-    border-bottom: 3px solid black;
-    cursor:pointer;
-  }
-}
-
-
-.footer_link:hover{
-  border-bottom: 3px solid black;
-  cursor:pointer;
-}

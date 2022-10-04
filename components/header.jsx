@@ -15,6 +15,8 @@ return(
 
 <MobileMenu viewMobileMenu={viewMobileMenu} setViewMobileMenu={setViewMobileMenu}/>
 
+<div className={styles.background_fix}></div>
+
 <HeaderFrame>
 
 <DesktopMenu>
@@ -44,19 +46,19 @@ about
 
 <Spacer></Spacer>
 
-<Link href="/">
+<Link href="https://soundcloud.com/lisavonmond" target="blank">
 <MenuItem current="soundcloud">
 soundcloud
 </MenuItem>
 </Link>
 
-<Link href="/">
+<Link href="https://www.instagram.com/lisadelune/" target="blank">
 <MenuItem current="instagram">
 instagram
 </MenuItem>
 </Link>
 
-<Link href="/">
+<Link href="mailto:lisavonmond@posteo.de">
 <MenuItem current="contact">
 contact
 </MenuItem>
