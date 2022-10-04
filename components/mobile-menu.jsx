@@ -1,9 +1,6 @@
 import styles from '../styles/Home.module.css'
 import styled, {css} from 'styled-components'
 import Link from 'next/link'
-import Image from 'next/image'
-import insta from '../public/insta.svg'
-import soundcloud from '../public/soundcloud.svg'
 import { MobileSubMenu } from './mobile-sub-menu'
 import { useState } from 'react'
 
@@ -13,7 +10,6 @@ const [viewMSubMenu, setViewMSubMenu] = useState(false)
 
 return(
         
-
 <MMenuFrame visible={viewMobileMenu}>
 <div className={styles.m_background}></div>
 <Link href="/" target="blank" rel="noopener">
@@ -22,7 +18,6 @@ return(
 <Link href="/sound" target="blank" rel="noopener">
 <MenuItem onClick={()=>setViewMSubMenu(true)} className={styles.menuitem}>sound</MenuItem>
 </Link>
-<MobileSubMenu viewMSubMenu={viewMSubMenu} setViewMSubMenu={setViewMSubMenu} setViewMobileMenu={setViewMobileMenu}/>
 <Link href="/about" target="blank" rel="noopener">
 <MenuItem onClick={()=>setViewMobileMenu(false)}>about</MenuItem>
 </Link>
@@ -40,11 +35,10 @@ return(
 <Link href="/lisadelune" target="blank" rel="noopener">
 <MenuItem onClick={()=>setViewMobileMenu(false)}>Lisa de Lune</MenuItem>
 </Link>
-<XButton onClick={()=>setViewMobileMenu(false)}>x</XButton>
+<XButton onClick={()=>setViewMobileMenu(false)}>×</XButton>
 </MMenuFrame>
 )    
 }
-
 
 const MMenuFrame = styled.div`
 
@@ -62,7 +56,7 @@ const MMenuFrame = styled.div`
   z-index:2000;
   gap: 0.6rem;
   color:black;
-  background:skyblue;
+  background: url(/cloud_background.jpg);
 
 @media only screen and (min-width:800px){
     display:none;
@@ -74,7 +68,6 @@ ${props =>
    display:none;
   `}
 `
-
 const MenuItem = styled.div`
 
 font-size: 1.2rem;
@@ -85,10 +78,9 @@ cursor:pointer;
 z-index:90;
 
 &:hover{
-  border-bottom: 3px solid black;
+  border-bottom: 3px solid blueviolet;;
 }
 `
-
 const Spacer = styled.div`
 height: 1rem;
 `
@@ -106,6 +98,7 @@ justify-content:center;
 border-radius: 0.3rem;
 font-size: 1.6rem;
 cursor:pointer;
+padding: 0.2rem;
 
 &:hover{
 color: skyblue;

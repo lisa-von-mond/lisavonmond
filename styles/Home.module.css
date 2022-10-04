@@ -2,6 +2,15 @@
   padding: 0;
 }
 
+.background_fix {
+  position:fixed;
+  width: 110vw;
+  height: 110vh;
+  background: url(/cloud_background.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 @media only screen and (max-width:799px){
 .background{
   display:none;
@@ -45,14 +54,24 @@
 
 .exlink{
   border-bottom: 3px solid black;
-  height: 2rem;
-  margin:o;
+  height: 1.6rem;
+  margin:0;
   padding:0;
 }
 
 .exlink:hover{
   border-bottom: 4px solid black;
 }}
+
+.exlink{
+  border-bottom: 3px solid black;
+  margin:0;
+  padding:0;
+}
+
+.exlink:hover{
+  border-bottom: 4px solid black;
+}
 
 /* LAYOUT ELEMENTS MOBILE*/
 
@@ -62,16 +81,9 @@
   justify-content: center;
   align-items: center;
   z-index:500;
+  
   }
 
-
-.feature {
-  position:normal;
-  width:100%;
-  height:100%;
-  margin: 0;
-  animation: fade 2s;
-  }
 
 .content {
   line-height: 1.5;
@@ -83,6 +95,7 @@
   align-items:flex-start;
   justify-content:flex-start;
   z-index: 500;
+  padding: 2rem;
   }
 
 .emptyspace {
@@ -144,7 +157,7 @@
 
 /* DESKTOP AND TABLET STYLES */
 
-@media only screen and (min-width:800px){
+@media only screen and (min-width:900px){
 
 
 .main {
@@ -162,8 +175,8 @@
   line-height: 1.5;
   font-size: 1.3rem;
   text-align: justify;
-  width:50%;
-  padding: 1rem;
+  width:100%;
+  padding: 1rem 5rem 1rem 5rem;
   }
 
 .emptyspace {

@@ -9,9 +9,6 @@ return(
 <Link href="/sound/#releases" target="blank" rel="noopener">
 <SubMenuItem onClick={()=>(setViewSubMenu(false))}>releases</SubMenuItem>
 </Link>
-<Link href="/sound/#ambient_works" target="blank" rel="noopener">
-<SubMenuItem onClick={()=>(setViewSubMenu(false))}>ambient works</SubMenuItem>
-</Link>
 <Link href="/sound/#trailer_soundtrack" target="blank" rel="noopener">
 <SubMenuItem onClick={()=>(setViewSubMenu(false))}>soundtrack</SubMenuItem>
 </Link>
@@ -32,7 +29,6 @@ const SubMenuFrame = styled.div`
   padding-top: 4rem;
   margin-left: 3rem;
 
-
 ${props =>
     props.visible === false &&
     css`
@@ -49,7 +45,7 @@ height: 2rem;
 font-size: 1.2rem;
 
 &:hover{
-  border-bottom: 3px solid #f5ff00;
+  border-bottom: 3px solid blueviolet;
 
 }
   

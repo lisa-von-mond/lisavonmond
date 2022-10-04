@@ -12,7 +12,7 @@ const [viewSubMenu, setViewSubMenu] = useState(false)
       
 return(
 <>
-<div className={styles.background}></div>
+
 <MobileMenu viewMobileMenu={viewMobileMenu} setViewMobileMenu={setViewMobileMenu}/>
 
 <HeaderFrame>
@@ -20,7 +20,7 @@ return(
 <DesktopMenu>
 
 <Link href="/">
-<MenuItem>
+<MenuItem current={currentPosition} this="home">
 home
 </MenuItem>
 
@@ -28,7 +28,7 @@ home
 
 <div>
 <Link href="/sound">
-<MenuItemS onMouseEnter={() => setViewSubMenu(true)}>
+<MenuItemS onMouseEnter={() => setViewSubMenu(true)} current={currentPosition} this="sound">
 sound
 </MenuItemS>
 </Link>
@@ -37,7 +37,7 @@ sound
 </div>
 
 <Link href="/about">
-<MenuItem>
+<MenuItem current={currentPosition} this="about">
 about
 </MenuItem>
 </Link>
@@ -45,19 +45,19 @@ about
 <Spacer></Spacer>
 
 <Link href="/">
-<MenuItem>
+<MenuItem current="soundcloud">
 soundcloud
 </MenuItem>
 </Link>
 
 <Link href="/">
-<MenuItem>
+<MenuItem current="instagram">
 instagram
 </MenuItem>
 </Link>
 
 <Link href="/">
-<MenuItem>
+<MenuItem current="contact">
 contact
 </MenuItem>
 </Link>
@@ -65,7 +65,7 @@ contact
 <Spacer></Spacer>
 
 <Link href="/">
-<MenuItem>
+<MenuItem current="Lisa de Lune">
 Lisa de Lune
 </MenuItem>
 </Link>
@@ -82,7 +82,6 @@ Lisa de Lune
 )    
 }
 
-
 const HeaderFrame = styled.div`
 position:fixed;
 top: 0;
@@ -92,7 +91,6 @@ z-index:999;
 box-sizing:content-box;
 color:black;
 `
-
 const DesktopMenu = styled.div`
 position:fixed;
 width:30%;
@@ -107,11 +105,10 @@ gap:1rem;
 z-index:999;
 letter-spacing: 0.2rem;
 
-@media only screen and (max-width:700px){
+@media only screen and (max-width:900px){
   display:none;
 }
 `
-
 const Spacer = styled.p`
 
 margin: 0;
@@ -120,9 +117,7 @@ width: 1rem;
 font-size: 0.8rem;
 font-weight: 600;
 margin-right: 0.6rem;
-
 `
-
 const MenuItem = styled.div`
 
   cursor:pointer;
@@ -131,13 +126,19 @@ const MenuItem = styled.div`
   height: 1.8rem;
   font-size: 1.2rem;
   letter-spacing: 0.3rem;
+  display:inherit;
 
 &:hover{
   list-style-type: none;
-  border-bottom: 3px solid #f5ff00;
+  border-bottom: 3px solid blueviolet;
   }
-`
 
+  ${props =>
+    props.current === props.this &&
+    css`
+   font-weight: 800;
+  `}
+`
 const MenuItemS = styled.div`
 
   cursor:pointer;
@@ -146,20 +147,11 @@ const MenuItemS = styled.div`
   height: 1.8rem;
   font-size: 1.2rem;
   letter-spacing: 0.3rem;
+  display:inherit;
+
+  ${props =>
+    props.current === props.this &&
+    css`
+   font-weight: 800;
+  `}
 `
-
-const TitleText = styled.div`
-
-  cursor:pointer;
-  margin: 0;
-  padding:0;
-  height: 2rem;
-  font-size: 1.2rem;
-  letter-spacing: 0.3rem;
-
-&:hover{
-  list-style-type: none;
-  border-bottom: 3px solid black;
-  }
-`
-

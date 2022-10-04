@@ -14,9 +14,6 @@ return(
 <Link href="/sound/#releases" target="blank" rel="noopener">
 <SubMMenuItem onClick={hideMSubMenu}>releases</SubMMenuItem>
 </Link>
-<Link href="/sound/#ambient_works" target="blank" rel="noopener">
-<SubMMenuItem onClick={hideMSubMenu}>ambient works</SubMMenuItem>
-</Link>
 <Link href="/sound/#trailer_soundtrack" target="blank" rel="noopener">
 <SubMMenuItem onClick={hideMSubMenu}>soundtrack</SubMMenuItem>
 </Link>
@@ -54,7 +51,7 @@ font-size: 1.2rem;
 letter-spacing: 0.3rem;
 
 &:hover{
-  border-bottom: 3px solid black;
+  border-bottom: 3px solid blueviolet;;
 }
   
 `
