@@ -3,9 +3,9 @@ import styles from '../styles/Home.module.css'
 import face from '../public/luni_face.png'
 import Image from "next/image"
 
-export default function AboutMe(){
+export default function AboutMe({color}){
     return(
-        <>
+        <Frame color={color}>
         <h1>HI THERE, I AM LISA</h1>
 
         <Image className={styles.anim_pic} src={face} width="600" height="500" alt="lisa face"></Image>
@@ -15,6 +15,10 @@ export default function AboutMe(){
         <p>Contact me: lisavomond (at) posteo.de</p>
 
         <div className={styles.rowspacer}> </div>
-        </>
+        </Frame>
     )
 }
+
+const Frame = styled.div`
+color:${props=>props.color};
+`

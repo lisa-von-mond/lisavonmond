@@ -11,6 +11,15 @@
   background-size: cover;
 }
 
+.background_fix_ldl {
+  position:fixed;
+  width: 110vw;
+  height: 110vh;
+  background: url(/stars_background.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 @media only screen and (max-width:799px){
 .background{
   display:none;

@@ -1,44 +1,31 @@
 import styles from '../styles/Home.module.css'
 import styled, {css} from 'styled-components'
 import Link from 'next/link'
-import { MobileMenu } from './mobile-menu'
+import { MobileMenuLdL } from './mobile-menu-ldl'
 import { useState } from 'react'
-import { DesktopSubMenu } from './desktop-sub-menu'
 
-export function Header({currentPosition}){
+export function HeaderLdL({currentPosition}){
 
-const [viewMobileMenu, setViewMobileMenu] = useState(false)
-const [viewSubMenu, setViewSubMenu] = useState(false)
+const [viewMobileMenuL, setViewMobileMenuL] = useState(false)
       
 return(
 <>
 
-<MobileMenu viewMobileMenu={viewMobileMenu} setViewMobileMenu={setViewMobileMenu}/>
+<MobileMenuLdL viewMobileMenuL={viewMobileMenuL} setViewMobileMenuL={setViewMobileMenuL}/>
 
-<div className={styles.background_fix}></div>
+<div className={styles.background_fix_ldl}></div>
 
 <HeaderFrame>
 
 <DesktopMenu>
 
-<Link href="/">
+<Link href="/lisadelune">
 <MenuItem current={currentPosition} this="home">
 home
 </MenuItem>
-
 </Link>
 
-<div>
-<Link href="/sound">
-<MenuItemS onMouseEnter={() => setViewSubMenu(true)} current={currentPosition} this="sound">
-sound
-</MenuItemS>
-</Link>
-
-<DesktopSubMenu viewSubMenu={viewSubMenu} setViewSubMenu={setViewSubMenu}/>
-</div>
-
-<Link href="/about">
+<Link href="/ldl-about">
 <MenuItem current={currentPosition} this="about">
 about
 </MenuItem>
@@ -46,7 +33,7 @@ about
 
 <Spacer></Spacer>
 
-<Link href="https://soundcloud.com/lisavonmond" target="blank">
+<Link href="https://soundcloud.com/lisadelune" target="blank">
 <MenuItem current="soundcloud">
 soundcloud
 </MenuItem>
@@ -58,7 +45,7 @@ instagram
 </MenuItem>
 </Link>
 
-<Link href="mailto:lisavonmond@posteo.de">
+<Link href="mailto:lisadelune@posteo.de">
 <MenuItem current="contact">
 contact
 </MenuItem>
@@ -66,16 +53,15 @@ contact
 
 <Spacer></Spacer>
 
-<Link href="/lisadelune">
-<MenuItem current="Lisa de Lune">
-Lisa de Lune
+<Link href="/">
+<MenuItem current="lisavonmond">
+Lisa von Mond
 </MenuItem>
 </Link>
 
-
 </DesktopMenu>
 
-<div className={styles.menusign} onClick={()=>setViewMobileMenu(!viewMobileMenu)}>
+<div className={styles.menusign} onClick={()=>setViewMobileMenuL(true)}>
 ☰
 </div>
 
@@ -91,7 +77,7 @@ left: 0;
 height: 0.1rem;
 z-index:999;
 box-sizing:content-box;
-color:black;
+color:white;
 `
 const DesktopMenu = styled.div`
 position:fixed;
@@ -141,19 +127,4 @@ const MenuItem = styled.div`
    font-weight: 800;
   `}
 `
-const MenuItemS = styled.div`
 
-  cursor:pointer;
-  margin: 0;
-  padding:0;
-  height: 1.8rem;
-  font-size: 1.2rem;
-  letter-spacing: 0.3rem;
-  display:inherit;
-
-  ${props =>
-    props.current === props.this &&
-    css`
-   font-weight: 800;
-  `}
-`
