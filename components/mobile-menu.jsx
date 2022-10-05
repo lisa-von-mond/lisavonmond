@@ -12,23 +12,23 @@ return(
         
 <MMenuFrame visible={viewMobileMenu}>
 <div className={styles.m_background}></div>
-<Link href="/" target="blank" rel="noopener">
+<Link href="/">
 <MenuItem onClick={()=>setViewMobileMenu(false)} >home</MenuItem>
 </Link>
-<Link href="/sound" target="blank" rel="noopener">
+<Link href="/sound">
 <MenuItem onClick={()=>setViewMSubMenu(true)} className={styles.menuitem}>sound</MenuItem>
 </Link>
-<Link href="/about" target="blank" rel="noopener">
+<Link href="/about">
 <MenuItem onClick={()=>setViewMobileMenu(false)}>about</MenuItem>
 </Link>
 <Spacer></Spacer>
-<Link href="/facebook" target="blank" rel="noopener">
-<MenuItem onClick={()=>setViewMobileMenu(false)}>facebook</MenuItem>
+<Link href="https://www.soundcloud.com/lisavonmond" target="_blank" rel="noopener">
+<MenuItem onClick={()=>setViewMobileMenu(false)}>soundcloud</MenuItem>
 </Link>
-<Link href="/insta" target="blank" rel="noopener">
+<Link href="https://www.instagram.com/lisadelune" target="blank" rel="noopener">
 <MenuItem onClick={()=>setViewMobileMenu(false)}>insta</MenuItem>
 </Link>
-<Link href="/contact" target="blank" rel="noopener">
+<Link href="mailto:lisavonmond@posteo.de" target="blank" rel="noopener">
 <MenuItem onClick={()=>setViewMobileMenu(false)}>contact</MenuItem>
 </Link>
 <Spacer></Spacer>
@@ -79,6 +79,10 @@ z-index:90;
 
 &:hover{
   border-bottom: 3px solid blueviolet;;
+}
+
+@media only screen and (max-width:400px){
+  font-size:1rem;
 }
 `
 const Spacer = styled.div`

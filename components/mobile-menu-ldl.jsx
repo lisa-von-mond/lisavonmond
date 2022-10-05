@@ -8,24 +8,24 @@ return(
         
 <MMenuFrame visible={viewMobileMenuL}>
 <div className={styles.m_background}></div>
-<Link href="/" target="blank" rel="noopener">
+<Link href="/lisadelune">
 <MenuItem onClick={()=>setViewMobileMenuL(false)} >home</MenuItem>
 </Link>
-<Link href="/about" target="blank" rel="noopener">
+<Link href="/ldl-about">
 <MenuItem onClick={()=>setViewMobileMenuL(false)}>about</MenuItem>
 </Link>
 <Spacer></Spacer>
-<Link href="https://soundcloud.com/lisadelune" target="blank" rel="noopener">
+<Link href="https://soundcloud.com/lisadelune" target="_blank" rel="noopener">
 <MenuItem onClick={()=>setViewMobileMenuL(false)}>soundcloud</MenuItem>
 </Link>
-<Link href="https://instagram.com/lisadelune" target="blank" rel="noopener">
+<Link href="https://instagram.com/lisadelune" target="_blank" rel="noopener">
 <MenuItem onClick={()=>setViewMobileMenuL(false)}>insta</MenuItem>
 </Link>
-<Link href="mailto:lisadelune@posteo.de" target="blank" rel="noopener">
+<Link href="mailto:lisadelune@posteo.de" rel="noopener">
 <MenuItem onClick={()=>setViewMobileMenuL(false)}>contact</MenuItem>
 </Link>
 <Spacer></Spacer>
-<Link href="/" target="blank" rel="noopener">
+<Link href="/">
 <MenuItem onClick={()=>setViewMobileMenuL(false)}>Lisa von Mond</MenuItem>
 </Link>
 <XButton onClick={()=>setViewMobileMenuL(false)}>×</XButton>
@@ -69,6 +69,10 @@ font-weight: 500;
 height: 2rem;
 cursor:pointer;
 z-index:90;
+
+@media only screen and (max-width:400px){
+  font-size:1rem;
+}
 
 &:hover{
   border-bottom: 3px solid var(--ldl);
