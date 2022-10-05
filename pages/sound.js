@@ -19,8 +19,6 @@ import { InlineFooter } from '../components/footer'
 export default function Sound() {  
   
   const { scrollYProgress } = useScroll();
-  const scaleY = useTransform(scrollYProgress, [0, 100], [0, 100]);
-  const [pic, setPic] = useState("kea")
   
 
   return (
@@ -41,9 +39,7 @@ export default function Sound() {
 
         <h3>kea // vak.leipzig</h3>
 
-        <ImageWrapper>
-        <Image className={styles.anim_pic} src={kea} width="500" height="500" alt="kea cover"></Image>
-        </ImageWrapper>
+        <Image className={styles.anim_pic} src={kea} width="400" height="400" alt="kea cover"></Image>
 
         <p>A smooth soundscape chillout, released may 2022 on Solisampler VAK03 of vak.leipzig collective. Revenues from the sampler go to SeaWatch e.B. and Blindspots e.V. - an organization that supports volunteer structures for Balkan and Ukraine refugees.</p>
         <LinkWrapper>
@@ -55,9 +51,9 @@ export default function Sound() {
         <Spacer></Spacer>
 
         <h3>You and me // friendly connections</h3>
-        <ImageWrapper>
-        <Image className={styles.anim_pic} src={youandme} width="500" height="500" alt="kea cover"></Image>
-        </ImageWrapper>
+
+        <Image className={styles.anim_pic} src={youandme} width="400" height="400" alt="kea cover"></Image>
+
     
         <p>A warm and cosy downtempo track with influences of dub, house and ambient. Released may 2021 on the Bremen / Cologne label friendly connections</p>
         <SoundLink><a href="https://soundcloud.com/friendlyconnections/lisa-von-mond-you-and-me" target="blank" rel="noopener">↗ Listen to on soundcloud</a></SoundLink>
@@ -81,15 +77,9 @@ export default function Sound() {
   )
 }
 
-const ImageWrapper = styled.div`
-${props =>
-  props.current !== props.thispic &&
-  css`
-display:none;
-`}`
-
 
 const LinkWrapper = styled.div`
+
 display:flex;
 flex-direction: column;
 align-items:flex-start;
@@ -97,14 +87,16 @@ gap: 0.8rem;`
 
 const SoundLink = styled.div`
 
-  border: 2px solid black;
-  margin:0;
-  padding:0.3rem 0.7rem 0.3rem 0.7rem;
-  border-radius: 100px;
+border: 2px solid black;
+font-size: 0.9rem !important;
+margin:0;
+padding:0.3rem 0.7rem 0.3rem 0.7rem;
+border-radius: 100px;
 
 &:hover{
 background: black;
 color:white;
+border: 2px hidden black;
 }
 
 .a{

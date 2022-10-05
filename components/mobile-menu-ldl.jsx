@@ -71,7 +71,7 @@ cursor:pointer;
 z-index:90;
 
 &:hover{
-  border-bottom: 3px solid blueviolet;;
+  border-bottom: 3px solid var(--ldl);
 }
 `
 const Spacer = styled.div`

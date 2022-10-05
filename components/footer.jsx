@@ -22,6 +22,7 @@ const FooterWrapper = styled.footer`
   z-index:200;
   color:${props=>props.color};
 
+
   @media only screen and (min-width:900px){
     padding-right: 5rem;
     padding-left: 5rem;
@@ -31,19 +32,21 @@ const FooterInner = styled.footer`
   display:flex;
   align-items:center;
   justify-content:center;
-  border-top: 3px solid ${props=>props.color};
+  border-top: 2px solid ${props=>props.color};
   gap: 2rem;
 `
 
 const FooterText = styled.p `
 
-.a{
+font-family: 'Padauk', sans-serif;
+
+a{
   cursor:pointer;
 }
 
-.a:hover(
+a:hover(
   height: 1.7rem;
-  border-bottom: 3px solid black;
+  border-bottom: 2px solid black;
 )
 
 `

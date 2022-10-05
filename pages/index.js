@@ -2,6 +2,7 @@ import Head from 'next/head'
 import styles from '../styles/Home.module.css'
 import { Header } from '../components/header'
 import styled, {css} from 'styled-components'
+import { Moon } from '../components/moon'
 
 export default function Home() {
   
@@ -16,26 +17,109 @@ export default function Home() {
       <Header currentPosition="home"/>
 
       <main className={styles.main}>
+        <StartContent>
 
+            <Moon color="var(--lvm)"/>
+            <Intro>
+              <h1>Lisa von Mond</h1>
+              <p>Ambient dub, dreamtunes, slow wave<br></br>sound production, composition and research</p>
+            </Intro>
+            <News>
+              <ComingSoon>coming soon</ComingSoon>
+              <p>lovely planet EP</p>
+              <p>12/22 Hul Berlin</p>
+            </News>
+
+        </StartContent>
+
+        <PrivacyFixed>
+          <a href="/legal-privacy">privacy policy</a>
+        </PrivacyFixed>
+ 
       </main>
 
     </div>
   )
 }
 
-const Intro = styled.div`
+
+const StartContent = styled.div`
+position: fixed;
+left: 40%;
+top: 0;
 height: 100vh;
-width: 100%;
+display:flex;
+flex-direction: column;
+align-items: flex-start;
+justify-content: center;
+gap: 3rem;
+padding: 0;
+
+@media only screen and (max-width:899px){
+left: 0;
+top: 1rem;
+padding: 2rem;
+}
+
+`
+
+const Intro = styled.div`
+display:flex;
+flex-direction: column;
+align-items: flex-start;
+justify-content:flex-start;
+gap: 0.2rem;
+animation: fade 2s;
+color: black;
+
+h1{
+  border-bottom: 4px solid black;
+}
+
+
+p{
+  margin: 0;
+  padding: 0;
+}
+`
+
+const News = styled.div`
 display:flex;
 flex-direction: column;
 align-items: flex-start;
 justify-content:center;
-text-align:left;
+gap: 0.2rem;
 animation: fade 2s;
-color: blueviolet;
-padding: 2rem;
+color: var(--lvm);
+text-transform:uppercase;
+letter-spacing: 0.3rem;
+
+p{
+  padding: 0;
+  margin:0;
+}
 `
-const ContentAll = styled.div`
-height: 2000px;
-padding: 2rem;
+
+const PrivacyFixed = styled.div`
+position: fixed;
+left: 2rem;
+bottom: 2rem;
+letter-spacing: 0.2rem;
+font-size: 0.8rem;
+cursor:pointer;
+height: 1.3rem;
+box-sizing: border-box;
+
+&:hover{
+  border-bottom: 2px solid var(--lvm);
+}
 `
+
+const ComingSoon = styled.p`
+font-weight: 600;
+border-bottom: 2px solid var(--lvm);
+margin-bottom: 0.5rem !important;
+`
+
+
+

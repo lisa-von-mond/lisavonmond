@@ -10,6 +10,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Abyssinica+SIL&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
+
+:root{
+
+  --ldl: #f5ff00;
+  --lvm: #7722ff;
+  
+}
+
 html,
 body {
   padding: 0;
@@ -36,22 +44,32 @@ a {
 
 h1{
 
-  width:100%;
-  font-size:2rem;
-  letter-spacing: 0.3rem;
+  font-size:2.4rem;
+  letter-spacing: 0.4rem;
   margin-bottom: 2rem;
-  border-bottom: 3px solid black;
-  width:auto;
+  height: 3.4rem;
+  border-bottom: 4px solid black;
+  text-transform:uppercase;
   
 }
 
-@media only screen and (min-width:800px){
+@media only screen and (max-width: 500px){
 
+  h1{
+    font-size: 1.8rem;
+    height: 3rem;
+  }
 
-h1{
-  font-size:3rem;
+}
+
+@media only screen and (max-width: 400px){
+
+  h1{
+    font-size: 1.4rem;
+    height: 2.4rem;
   }
-  }
+
+}
 
 h2{
   font-size: 2rem;
@@ -157,4 +175,7 @@ audio::-webkit-media-controls-toggle-closed-captions-button{
     0%   {opacity:0}
     100% {opacity:1}
   }
+
+
+  
   

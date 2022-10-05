@@ -24,10 +24,8 @@ const SubMenuFrame = styled.div`
   align-items:flex-start;
   text-align:left;
   z-index:800;
-  gap: 1.2rem;
-  margin-top: -3rem;
-  padding-top: 4rem;
-  margin-left: 3rem;
+  gap: 0.4rem;
+  margin: 0 0 0 1.4rem;
 
 ${props =>
     props.visible === false &&
@@ -41,8 +39,9 @@ const SubMenuItem = styled.div`
 cursor:pointer;
 margin: 0;
 padding:0;
-height: 2rem;
-font-size: 1.2rem;
+height: 1.4rem;
+font-size: 1rem;
+letter-spacing: 0.2rem;
 
 &:hover{
   border-bottom: 3px solid blueviolet;
