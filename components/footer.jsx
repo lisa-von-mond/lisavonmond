@@ -8,7 +8,7 @@ return(
   <FooterWrapper color={color}>
     <FooterInner color={color}>
       <FooterText>Lisa de Lune 2022</FooterText>
-      <FooterText><a href="/legal-privacy">privacy policy</a></FooterText>
+      <Link href="/legal-privacy"><FooterLink color={color}>privacy policy</FooterLink></Link>
     </FooterInner>
   </FooterWrapper>
 )    
@@ -34,19 +34,30 @@ const FooterInner = styled.footer`
   justify-content:center;
   border-top: 2px solid ${props=>props.color};
   gap: 2rem;
+  padding-top: 1.4rem;
+  padding-bottom: 1.4rem;
+
 `
 
 const FooterText = styled.p `
 
 font-family: 'Padauk', sans-serif;
+padding: 0;
+margin: 0;
+height: 1.7rem;
 
-a{
-  cursor:pointer;
-}
+`
 
-a:hover(
-  height: 1.7rem;
-  border-bottom: 2px solid black;
+const FooterLink = styled.p `
+
+font-family: 'Padauk', sans-serif;
+cursor:pointer;
+padding: 0;
+margin: 0;
+height: 1.7rem;
+
+:&hover(
+  border-bottom: ${props=>props.color};
 )
 
 `

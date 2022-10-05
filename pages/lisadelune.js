@@ -3,6 +3,7 @@ import styles from '../styles/Home.module.css'
 import styled, {css} from 'styled-components'
 import { HeaderLdL } from '../components/header-ldl'
 import { Moon } from '../components/moon'
+import Link from 'next/link'
 
 export default function LisaDeLune() {
   
@@ -35,7 +36,7 @@ export default function LisaDeLune() {
       </StartContent>
     
         <PrivacyFixed>
-          <a href="/legal-privacy">privacy policy</a>
+          <Link href="/legal-privacy">privacy policy</Link>
         </PrivacyFixed>
 
       </main>

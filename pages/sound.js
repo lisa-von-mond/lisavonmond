@@ -88,15 +88,21 @@ gap: 0.8rem;`
 const SoundLink = styled.div`
 
 border: 2px solid black;
+height: 2.2rem;
 font-size: 0.9rem !important;
+display:flex;
+align-items:center;
+justify-content:center;
 margin:0;
 padding:0.3rem 0.7rem 0.3rem 0.7rem;
 border-radius: 100px;
+box-sizing: border-box;
 
 &:hover{
-background: black;
+background: var(--lvm);
 color:white;
 border: 2px hidden black;
+
 }
 
 .a{

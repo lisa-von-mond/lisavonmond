@@ -15,9 +15,8 @@
   position:fixed;
   width: 110vw;
   height: 110vh;
-  background: url(/stars_background.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
+  background: url(/background_retro.jpg);
+  background-size: 100%;
 }
 
 @media only screen and (max-width:799px){
