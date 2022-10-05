@@ -2,26 +2,21 @@
   padding: 0;
 }
 
-.background{
+.background_fix {
   position:fixed;
-  top:-10vh;
-  left: -10vw;
-  height: 120vh;
-  width: 120vw;
-  background: url(../public/gradient_bg.jpg);
+  width: 110vw;
+  height: 110vh;
+  background: url(/cloud_background.jpg);
+  background-repeat: no-repeat;
   background-size: cover;
-  z-index:0;
 }
 
-.m_background{
+.background_fix_ldl {
   position:fixed;
-  top:-10vh;
-  left: -10vw;
-  height: 120vh;
-  width: 120vw;
-  background: url(../public/gradient_bg.jpg);
-  background-size: cover;
-  z-index:0;
+  width: 110vw;
+  height: 110vh;
+  background: url(/background_retro.jpg);
+  background-size: 100%;
 }
 
 @media only screen and (max-width:799px){
@@ -46,46 +41,20 @@
   align-items:flex-start;
   text-align:left;}
 
-.title {
-  position: fixed;
-  top: 1rem;
-  left:1rem;
-  margin: 0;
-  text-align: center;
-  letter-spacing: 0.2rem;
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  border-radius: 50%;
-  font-size: 1.2rem;
-  font-weight: 600;
-
-}
-
-.headline_d{
-  display:none;
-  }  
-
-.headline_m{
-display:block;
-padding:0;
-margin:0;
-    }  
-
 @media only screen and (min-width:800px) and (orientation:landscape){
 
-.headline_m{
-  display:none;
-    }  
-      
-.headline_d{
-  display:block;
-  }  }
 
 .exlink{
   border-bottom: 3px solid black;
-  height: 2rem;
-  margin:o;
+  height: 1.6rem;
+  margin:0;
+  padding:0;
+}
+}
+
+.exlink{
+  border-bottom: 3px solid black;
+  margin:0;
   padding:0;
 }
 
@@ -95,27 +64,16 @@ margin:0;
 
 /* LAYOUT ELEMENTS MOBILE*/
 
-.main {
-  min-height: 100vh;
-  padding: 1rem;
-  flex: 1;
+.content {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   z-index:500;
+  
   }
 
-
-.feature {
-  position:normal;
-  width:100%;
-  height:100%;
-  margin: 0;
-  animation: fade 2s;
-  }
-
-.content {
+.main {
   line-height: 1.5;
   font-size: 1.2rem;
   text-align: justify;
@@ -125,28 +83,8 @@ margin:0;
   align-items:flex-start;
   justify-content:flex-start;
   z-index: 500;
+  padding: 2rem;
   }
-
-.emptyspace {
-  display:none;
-  }
-
-.desktopmenu {
-  display:none;
-    }
-  
-.menusign {
-  position:fixed;
-  top: 1rem;
-  right: 1rem;
-  font-size: 1.3rem;
-  cursor:pointer;
-  color: black;
-}
-
-.invi{
-  display:none !important;
-}
 
 .spacer{
   margin-top:0;
@@ -186,54 +124,20 @@ margin:0;
 
 /* DESKTOP AND TABLET STYLES */
 
-@media only screen and (min-width:800px){
+@media only screen and (min-width:900px){
 
-
-.main {
-  flex-direction:row;
-  padding: 2rem;
-  }
-
-.title {
-  letter-spacing: 0.2rem;
-  position: fixed;
-  top: 2rem;
-  left:2rem;
-  }
 
 .content {
+  margin-left: 30vw;
+  }
+
+.main {
   line-height: 1.5;
   font-size: 1.3rem;
   text-align: justify;
-  width:50%;
-  padding: 1rem;
+  width:100%;
+  padding: 1rem 5rem 1rem 5rem;
   }
-
-.emptyspace {
-  display:block;
-  width:50%;
-  height:200px;
-    }
-
-
-.feature {
-  position:fixed;
-  top:0;
-  left:0;
-  height:100%;
-  width:50%;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  width:50%;
-  margin-top:0;
-  padding-left: 15rem;
-  animation: fade 2s;
-  }
-
-.menusign {
-    display:none;
-        }
 
 .decoimage{
     margin-top:3rem;
@@ -243,58 +147,3 @@ margin:0;
         }
 }
 
-/* FOOTER */
-
-.footer {
-  font-size: 1rem;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  gap: 0;
-  z-index:200;
-  flex-direction:column;
-
-}
-
-@media only screen and (min-width:800px){
-
-.footer {
-  position:fixed;
-  left: 2rem;
-  bottom: 1rem;
-  font-size: 1rem;
-  display:flex;
-  flex-direction:row;
-  align-items:center;
-  justify-content:center;
-  gap: 3rem;
-  z-index:200;
-  color:black;
-  
-  }
-
-}
-
-.footer_link{
-  cursor:pointer;
-  height: 1.7rem;
-}
-
-
-@media only screen and (max-width:799px){
-  .footer_link{
-  margin-top:0;
-  color:black;
-  }
-
-  .footer_link:hover{
-    border-bottom: 3px solid black;
-    cursor:pointer;
-  }
-}
-
-
-.footer_link:hover{
-  border-bottom: 3px solid black;
-  cursor:pointer;
-}

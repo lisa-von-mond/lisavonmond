@@ -1,48 +1,49 @@
 import Head from 'next/head'
 import styles from '../styles/Home.module.css'
-import { Header } from '../components/header'
 import styled, {css} from 'styled-components'
+import { HeaderLdL } from '../components/header-ldl'
 import { Moon } from '../components/moon'
 import Link from 'next/link'
 
-export default function Home() {
+export default function LisaDeLune() {
   
   return (
     <div className={styles.container}>
       <Head>
-        <title>Lisa von Mond</title>
-        <meta name="Lisa von Mond" content="" />
+        <title>Lisa de Lune</title>
+        <meta name="Lisa de Lune" content="" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <Header currentPosition="home"/>
+      <HeaderLdL currentPosition="home"/>
 
       <main className={styles.main}>
-        <StartContent>
 
-            <Moon color="var(--lvm)"/>
-            <Intro>
-              <h1>Lisa von Mond</h1>
-              <p>Ambient dub, dreamtunes, slow wave<br></br>sound production, composition and research</p>
-            </Intro>
-            <News>
-              <ComingSoon>coming soon</ComingSoon>
-              <p>lovely planet EP</p>
-              <p>12/22 Hul Berlin</p>
-            </News>
 
-        </StartContent>
+      <StartContent>
+          <Moon color="var(--ldl)"/>
+          <Intro>
+              <h1>Lisa de Lune</h1>
+              <p>Full moon techno</p>
+          </Intro>
+          <News>
+          <p>UPCOMING</p>
+          <p>17.10.22 sysyphos / B</p>
+          <p>29.10.22 hafenklang / HH</p>
+          <p>29.11.22 luna / K</p>
+        </News>
 
+      </StartContent>
+    
         <PrivacyFixed>
           <Link href="/legal-privacy">privacy policy</Link>
         </PrivacyFixed>
- 
+
       </main>
 
     </div>
   )
 }
-
 
 const StartContent = styled.div`
 position: fixed;
@@ -64,6 +65,8 @@ padding: 2rem;
 
 `
 
+
+
 const Intro = styled.div`
 display:flex;
 flex-direction: column;
@@ -71,16 +74,15 @@ align-items: flex-start;
 justify-content:flex-start;
 gap: 0.2rem;
 animation: fade 2s;
-color: black;
+color: white;
 
 h1{
-  border-bottom: 4px solid black;
+  border-bottom: 4px solid white;
 }
-
-
 p{
   margin: 0;
   padding: 0;
+  letter-spacing: 0.2rem;
 }
 `
 
@@ -91,7 +93,7 @@ align-items: flex-start;
 justify-content:center;
 gap: 0.2rem;
 animation: fade 2s;
-color: var(--lvm);
+color: var(--ldl);
 text-transform:uppercase;
 letter-spacing: 0.3rem;
 
@@ -110,17 +112,10 @@ font-size: 0.8rem;
 cursor:pointer;
 height: 1.3rem;
 box-sizing: border-box;
+color:white;
 
 &:hover{
-  border-bottom: 2px solid var(--lvm);
+  border-bottom: 2px solid var(--ldl);
 }
 `
-
-const ComingSoon = styled.p`
-font-weight: 600;
-border-bottom: 2px solid var(--lvm);
-margin-bottom: 0.5rem !important;
-`
-
-
 

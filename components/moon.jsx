@@ -2,7 +2,7 @@ import styles from '../styles/Home.module.css'
 import styled, {css} from 'styled-components'
 import {mooncalendar} from '../utils/moon-calendar.js'
 
-export function Moon({}){
+export function Moon({color}){
 
 const today = new Date()
 
@@ -19,36 +19,30 @@ console.log(moonState)
 const nextFullMoon = (mooncalendar.find(e => e.state === "full moon")).date
 
 return(
-
-  <MoonCircle>
-  <p className={styles.featuretext}>{todayDate}</p>
-  <p className={styles.featuretext}>{moonState}</p>
-  <p className={styles.featuretext}>next full moon:</p>
-  <p className={styles.featuretext}>{nextFullMoon}</p>
-  </MoonCircle>
-
-
+  <MoonWrapper color={color}>
+  <p>{todayDate} *** {moonState}</p>
+  <p>next full moon: {nextFullMoon}</p>
+  </MoonWrapper>
 )    
 }
 
-
-const MoonCircle = styled.div`
+const MoonWrapper = styled.div`
 font-size: 0.7rem;
-position:fixed;
-bottom: 2rem;
-left: 2rem;
-height:300px;
+letter-spacing: 0.2rem;
 display:flex;
 align-items:flex-start;
-justify-content:flex-end;
+justify-content:flex-start;
 flex-direction:column;
-aspect-ratio:1;
+height: auto;
 text-align:left;
-gap:0.2rem;
+gap: 0.1rem;
+color:${props=>props.color};
+animation: fade 2s;
 
-@media only screen and (max-width:799px){
-display:none;
-
+p{
+  margin: 0;
+  padding: 0;
+  display:inherit;
 }
 
 `

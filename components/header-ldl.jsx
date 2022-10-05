@@ -1,41 +1,31 @@
 import styles from '../styles/Home.module.css'
 import styled, {css} from 'styled-components'
 import Link from 'next/link'
-import { MobileMenu } from './mobile-menu'
+import { MobileMenuLdL } from './mobile-menu-ldl'
 import { useState } from 'react'
-import { DesktopSubMenu } from './desktop-sub-menu'
 
-export function Header({currentPosition}){
+export function HeaderLdL({currentPosition}){
 
-const [viewMobileMenu, setViewMobileMenu] = useState(false)
-const [viewSubMenu, setViewSubMenu] = useState(false)
+const [viewMobileMenuL, setViewMobileMenuL] = useState(false)
       
 return(
 <>
 
-<MobileMenu viewMobileMenu={viewMobileMenu} setViewMobileMenu={setViewMobileMenu}/>
+<MobileMenuLdL viewMobileMenuL={viewMobileMenuL} setViewMobileMenuL={setViewMobileMenuL}/>
 
-<div className={styles.background_fix}></div>
+<div className={styles.background_fix_ldl}></div>
 
 <HeaderFrame>
 
 <DesktopMenu>
 
-<Link href="/">
+<Link href="/lisadelune">
 <MenuItem current={currentPosition} this="home">
 home
 </MenuItem>
 </Link>
 
-<Link href="/sound">
-<MenuItemS onMouseEnter={() => setViewSubMenu(true)} current={currentPosition} this="sound">
-sound
-</MenuItemS>
-</Link>
-
-<DesktopSubMenu viewSubMenu={viewSubMenu} setViewSubMenu={setViewSubMenu}/>
-
-<Link href="/about">
+<Link href="/ldl-about">
 <MenuItem current={currentPosition} this="about">
 about
 </MenuItem>
@@ -43,7 +33,7 @@ about
 
 <Spacer></Spacer>
 
-<Link href="https://soundcloud.com/lisavonmond" target="_blank">
+<Link href="https://soundcloud.com/lisadelune" target="_blank">
 <MenuItem current="soundcloud">
 soundcloud
 </MenuItem>
@@ -55,7 +45,7 @@ instagram
 </MenuItem>
 </Link>
 
-<Link href="mailto:lisavonmond@posteo.de">
+<Link href="mailto:lisadelune@posteo.de">
 <MenuItem current="contact">
 contact
 </MenuItem>
@@ -63,16 +53,15 @@ contact
 
 <Spacer></Spacer>
 
-<Link href="/lisadelune">
-<MenuItem current="Lisa de Lune">
-Lisa de Lune
+<Link href="/">
+<MenuItem current="lisavonmond">
+Lisa von Mond
 </MenuItem>
 </Link>
 
-
 </DesktopMenu>
 
-<MenuSign onClick={()=>setViewMobileMenu(!viewMobileMenu)}>
+<MenuSign onClick={()=>setViewMobileMenuL(true)}>
 ☰
 </MenuSign>
 
@@ -88,58 +77,45 @@ left: 0;
 height: 0.1rem;
 z-index:999;
 box-sizing:content-box;
-color:black;
+color:white;
 `
 const DesktopMenu = styled.div`
 position:fixed;
 width:30%;
-top:0;
-left: 0;
-padding: 2rem;
+top:2rem;
+left: 2rem;
 display:flex;
 flex-direction:column;
 justify-content:space-between;
 align-items:flex-start;
 gap:0.4rem;
 z-index:999;
+letter-spacing: 0.2rem;
 
 @media only screen and (max-width:900px){
   display:none;
 }
 `
-const Spacer = styled.div`
-height: 1rem;
+const Spacer = styled.p`
+
+height: 0.4rem;
+margin: 0;
+padding: 0;
 `
 const MenuItem = styled.div`
 
   cursor:pointer;
   margin: 0;
   padding:0;
-  height: 1.4rem;
+  height: 1.5rem;
   font-size: 1rem;
   letter-spacing: 0.2rem;
   display:inherit;
 
 &:hover{
   list-style-type: none;
-  border-bottom: 3px solid var(--lvm);
+  border-bottom: 3px solid var(--ldl);
   }
-
-  ${props =>
-    props.current === props.this &&
-    css`
-   font-weight: 800;
-  `}
-`
-const MenuItemS = styled.div`
-
-  cursor:pointer;
-  margin: 0;
-  padding:0;
-  height: 1.4rem;
-  font-size: 1rem;
-  letter-spacing: 0.3rem;
-  display:inherit;
 
   ${props =>
     props.current === props.this &&
@@ -154,8 +130,11 @@ top: 1rem;
 right: 1rem;
 font-size: 1.3rem;
 cursor:pointer;
+color: white;
 
 @media only screen and (min-width:900px){
   display:none;
 }
 `
+
+
