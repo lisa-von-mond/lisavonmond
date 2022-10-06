@@ -1,26 +1,19 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
-import { Header } from '../components/header'
-import { useState } from 'react'
+import { HeaderSimple } from '../components/header-simple'
 import kea from '../public/kea.gif'
 import youandme from '../public/you-and-me.gif'
-import lsftrailer from '../public/LSF_trailer.gif'
 import ambientimage from '../public/ambient_decopic.gif'
 import styled, {css} from 'styled-components'
 import { KeaPlayer } from '../components/kea-player'
 import { YouAndMePlayer } from '../components/you-and-me-player'
 import { AmbientWorksPlayer } from '../components/ambient-works-player'
-import { Footer } from '../components/footer';
-import { motion, useScroll, useViewportScroll, useTransform } from "framer-motion"
-import handleViewport from 'react-in-viewport';
 import { InlineFooter } from '../components/footer'
 
 export default function Sound() {  
   
-  const { scrollYProgress } = useScroll();
   
-
   return (
     <div className={styles.container}>
       <Head>
@@ -29,7 +22,7 @@ export default function Sound() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-    <Header currentPosition="sound"/>
+    <HeaderSimple currentPosition="sound"/>
  
      <div className={styles.content}>
 

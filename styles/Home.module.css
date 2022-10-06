@@ -6,6 +6,8 @@
   position:fixed;
   width: 110vw;
   height: 110vh;
+  top: -5vh;
+  left: -5vw;
   background: url(/cloud_background.jpg);
   background-repeat: no-repeat;
   background-size: cover;
@@ -33,13 +35,6 @@
 .anim_pic{
   animation: fade 2s;
 }
-
-.maintext {
-  padding: 4rem 3rem 4rem 3rem;
-  display:flex;
-  flex-direction: column;
-  align-items:flex-start;
-  text-align:left;}
 
 @media only screen and (min-width:800px) and (orientation:landscape){
 
