@@ -3,10 +3,26 @@ import styled, {css} from 'styled-components'
 import Link from 'next/link'
 import { MobileMenuLdL } from './mobile-menu-ldl'
 import { useState } from 'react'
+import { motion } from 'framer-motion'
 
 export function HeaderLdL({currentPosition}){
 
 const [viewMobileMenuL, setViewMobileMenuL] = useState(false)
+
+const wholeMenu = {
+  out: { translateX: -300 },
+  in: {
+    translateX: 0,
+    transition: {
+      staggerChildren: 0.1
+    }
+  }
+}
+
+const oneItem = {
+  out: { translateX: -300 },
+  in: { translateX: 0 }
+}
       
 return(
 <>
@@ -17,47 +33,38 @@ return(
 
 <HeaderFrame>
 
-<DesktopMenu>
+<DesktopMenu as={motion.div} 
+variants={wholeMenu}
+initial="out"
+animate="in">
 
-<Link href="/lisadelune">
-<MenuItem current={currentPosition} this="home">
-home
+<MenuItem as={motion.div} variants={oneItem} current={currentPosition} this="home">
+<Link href="/lisadelune">home</Link>
 </MenuItem>
-</Link>
 
-<Link href="/ldl-about">
-<MenuItem current={currentPosition} this="about">
-about
+<MenuItem as={motion.div} variants={oneItem} current={currentPosition} this="about">
+<Link href="/ldl-about">about</Link>
 </MenuItem>
-</Link>
 
 <Spacer></Spacer>
 
-<Link href="https://soundcloud.com/lisadelune" target="_blank">
-<MenuItem current="soundcloud">
-soundcloud
+<MenuItem as={motion.div} variants={oneItem} current="soundcloud">
+<Link href="https://soundcloud.com/lisadelune" target="_blank">soundcloud</Link>
 </MenuItem>
-</Link>
 
-<Link href="https://www.instagram.com/lisadelune/" target="_blank">
-<MenuItem current="instagram">
-instagram
+<MenuItem as={motion.div} variants={oneItem} current="instagram">
+<Link href="https://www.instagram.com/lisadelune/" target="_blank">instagram</Link>
 </MenuItem>
-</Link>
 
-<Link href="mailto:lisadelune@posteo.de">
-<MenuItem current="contact">
-contact
+<MenuItem as={motion.div} variants={oneItem} current="contact">
+<Link href="mailto:lisadelune@posteo.de">contact</Link>
 </MenuItem>
-</Link>
 
 <Spacer></Spacer>
 
-<Link href="/">
-<MenuItem current="lisavonmond">
-Lisa von Mond
+<MenuItem as={motion.div} variants={oneItem} current="lisavonmond">
+<Link href="/">Lisa von Mond</Link>
 </MenuItem>
-</Link>
 
 </DesktopMenu>
 

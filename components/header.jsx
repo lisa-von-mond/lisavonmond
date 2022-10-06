@@ -4,11 +4,27 @@ import Link from 'next/link'
 import { MobileMenu } from './mobile-menu'
 import { useState } from 'react'
 import { DesktopSubMenu } from './desktop-sub-menu'
+import { motion } from 'framer-motion'
 
 export function Header({currentPosition}){
 
 const [viewMobileMenu, setViewMobileMenu] = useState(false)
 const [viewSubMenu, setViewSubMenu] = useState(false)
+
+const wholeMenu = {
+  out: { translateX: -300 },
+  in: {
+    translateX: 0,
+    transition: {
+      staggerChildren: 0.1
+    }
+  }
+}
+
+const oneItem = {
+  out: { translateX: -300 },
+  in: { translateX: 0 }
+}
       
 return(
 <>
@@ -19,56 +35,44 @@ return(
 
 <HeaderFrame>
 
-<DesktopMenu>
+<DesktopMenu as={motion.div} 
+variants={wholeMenu}
+initial="out"
+animate="in">
 
-<Link href="/">
-<MenuItem current={currentPosition} this="home">
-home
+<MenuItem as={motion.div} variants={oneItem} current={currentPosition} this="home">
+<Link href="/">home</Link>
 </MenuItem>
-</Link>
 
-<Link href="/sound">
-<MenuItemS onMouseEnter={() => setViewSubMenu(true)} current={currentPosition} this="sound">
-sound
+<MenuItemS as={motion.div} variants={oneItem} onMouseEnter={() => setViewSubMenu(true)} current={currentPosition} this="sound">
+<Link href="/sound">sound</Link>
 </MenuItemS>
-</Link>
 
 <DesktopSubMenu viewSubMenu={viewSubMenu} setViewSubMenu={setViewSubMenu}/>
 
-<Link href="/about">
-<MenuItem current={currentPosition} this="about">
-about
+<MenuItem as={motion.div} variants={oneItem} current={currentPosition} this="about">
+<Link href="/about">about</Link>
 </MenuItem>
-</Link>
 
 <Spacer></Spacer>
 
-<Link href="https://soundcloud.com/lisavonmond" target="_blank">
-<MenuItem current="soundcloud">
-soundcloud
+<MenuItem as={motion.div} variants={oneItem} current="soundcloud">
+<Link href="https://soundcloud.com/lisavonmond" target="_blank">soundcloud</Link>
 </MenuItem>
-</Link>
 
-<Link href="https://www.instagram.com/lisadelune/" target="_blank">
-<MenuItem current="instagram">
-instagram
+<MenuItem as={motion.div} variants={oneItem} current="instagram">
+<Link href="https://www.instagram.com/lisadelune/" target="_blank">instagram</Link>
 </MenuItem>
-</Link>
 
-<Link href="mailto:lisavonmond@posteo.de">
-<MenuItem current="contact">
-contact
+<MenuItem as={motion.div} variants={oneItem} current="contact">
+<Link href="mailto:lisavonmond@posteo.de">contact</Link>
 </MenuItem>
-</Link>
 
 <Spacer></Spacer>
 
-<Link href="/lisadelune">
-<MenuItem current="Lisa de Lune">
-Lisa de Lune
+<MenuItem as={motion.div} variants={oneItem} current="Lisa de Lune">
+<Link href="/lisadelune">Lisa de Lune</Link>
 </MenuItem>
-</Link>
-
 
 </DesktopMenu>
 

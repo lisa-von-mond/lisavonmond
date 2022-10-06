@@ -36,7 +36,7 @@ export default function LisaDeLune() {
       </StartContent>
     
         <PrivacyFixed>
-          <Link href="/legal-privacy">privacy policy</Link>
+          <Link href="/privacy">privacy policy</Link>
         </PrivacyFixed>
 
       </main>

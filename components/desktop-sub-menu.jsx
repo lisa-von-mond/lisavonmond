@@ -1,17 +1,25 @@
 import styled, {css} from 'styled-components'
 import Link from 'next/link'
+import { motion } from 'framer-motion'
 
 export function DesktopSubMenu({viewSubMenu, setViewSubMenu}){
 
 return(
         
 <SubMenuFrame visible={viewSubMenu} onMouseLeave={()=>(setViewSubMenu(false))}>
+
+<SubMenuItem onClick={()=>(setViewSubMenu(false))}>
 <Link href="/sound/#releases" target="blank" rel="noopener">
-<SubMenuItem onClick={()=>(setViewSubMenu(false))}>releases</SubMenuItem>
+  releases
 </Link>
+</SubMenuItem>
+
+<SubMenuItem onClick={()=>(setViewSubMenu(false))}>
 <Link href="/sound/#trailer_soundtrack" target="blank" rel="noopener">
-<SubMenuItem onClick={()=>(setViewSubMenu(false))}>soundtrack</SubMenuItem>
+  soundtrack
 </Link>
+</SubMenuItem>
+
 </SubMenuFrame>
 )    
 }
