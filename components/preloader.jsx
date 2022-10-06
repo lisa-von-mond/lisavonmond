@@ -7,38 +7,38 @@ export default function MoonPreloader(){
 
 <PreloadScreen>
 <PreloadWrapper>
-    <PreloadMoon>
+    <PreloadMoon del="0s">
         <PreloadMoonInner del="0s"></PreloadMoonInner>
     </PreloadMoon>
-    <PreloadMoon>
-        <PreloadMoonInner del="0.4s"></PreloadMoonInner>
+    <PreloadMoon del="0.3s">
+        <PreloadMoonInner del="0.3s"></PreloadMoonInner>
     </PreloadMoon>
-    <PreloadMoon del="0.8s">
-        <PreloadMoonInner del="0.8s"></PreloadMoonInner>
+    <PreloadMoon del="0.6s">
+        <PreloadMoonInner del="0.6s"></PreloadMoonInner>
+    </PreloadMoon>
+    <PreloadMoon del="0.9s">
+        <PreloadMoonInner del="0.9s"></PreloadMoonInner>
     </PreloadMoon>
     <PreloadMoon del="1.2s">
         <PreloadMoonInner del="1.2s"></PreloadMoonInner>
     </PreloadMoon>
-    <PreloadMoon del="1.6s">
-        <PreloadMoonInner del="1.6s"></PreloadMoonInner>
+    <PreloadMoon del="1.5s">
+        <PreloadMoonInner del="1.5s"></PreloadMoonInner>
     </PreloadMoon>
-    <PreloadMoon del="2.0s">
-        <PreloadMoonInner del="2.0s"></PreloadMoonInner>
+    <PreloadMoon del="1.8s">
+        <PreloadMoonInner del="1.8s"></PreloadMoonInner>
+    </PreloadMoon>
+    <PreloadMoon del="2.1s">
+        <PreloadMoonInner del="2.1s"></PreloadMoonInner>
     </PreloadMoon>
     <PreloadMoon del="2.4s">
         <PreloadMoonInner del="2.4s"></PreloadMoonInner>
     </PreloadMoon>
-    <PreloadMoon del="2.8s">
-        <PreloadMoonInner del="2.8s"></PreloadMoonInner>
+    <PreloadMoon del="2.7s">
+        <PreloadMoonInner del="2.7s"></PreloadMoonInner>
     </PreloadMoon>
-    <PreloadMoon del="3.2s">
-        <PreloadMoonInner del="3.2s"></PreloadMoonInner>
-    </PreloadMoon>
-    <PreloadMoon del="3.6s">
-        <PreloadMoonInner del="3.6s"></PreloadMoonInner>
-    </PreloadMoon>
-    <PreloadMoon del="4.0s">
-        <PreloadMoonInner del="4.0s"></PreloadMoonInner>
+    <PreloadMoon del="3.0s">
+        <PreloadMoonInner del="3.0s"></PreloadMoonInner>
     </PreloadMoon>
 
 

@@ -6,6 +6,8 @@
   position:fixed;
   width: 110vw;
   height: 110vh;
+  top: -5vh;
+  left: -5vw;
   background: url(/cloud_background.jpg);
   background-repeat: no-repeat;
   background-size: cover;

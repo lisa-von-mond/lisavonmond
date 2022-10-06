@@ -37,8 +37,6 @@ export default function Home() {
         <PrivacyFixed>
           <Link href="/legal-privacy">privacy policy</Link>
         </PrivacyFixed>
-
-        <MoonPreloader/>
  
       </main>
 
