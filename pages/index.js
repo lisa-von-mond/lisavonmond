@@ -4,6 +4,7 @@ import { Header } from '../components/header'
 import styled, {css} from 'styled-components'
 import { Moon } from '../components/moon'
 import Link from 'next/link'
+import MoonPreloader from '../components/preloader'
 
 export default function Home() {
   
@@ -36,6 +37,8 @@ export default function Home() {
         <PrivacyFixed>
           <Link href="/legal-privacy">privacy policy</Link>
         </PrivacyFixed>
+
+        <MoonPreloader/>
  
       </main>
 
