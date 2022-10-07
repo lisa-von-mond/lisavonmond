@@ -28,10 +28,10 @@ export default function LisaDeLune() {
           </Intro>
           <News>
           <p>UPCOMING</p>
-          <p>17.10.22 sysyphos / B</p>
+          <p>17.10.22 sisyphos / B</p>
           <p>29.10.22 hafenklang / HH</p>
           <p>29.11.22 luna / K</p>
-        </News>
+          </News>
 
       </StartContent>
     
@@ -65,24 +65,26 @@ padding: 2rem;
 
 `
 
-
-
 const Intro = styled.div`
 display:flex;
 flex-direction: column;
 align-items: flex-start;
 justify-content:flex-start;
-gap: 0.2rem;
+gap: 1.2rem;
 animation: fade 2s;
 color: white;
+font-family: 'Padauk', sans-serif;
 
 h1{
   border-bottom: 4px solid white;
+  margin: 0;
+  padding: 0;
 }
 p{
   margin: 0;
   padding: 0;
-  letter-spacing: 0.2rem;
+  font-size: 1rem;
+  letter-spacing: 0.2rem;  
 }
 `
 
@@ -97,9 +99,11 @@ color: var(--ldl);
 text-transform:uppercase;
 letter-spacing: 0.3rem;
 
+
 p{
   padding: 0;
   margin:0;
+  font-size: 0.8rem;
 }
 `
 
