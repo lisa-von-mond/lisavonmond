@@ -1,12 +1,9 @@
 import styles from '../styles/Home.module.css'
 import styled, {css} from 'styled-components'
 import Link from 'next/link'
-import { useState } from 'react'
 import { motion } from 'framer-motion'
 
 export function MobileMenu({viewMobileMenu, setViewMobileMenu, theme, simple}){
-
-const [viewMSubMenu, setViewMSubMenu] = useState(false)
 
 const menuFrame = {
   out: {},
@@ -34,19 +31,19 @@ variants={menuFrame}
 initial="out"
 animate="in">
 
-<MenuItem className="item" as={motion.div} variants={oneItem} onClick={()=>setViewMobileMenu(false)}>
+<MenuItem className="item" as={motion.div} variants={oneItem}>
   <Link href={theme === "lvm" ? "/" : "/lisadelune"}>
     home
   </Link>
 </MenuItem>
 
-{theme === "lvm" ?? <MenuItem className="item" as={motion.div} variants={oneItem} onClick={()=>setViewMSubMenu(true)}>
+{theme === "lvm" ?? <MenuItem className="item" as={motion.div} variants={oneItem}>
   <Link href="/sound">
     sound
   </Link>
 </MenuItem>}
 
-<MenuItem className="item" as={motion.div} variants={oneItem} onClick={()=>setViewMobileMenu(false)}>
+<MenuItem className="item" as={motion.div} variants={oneItem}>
   <Link href={theme === "lvm" ? "/about" : "/ldl-about"}>
     about
   </Link> 
@@ -54,19 +51,19 @@ animate="in">
 
 <Spacer></Spacer>
 
-<MenuItem className="item" as={motion.div} variants={oneItem} onClick={()=>setViewMobileMenu(false)}>
+<MenuItem className="item" as={motion.div} variants={oneItem}>
   <Link href={theme === "lvm" ? "https://www.soundcloud.com/lisavonmond" :"https://www.soundcloud.com/lisadelune"} target="_blank" rel="noopener">
     soundcloud
   </Link>
 </MenuItem>
 
-<MenuItem className="item"  as={motion.div} variants={oneItem} onClick={()=>setViewMobileMenu(false)}>
+<MenuItem className="item"  as={motion.div} variants={oneItem}>
   <Link href="https://www.instagram.com/lisadelune" target="blank" rel="noopener">
     insta
   </Link>
 </MenuItem>
 
-<MenuItem className="item" as={motion.div} variants={oneItem} onClick={()=>setViewMobileMenu(false)}>
+<MenuItem className="item" as={motion.div} variants={oneItem}>
   <Link href={theme === "lvm" ? "mailto:lisavonmond@posteo.de" : "mailto:lisadelune@posteo.de"} target="blank" rel="noopener">
     contact
   </Link>
@@ -74,13 +71,13 @@ animate="in">
 
 <Spacer></Spacer>
 
-{theme === "lvm" ? <MenuItem className="item" as={motion.div} variants={oneItem} onClick={()=>setViewMobileMenu(false)}>
+{theme === "lvm" ? <MenuItem className="item" as={motion.div} variants={oneItem}>
   <Link href="/lisadelune" target="blank" rel="noopener">
     Lisa de Lune
   </Link>
 </MenuItem>
 :
-<MenuItem className="item" as={motion.div} variants={oneItem} onClick={()=>setViewMobileMenu(false)}>
+<MenuItem className="item" as={motion.div} variants={oneItem}>
   <Link href="/" target="blank" rel="noopener">
     Lisa von Mond
   </Link>
@@ -88,13 +85,18 @@ animate="in">
 
 <Spacer></Spacer>
 
-<MenuItem className="item" as={motion.div} variants={oneItem} onClick={()=>setViewMobileMenu(false)}>
+<MenuItem className="item" as={motion.div} variants={oneItem}>
   <Link href={theme === "lvm" ? "/legal-privacy" : "/privacy"} target="blank" rel="noopener">
     privacy
   </Link>
 </MenuItem>
 
-<XButton theme={theme} onClick={()=>setViewMobileMenu(false)}>×</XButton>
+<XButton theme={theme} onClick={()=>setViewMobileMenu(false)}
+    as={motion.div} 
+    whileHover={{
+    scale: 1.3,
+    transition: { duration: 0.6 },}}
+  >×</XButton>
 
 </MMenuFrame>
 <Background theme={theme}></Background>  
@@ -158,8 +160,8 @@ const XButton = styled.div`
 position:fixed;
 top: 1rem;
 right: 1rem;
-height: 1.6rem;
-width: 1.6rem;
+height: 1.4rem;
+width: 1.4rem;
 display: flex;
 align-items:center;
 justify-content:center;
@@ -169,10 +171,6 @@ cursor:pointer;
 color:black;
 border: 2px solid black;
 
-&:hover{
-border: 2px solid var(--lvm);
-color: var(--lvm);
-}
 
 ${props =>
   props.theme === "ldl" &&
@@ -181,9 +179,6 @@ ${props =>
 color:white;
 border: 2px solid white;
 
-&:hover{
-  border: 2px solid var(--ldl);
-  color: var(--ldl);}
 `}
 `
 

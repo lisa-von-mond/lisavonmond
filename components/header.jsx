@@ -81,7 +81,11 @@ animate="in">
 
 </DesktopMenu>
 
-<MenuSign onClick={()=>setViewMobileMenu(!viewMobileMenu)}>
+<MenuSign onClick={()=>setViewMobileMenu(!viewMobileMenu)}
+    as={motion.div} 
+    whileHover={{
+    scale: 1.3,
+    transition: { duration: 0.6 },}}>
 ☰
 </MenuSign>
 
