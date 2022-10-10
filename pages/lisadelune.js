@@ -21,7 +21,6 @@ export default function LisaDeLune() {
 
 
       <StartContent>
-          <Moon color="var(--ldl)"/>
           <Intro>
               <h1>Lisa de Lune</h1>
               <p>Full moon techno</p>

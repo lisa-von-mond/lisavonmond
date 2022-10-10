@@ -21,7 +21,6 @@ export default function Home() {
       <main className={styles.main}>
         <StartContent>
 
-            <Moon color="var(--lvm)"/>
             <Intro>
               <h1>Lisa von Mond</h1>
               <p>Ambient dub, dreamtunes, slow wave<br></br>sound production, composition and research</p>
