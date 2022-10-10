@@ -6,30 +6,35 @@ import { useState } from 'react'
 import { DesktopSubMenu } from './desktop-sub-menu'
 import { motion } from 'framer-motion'
 
-export function Header({currentPosition}){
+export function Header({currentPosition, simple}){
 
 const [viewMobileMenu, setViewMobileMenu] = useState(false)
 const [viewSubMenu, setViewSubMenu] = useState(false)
 
 const wholeMenu = {
-  out: { translateX: -300 },
+  out: { },
   in: {
-    translateX: 0,
     transition: {
       staggerChildren: 0.1
     }
   }
 }
 
-const oneItem = {
-  out: { translateX: -300 },
-  in: { translateX: 0 }
-}
+const oneItem = simple ? 
+{
+  out: { scale:1 },
+  in: { scale:1 }
+} 
+: 
+{
+  out: { scale:0 },
+  in: { scale:1 }
+} 
       
 return(
 <>
 
-<MobileMenu viewMobileMenu={viewMobileMenu} setViewMobileMenu={setViewMobileMenu}/>
+<MobileMenu viewMobileMenu={viewMobileMenu} setViewMobileMenu={setViewMobileMenu} theme="lvm" simple={simple}/>
 
 <div className={styles.background_fix}></div>
 
@@ -76,7 +81,11 @@ animate="in">
 
 </DesktopMenu>
 
-<MenuSign onClick={()=>setViewMobileMenu(!viewMobileMenu)}>
+<MenuSign onClick={()=>setViewMobileMenu(!viewMobileMenu)}
+    as={motion.div} 
+    whileHover={{
+    scale: 1.3,
+    transition: { duration: 0.6 },}}>
 ☰
 </MenuSign>
 

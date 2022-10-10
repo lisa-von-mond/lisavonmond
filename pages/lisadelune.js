@@ -2,7 +2,6 @@ import Head from 'next/head'
 import styles from '../styles/Home.module.css'
 import styled, {css} from 'styled-components'
 import { HeaderLdL } from '../components/header-ldl'
-import { Moon } from '../components/moon'
 import Link from 'next/link'
 
 export default function LisaDeLune() {
@@ -72,7 +71,7 @@ justify-content:flex-start;
 gap: 1.2rem;
 animation: fade 2s;
 color: white;
-font-family: 'Padauk', sans-serif;
+text-align:left;
 
 h1{
   border-bottom: 4px solid white;
@@ -85,6 +84,8 @@ p{
   font-size: 1rem;
   letter-spacing: 0.2rem;  
 }
+
+
 `
 
 const News = styled.div`
@@ -97,6 +98,7 @@ animation: fade 2s;
 color: var(--ldl);
 text-transform:uppercase;
 letter-spacing: 0.3rem;
+text-align:left;
 
 
 p{
@@ -119,6 +121,10 @@ color:white;
 
 &:hover{
   border-bottom: 2px solid var(--ldl);
+}
+
+@media only screen and (max-width:899px){
+  display:none;
 }
 `
 

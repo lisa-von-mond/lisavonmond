@@ -1,33 +1,38 @@
 import styles from '../styles/Home.module.css'
 import styled, {css} from 'styled-components'
 import Link from 'next/link'
-import { MobileMenuLdL } from './mobile-menu-ldl'
 import { useState } from 'react'
 import { motion } from 'framer-motion'
+import { MobileMenu } from './mobile-menu'
 
-export function HeaderLdL({currentPosition}){
+export function HeaderLdL({currentPosition, simple}){
 
-const [viewMobileMenuL, setViewMobileMenuL] = useState(false)
+const [viewMobileMenu, setViewMobileMenu] = useState(false)
 
 const wholeMenu = {
-  out: { translateX: -300 },
+  out: { },
   in: {
-    translateX: 0,
     transition: {
       staggerChildren: 0.1
     }
   }
 }
 
-const oneItem = {
-  out: { translateX: -300 },
-  in: { translateX: 0 }
-}
+const oneItem = simple ? 
+{
+  out: { scale:1 },
+  in: { scale:1 }
+} 
+: 
+{
+  out: { scale:0 },
+  in: { scale:1 }
+} 
       
 return(
 <>
 
-<MobileMenuLdL viewMobileMenuL={viewMobileMenuL} setViewMobileMenuL={setViewMobileMenuL}/>
+<MobileMenu viewMobileMenu={viewMobileMenu} setViewMobileMenu={setViewMobileMenu} theme="ldl" simple={simple}/>
 
 <div className={styles.background_fix_ldl}></div>
 
@@ -68,7 +73,11 @@ animate="in">
 
 </DesktopMenu>
 
-<MenuSign onClick={()=>setViewMobileMenuL(true)}>
+<MenuSign onClick={()=>setViewMobileMenu(true)}
+    as={motion.div} 
+    whileHover={{
+    scale: 1.3,
+    transition: { duration: 0.6 },}}>
 ☰
 </MenuSign>
 
