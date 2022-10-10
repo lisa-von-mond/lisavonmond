@@ -11,6 +11,7 @@
   background: url(/cloud_background.jpg);
   background-repeat: no-repeat;
   background-size: cover;
+  animation: fancybg 5s;
 }
 
 .background_fix_ldl {
@@ -19,6 +20,7 @@
   height: 110vh;
   background: url(/background_retro.jpg);
   background-size: 100%;
+  animation: fancybg 5s;
 }
 
 @media only screen and (max-width:799px){
