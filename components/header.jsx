@@ -6,7 +6,7 @@ import { useState } from 'react'
 import { DesktopSubMenu } from './desktop-sub-menu'
 import { motion } from 'framer-motion'
 
-export function Header({currentPosition}){
+export function Header({currentPosition, simple}){
 
 const [viewMobileMenu, setViewMobileMenu] = useState(false)
 const [viewSubMenu, setViewSubMenu] = useState(false)
@@ -20,15 +20,21 @@ const wholeMenu = {
   }
 }
 
-const oneItem = {
+const oneItem = simple ? 
+{
+  out: { scale:1 },
+  in: { scale:1 }
+} 
+: 
+{
   out: { scale:0 },
   in: { scale:1 }
-}
+} 
       
 return(
 <>
 
-<MobileMenu viewMobileMenu={viewMobileMenu} setViewMobileMenu={setViewMobileMenu}/>
+<MobileMenu viewMobileMenu={viewMobileMenu} setViewMobileMenu={setViewMobileMenu} theme="lvm" simple={simple}/>
 
 <div className={styles.background_fix}></div>
 

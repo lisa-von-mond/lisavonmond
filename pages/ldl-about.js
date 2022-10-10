@@ -2,7 +2,7 @@ import Head from 'next/head'
 import styles from '../styles/Home.module.css'
 import AboutMe from '../components/about-text'
 import { InlineFooter } from '../components/footer'
-import { HeaderLdLSimple } from '../components/header-ldl-simple'
+import { HeaderLdL } from '../components/header-ldl'
 
 export default function About() {
 
@@ -15,7 +15,7 @@ export default function About() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <HeaderLdLSimple currentPosition="about"/>
+      <HeaderLdL currentPosition="about" simple/>
        
       <div className={styles.content}>
 

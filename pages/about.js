@@ -2,7 +2,7 @@ import Head from 'next/head'
 import styles from '../styles/Home.module.css'
 import AboutMe from '../components/about-text'
 import { InlineFooter } from '../components/footer'
-import { HeaderSimple } from '../components/header-simple'
+import { Header } from '../components/header'
 
 
 export default function About() {
@@ -16,7 +16,7 @@ export default function About() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <HeaderSimple currentPosition="about"/>
+      <Header currentPosition="about" simple/>
        
       <div className={styles.content}>
 

@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
-import { HeaderSimple } from '../components/header-simple'
+import { Header } from '../components/header'
 import kea from '../public/kea.gif'
 import youandme from '../public/you-and-me.gif'
 import styled, {css} from 'styled-components'
@@ -20,7 +20,7 @@ export default function Sound() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-    <HeaderSimple currentPosition="sound"/>
+    <Header currentPosition="sound" simple/>
  
      <div className={styles.content}>
 

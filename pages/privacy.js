@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import styles from '../styles/Home.module.css'
 import PrivacyText from '../components/privacy-text'
-import { HeaderLdLSimple } from '../components/header-ldl-simple'
+import { HeaderLdL } from '../components/header-ldl'
 
 
 export default function Privacy() {
@@ -15,7 +15,7 @@ export default function Privacy() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <HeaderLdLSimple/>
+      <HeaderLdL simple/>
      
       <div className={styles.content}>
 

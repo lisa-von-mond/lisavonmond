@@ -4,7 +4,6 @@ import { Header } from '../components/header'
 import styled, {css} from 'styled-components'
 import { Moon } from '../components/moon'
 import Link from 'next/link'
-import MoonPreloader from '../components/preloader'
 
 export default function Home() {
   
