@@ -56,8 +56,10 @@ h1{
   font-size:2.4rem;
   letter-spacing: 0.4rem;
   margin-bottom: 2rem;
-  height: 3.4rem;
-  border-bottom: 4px solid black;
+  padding-bottom: 0.3rem;
+  border-bottom-style: solid;
+  border-bottom-color: black;
+  border-bottom-width: 4px;
   text-transform:uppercase;
   
 }
@@ -66,28 +68,13 @@ h1{
 
   h1{
     font-size: 1.8rem;
-    height: 3rem;
+    letter-spacing: 0.32rem;
+    border-bottom-width: 4px;
   }
 
 }
 
-@media only screen and (max-width: 400px){
 
-  h1{
-    font-size: 1.4rem;
-    height: 2.4rem;
-  }
-
-}
-
-@media only screen and (max-width: 350px){
-
-  h1{
-    font-size: 1rem;
-    height: 2rem;
-  }
-
-}
 
 h2{
   font-size: 2rem;
@@ -96,7 +83,19 @@ h2{
   text-align:left;
   margin-bottom: 2rem;
   padding-top: 2rem;
-  border-bottom: 3px solid black;
+  padding-bottom: 0.2rem;
+  border-bottom-style: solid;
+  border-bottom-color: black;
+  border-bottom-width: 3px;
+}
+
+@media only screen and (max-width: 500px){
+
+  h2{
+    font-size: 1.6rem;
+    letter-spacing: 0.25rem;
+  }
+
 }
 
 h3{

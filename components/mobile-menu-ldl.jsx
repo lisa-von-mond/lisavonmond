@@ -28,6 +28,10 @@ return(
 <Link href="/">
 <MenuItem onClick={()=>setViewMobileMenuL(false)}>Lisa von Mond</MenuItem>
 </Link>
+<Spacer></Spacer>
+<Link href="/privacy">
+<MenuItem onClick={()=>setViewMobileMenuL(false)}>privacy</MenuItem>
+</Link>
 <XButton onClick={()=>setViewMobileMenuL(false)}>×</XButton>
 </MMenuFrame>
 )    
@@ -49,7 +53,9 @@ const MMenuFrame = styled.div`
   z-index:2000;
   gap: 0.6rem;
   color:white;
-  background: url(/stars_background.jpg);
+  background: url(/background_retro.jpg);
+  background-size:cover;
+  backgrouund-repeat: no-repeat;
 
 @media only screen and (min-width:800px){
     display:none;
@@ -88,7 +94,8 @@ top: 1rem;
 right: 1rem;
 height: 2rem;
 width: 2rem;
-border: 2px solid black;
+border: 2px solid white;
+color: white;
 display: flex;
 align-items:center;
 justify-content:center;
@@ -98,7 +105,7 @@ cursor:pointer;
 padding: 0.2rem;
 
 &:hover{
-color: skyblue;
-background:black;
+color: var(--ldl);
+border: 2px solid var(--ldl);
 }
 `

@@ -42,8 +42,22 @@ return(
 
 const PrivacyTextWrapper = styled.div`
 
-color:${props=>props.color}
+display:flex;
+flex-direction:column;
+justify-content:flex-start;
+align-items:flex-start;
 
+color:${props=>props.color};
+
+p{
+  margin-bottom: 1rem;
+  padding: 0;
+}
+
+h2{
+  border-bottom-color: ${props=>props.color};
+  margin-bottom: 1.4rem;
+}
 
 `
 

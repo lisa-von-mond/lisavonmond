@@ -20,6 +20,7 @@ const FooterWrapper = styled.footer`
   padding-left: 2rem;
   font-size: 1rem;
   z-index:200;
+  margin-top: 2rem;
   color:${props=>props.color};
 
 

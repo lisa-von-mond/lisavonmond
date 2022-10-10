@@ -16,8 +16,6 @@ export default function AboutMe({color}){
         <p>Lisa von Mond and Lisa de Lune are not two totally different identities, they can rather be seen as different shapes of the same concept.</p>
         <p>My EP lovely planet will be released at the end of this year. I am currently working on techno releases.</p>
         <p>Contact me: lisadelune (at) posteo.de / lisavomond (at) posteo.de</p>
-
-        <div className={styles.rowspacer}> </div>
         </Frame>
     )
 }
@@ -27,5 +25,14 @@ display:flex;
 flex-direction: column;
 align-items:flex-start;
 color:${props=>props.color};
-h1{border-bottom: 4px solid ${props=>props.color}}
+
+h1{
+ border-bottom-color:${props=>props.color};
+ margin-bottom: 3rem;
+}
+
+p{
+padding: 0;
+margin-bottom: 1rem;
+}
 `

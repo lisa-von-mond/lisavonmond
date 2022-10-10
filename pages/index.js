@@ -69,6 +69,7 @@ display:flex;
 flex-direction: column;
 align-items: flex-start;
 justify-content:flex-start;
+text-align:left;
 gap: 0.2rem;
 animation: fade 2s;
 color: black;
@@ -94,6 +95,7 @@ animation: fade 2s;
 color: var(--lvm);
 text-transform:uppercase;
 letter-spacing: 0.3rem;
+text-alihn:center;
 
 p{
   padding: 0;
@@ -114,12 +116,17 @@ box-sizing: border-box;
 &:hover{
   border-bottom: 2px solid var(--lvm);
 }
+
+@media only screen and (max-width:899px){
+  display:none;
+}
 `
 
 const ComingSoon = styled.p`
 font-weight: 600;
 border-bottom: 2px solid var(--lvm);
 margin-bottom: 0.5rem !important;
+text-align:left;
 `
 
 

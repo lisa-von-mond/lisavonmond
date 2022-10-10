@@ -35,6 +35,10 @@ return(
 <Link href="/lisadelune" target="blank" rel="noopener">
 <MenuItem onClick={()=>setViewMobileMenu(false)}>Lisa de Lune</MenuItem>
 </Link>
+<Spacer></Spacer>
+<Link href="/privacy-policy" target="blank" rel="noopener">
+<MenuItem onClick={()=>setViewMobileMenu(false)}>privacy</MenuItem>
+</Link>
 <XButton onClick={()=>setViewMobileMenu(false)}>×</XButton>
 </MMenuFrame>
 )    

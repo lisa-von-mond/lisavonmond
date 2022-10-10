@@ -20,6 +20,8 @@
   height: 110vh;
   background: url(/background_retro.jpg);
   background-size: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
   animation: fancybg 5s;
 }
 
