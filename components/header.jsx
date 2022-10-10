@@ -12,9 +12,8 @@ const [viewMobileMenu, setViewMobileMenu] = useState(false)
 const [viewSubMenu, setViewSubMenu] = useState(false)
 
 const wholeMenu = {
-  out: { translateX: -300 },
+  out: { },
   in: {
-    translateX: 0,
     transition: {
       staggerChildren: 0.1
     }
@@ -22,8 +21,8 @@ const wholeMenu = {
 }
 
 const oneItem = {
-  out: { translateX: -300 },
-  in: { translateX: 0 }
+  out: { scale:0 },
+  in: { scale:1 }
 }
       
 return(

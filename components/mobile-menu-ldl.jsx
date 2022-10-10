@@ -1,40 +1,85 @@
-import styles from '../styles/Home.module.css'
 import styled, {css} from 'styled-components'
 import Link from 'next/link'
+import { motion } from 'framer-motion'
 
 export function MobileMenuLdL({viewMobileMenuL, setViewMobileMenuL}){
 
+  const menuFrame = {
+    out: {},
+    in: {
+      transition: {
+        staggerChildren: 0.1
+      }
+    }
+  }
+  
+  const oneItem = {
+    out: { scale:0 },
+    in: { scale:1 }
+  }
+
 return(
-        
-<MMenuFrame visible={viewMobileMenuL}>
-<div className={styles.m_background}></div>
-<Link href="/lisadelune">
-<MenuItem onClick={()=>setViewMobileMenuL(false)} >home</MenuItem>
-</Link>
-<Link href="/ldl-about">
-<MenuItem onClick={()=>setViewMobileMenuL(false)}>about</MenuItem>
-</Link>
+       <>
+{viewMobileMenuL &&       
+<MMenuFrame 
+as={motion.div} 
+variants={menuFrame}
+initial="out"
+animate="in">
+
+<MenuItem as={motion.div} variants={oneItem} onClick={()=>setViewMobileMenuL(false)}>
+  <Link href="/lisadelune">
+    home
+  </Link>
+</MenuItem>
+
+<MenuItem as={motion.div} variants={oneItem} onClick={()=>setViewMobileMenuL(false)}>
+  <Link href="/ldl-about">
+    about
+  </Link>
+</MenuItem>
+
 <Spacer></Spacer>
-<Link href="https://soundcloud.com/lisadelune" target="_blank" rel="noopener">
-<MenuItem onClick={()=>setViewMobileMenuL(false)}>soundcloud</MenuItem>
-</Link>
-<Link href="https://instagram.com/lisadelune" target="_blank" rel="noopener">
-<MenuItem onClick={()=>setViewMobileMenuL(false)}>insta</MenuItem>
-</Link>
-<Link href="mailto:lisadelune@posteo.de" rel="noopener">
-<MenuItem onClick={()=>setViewMobileMenuL(false)}>contact</MenuItem>
-</Link>
+
+<MenuItem as={motion.div} variants={oneItem} onClick={()=>setViewMobileMenuL(false)}>
+  <Link href="https://soundcloud.com/lisadelune" target="_blank" rel="noopener">
+    soundcloud
+  </Link>
+</MenuItem>
+
+<MenuItem as={motion.div} variants={oneItem} onClick={()=>setViewMobileMenuL(false)}>
+  <Link href="https://instagram.com/lisadelune" target="_blank" rel="noopener">
+    insta
+  </Link>
+</MenuItem>
+
+<MenuItem as={motion.div} variants={oneItem} onClick={()=>setViewMobileMenuL(false)}>
+  <Link href="mailto:lisadelune@posteo.de" rel="noopener">
+    contact
+  </Link>
+</MenuItem>
+
 <Spacer></Spacer>
-<Link href="/">
-<MenuItem onClick={()=>setViewMobileMenuL(false)}>Lisa von Mond</MenuItem>
-</Link>
+
+<MenuItem as={motion.div} variants={oneItem} onClick={()=>setViewMobileMenuL(false)}>
+  <Link href="/">
+    Lisa von Mond
+  </Link>
+</MenuItem>
+
 <Spacer></Spacer>
-<Link href="/privacy">
-<MenuItem onClick={()=>setViewMobileMenuL(false)}>privacy</MenuItem>
-</Link>
+
+<MenuItem as={motion.div} variants={oneItem} onClick={()=>setViewMobileMenuL(false)}>
+  <Link href="/privacy">
+    privacy
+  </Link>
+</MenuItem>
+
 <XButton onClick={()=>setViewMobileMenuL(false)}>×</XButton>
-</MMenuFrame>
-)    
+
+</MMenuFrame>}
+</> 
+)
 }
 
 const MMenuFrame = styled.div`
