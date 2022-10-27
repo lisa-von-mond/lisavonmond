@@ -55,7 +55,7 @@ display:flex;
 flex-direction: column;
 align-items: flex-start;
 justify-content: center;
-gap: 3rem;
+gap: 4rem;
 padding: 0;
 
 @media only screen and (max-width:899px){
