@@ -171,6 +171,7 @@ top: 1rem;
 right: 1rem;
 font-size: 1.3rem;
 cursor:pointer;
+color: var(--dark);
 
 @media only screen and (min-width:900px){
   display:none;

@@ -95,7 +95,7 @@ const SoundLink = styled.div`
 
 border-width: 2px;
 border-style: solid;
-border-color: rgba(0, 0, 0, 1);
+border-color: var(--dark);
 height: 2.2rem;
 font-size: 0.9rem !important;
 display:flex;
@@ -108,18 +108,21 @@ border-radius: 100px;
 box-sizing: border-box;
 background:rgb(255, 255, 255, 0);
 color: rgb(0, 0, 0);
-transition: background 2s, filter 2s, webkit-filter 2s, color 2s, border-color 2s;
--webkit-filter: invert(0%);
-filter: invert(0%);
+transition: background 2s, color 2s, border-color 2s;
 cursor:pointer;
 
 &:hover{
-background: rgb(0, 0, 0);
+background: var(--dark);
 color:rgb(255, 255, 255);
 border-color: rgba(0, 0, 0, 0);
 
-.arrow{  
-  color: red;
+.arrow{
+  filter: invert(0%) brightness(180%);
+  transition: filter 2s;
+}
+
+&:hover .arrow{  
+  filter: invert(100%);
 }
 
 div(
