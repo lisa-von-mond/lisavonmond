@@ -56,7 +56,7 @@ export default function Sound() {
 
         <Link href="https://soundcloud.com/friendlyconnections/lisa-von-mond-you-and-me" target="blank" rel="noopener">
         <SoundLink>
-          <Image className="arrow" src={arrow} alt="arrow" height="17" width="17"></Image>
+         <Image className="arrow" src={arrow} alt="arrow" height="17" width="17"></Image>
           listen on soundcloud
           </SoundLink>
         </Link>
@@ -93,7 +93,9 @@ gap: 0.8rem;`
 
 const SoundLink = styled.div`
 
-border: 2px solid black;
+border-width: 2px;
+border-style: solid;
+border-color: rgba(0, 0, 0, 1);
 height: 2.2rem;
 font-size: 0.9rem !important;
 display:flex;
@@ -104,16 +106,20 @@ margin:0;
 padding:0.3rem 0.7rem 0.3rem 0.7rem;
 border-radius: 100px;
 box-sizing: border-box;
+background:rgb(255, 255, 255, 0);
+color: rgb(0, 0, 0);
+transition: background 2s, filter 2s, webkit-filter 2s, color 2s, border-color 2s;
+-webkit-filter: invert(0%);
+filter: invert(0%);
+cursor:pointer;
 
 &:hover{
-background: var(--lvm);
-color:white;
-border: 2px hidden black;
+background: rgb(0, 0, 0);
+color:rgb(255, 255, 255);
+border-color: rgba(0, 0, 0, 0);
 
-.arrow{  -webkit-filter: invert(100%);
-  filter: invert(100%);}
-
-
+.arrow{  
+  color: red;
 }
 
 div(

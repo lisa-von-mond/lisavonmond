@@ -26,7 +26,7 @@ export default function LisaDeLune() {
           </Intro>
           <News>
           <p>UPCOMING</p>
-          <p>17.10.22 sisyphos / B</p>
+          <p>28.10.22 waagenbau / HH</p>
           <p>29.10.22 hafenklang / HH</p>
           <p>29.11.22 luna / K</p>
           </News>

@@ -71,7 +71,7 @@ animate="in">
 
 <Spacer></Spacer>
 
-{theme === "lvm" ? <MenuItem className="item" as={motion.div} variants={oneItem}>
+{/*theme === "lvm" ? <MenuItem className="item" as={motion.div} variants={oneItem}>
   <Link href="/lisadelune" target="blank" rel="noopener">
     Lisa de Lune
   </Link>
@@ -81,7 +81,7 @@ animate="in">
   <Link href="/" target="blank" rel="noopener">
     Lisa von Mond
   </Link>
-</MenuItem>}
+</MenuItem>*/}
 
 <Spacer></Spacer>
 
@@ -121,7 +121,6 @@ const MMenuFrame = styled.div`
   text-align:center;
   z-index:2000;
   gap: 0.6rem;
-  color:black;
 
 .item:hover{border-bottom: 3px solid var(--lvm);}
 
@@ -160,16 +159,16 @@ const XButton = styled.div`
 position:fixed;
 top: 1rem;
 right: 1rem;
-height: 1.4rem;
-width: 1.4rem;
+height: 1.5rem;
+width: 1.5rem;
 display: flex;
 align-items:center;
 justify-content:center;
 border-radius: 0.3rem;
 font-size: 1.6rem;
 cursor:pointer;
-color:black;
-border: 2px solid black;
+color:var(--dark);
+border: 2px solid var(--dark);
 
 
 ${props =>

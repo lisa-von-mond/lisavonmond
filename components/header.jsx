@@ -62,22 +62,22 @@ animate="in">
 <Spacer></Spacer>
 
 <MenuItem as={motion.div} variants={oneItem} current="soundcloud">
-<Link href="https://soundcloud.com/lisavonmond" target="_blank">soundcloud</Link>
+<Link href="https://soundcloud.com/lisavonmond" passHref><a target="_blank">soundcloud</a></Link>
 </MenuItem>
 
 <MenuItem as={motion.div} variants={oneItem} current="instagram">
-<Link href="https://www.instagram.com/lisadelune/" target="_blank">instagram</Link>
+<Link href="https://www.instagram.com/lisadelune/" passHref><a target="_blank">instagram</a></Link>
 </MenuItem>
 
 <MenuItem as={motion.div} variants={oneItem} current="contact">
-<Link href="mailto:lisavonmond@posteo.de">contact</Link>
+<Link href="mailto:lisavonmond@posteo.de" passHref><a target="_blank">contact</a></Link>
 </MenuItem>
 
 <Spacer></Spacer>
 
-<MenuItem as={motion.div} variants={oneItem} current="Lisa de Lune">
+{/*<MenuItem as={motion.div} variants={oneItem} current="Lisa de Lune">
 <Link href="/lisadelune">Lisa de Lune</Link>
-</MenuItem>
+</MenuItem>*/}
 
 </DesktopMenu>
 
@@ -101,7 +101,7 @@ left: 0;
 height: 0.1rem;
 z-index:999;
 box-sizing:content-box;
-color:black;
+color:var(--dark);
 `
 const DesktopMenu = styled.div`
 position:fixed;
@@ -132,10 +132,14 @@ const MenuItem = styled.div`
   font-size: 1rem;
   letter-spacing: 0.2rem;
   display:inherit;
+  border-bottom-width: 3px;
+  border-bottom-style: solid;
+  border-bottom-color: var(--lvm-invi);
+  transition: border-bottom-color 1s;
 
 &:hover{
   list-style-type: none;
-  border-bottom: 3px solid var(--lvm);
+  border-bottom-color: var(--lvm);
   }
 
   ${props =>

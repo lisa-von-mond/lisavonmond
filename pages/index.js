@@ -19,6 +19,9 @@ export default function Home() {
 
       <main className={styles.main}>
         <StartContent>
+          <MoonWrapper>
+            <Moon color="white" />
+          </MoonWrapper>
 
             <Intro>
               <h1>Lisa von Mond</h1>
@@ -45,7 +48,7 @@ export default function Home() {
 
 const StartContent = styled.div`
 position: fixed;
-left: 40%;
+left: 35%;
 top: 0;
 height: 100vh;
 display:flex;
@@ -60,7 +63,6 @@ left: 0;
 top: 1rem;
 padding: 2rem;
 }
-
 `
 
 const Intro = styled.div`
@@ -71,12 +73,11 @@ justify-content:flex-start;
 text-align:left;
 gap: 0.2rem;
 animation: fade 2s;
-color: black;
+color: var(--dark);
 
 h1{
-  border-bottom: 4px solid black;
+  border-bottom: 4px solid var(--dark);
 }
-
 
 p{
   margin: 0;
@@ -104,16 +105,21 @@ p{
 
 const PrivacyFixed = styled.div`
 position: fixed;
-left: 2rem;
+right: 2rem;
 bottom: 2rem;
 letter-spacing: 0.2rem;
 font-size: 0.8rem;
 cursor:pointer;
 height: 1.3rem;
+color: white;
 box-sizing: border-box;
+border-bottom-width: 3px;
+border-bottom-style: solid;
+border-bottom-color: var(--lvm-invi);
+transition: border-bottom-color 1s;
 
 &:hover{
-  border-bottom: 2px solid var(--lvm);
+  border-bottom-color: white;
 }
 
 @media only screen and (max-width:899px){
@@ -128,5 +134,15 @@ margin-bottom: 0.5rem !important;
 text-align:left;
 `
 
+const MoonWrapper = styled.div`
+position: fixed;
+right: 2rem;
+top: 2rem;
+
+.moon{
+  animation: moon_rotate 5s;
+}
+
+`
 
 

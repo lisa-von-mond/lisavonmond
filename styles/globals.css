@@ -14,7 +14,10 @@
 :root{
 
   --ldl: #f5ff00;
-  --lvm: #1400aa;
+  --lvm: rgb(119, 0, 255);
+  --lvm-invi: rgba(20, 0, 170, 0);
+  --dark: rgb(59, 59, 59);
+  color: var(--dark);
   
 }
 
@@ -58,7 +61,7 @@ h1{
   margin-bottom: 2rem;
   padding-bottom: 0.3rem;
   border-bottom-style: solid;
-  border-bottom-color: black;
+  border-bottom-color: var(--dark);
   border-bottom-width: 4px;
   text-transform:uppercase;
   
@@ -74,8 +77,6 @@ h1{
 
 }
 
-
-
 h2{
   font-size: 2rem;
   letter-spacing: 0.3rem;
@@ -85,8 +86,8 @@ h2{
   padding-top: 2rem;
   padding-bottom: 0.2rem;
   border-bottom-style: solid;
-  border-bottom-color: black;
-  border-bottom-width: 3px;
+  border-bottom-color: var(--dark);
+  border-bottom-width: 4px;
 }
 
 @media only screen and (max-width: 500px){
@@ -94,6 +95,7 @@ h2{
   h2{
     font-size: 1.6rem;
     letter-spacing: 0.25rem;
+    border-bottom-width: 3px;
   }
 
 }

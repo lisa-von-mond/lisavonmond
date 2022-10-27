@@ -50,9 +50,13 @@ padding:0;
 height: 1.4rem;
 font-size: 1rem;
 letter-spacing: 0.2rem;
+border-bottom-width: 3px;
+border-bottom-style: solid;
+border-bottom-color: var(--lvm-invi);
+transition: border-bottom-color 1s;
 
 &:hover{
-  border-bottom: 3px solid blueviolet;
+  border-bottom: 3px solid var(--lvm);
 
 }
   
