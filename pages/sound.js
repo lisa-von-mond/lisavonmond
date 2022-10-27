@@ -8,6 +8,7 @@ import styled, {css} from 'styled-components'
 import { InlineFooter } from '../components/footer'
 import arrow from '../public/pfeil.svg'
 import Link from 'next/link'
+import ArrowButton from '../components/arrow-button'
 
 export default function Sound() {  
   
@@ -35,13 +36,8 @@ export default function Sound() {
         <p>A smooth soundscape chillout, released may 2022 on Solisampler VAK03 of vak.leipzig collective. Revenues from the sampler go to SeaWatch e.B. and Blindspots e.V. - an organization that supports volunteer structures for Balkan and Ukraine refugees.</p>
         <LinkWrapper>
 
-        <Link href="https://soundcloud.com/vak-leipzig/sets/vak03" target="blank" rel="noopener">
-        <SoundLink><Image className="arrow" src={arrow} alt="arrow" height="17" width="17"></Image>listen on soundcloud</SoundLink>
-        </Link>
-
-        <Link href="https://vak-leipzig.bandcamp.com/album/vak03" target="blank" rel="noopener">
-        <SoundLink><Image className="arrow" src={arrow} alt="arrow" height="17" width="17"></Image>buy sampler on bandcamp</SoundLink>
-        </Link>
+        <ArrowButton link="https://soundcloud.com/vak-leipzig/sets/vak03" text="listen on soundcloud"/>
+        <ArrowButton link="https://vak-leipzig.bandcamp.com/album/vak03" text="buy sampler on bandcamp"/>
 
         </LinkWrapper>
 
@@ -54,24 +50,16 @@ export default function Sound() {
     
         <p>A warm and cosy downtempo track with influences of dub, house and ambient. Released may 2021 on the Bremen / Cologne label friendly connections</p>
 
-        <Link href="https://soundcloud.com/friendlyconnections/lisa-von-mond-you-and-me" target="blank" rel="noopener">
-        <SoundLink>
-         <Image className="arrow" src={arrow} alt="arrow" height="17" width="17"></Image>
-          listen on soundcloud
-          </SoundLink>
-        </Link>
+        <ArrowButton link="https://soundcloud.com/friendlyconnections/lisa-von-mond-you-and-me" text="listen on soundcloud"/>
 
         <h2 id="trailer_soundtrack">TRAILER SOUNDTRACK</h2>
         <h3>lesbian gay film days 2020</h3>
         <p>Together with <a href="https://soundcloud.com/smallfieldt" target="blank" rel="noopener" className={styles.exlink}>Nika Smallfieldt</a> I made the trailer soundtrack of Lesbian Gay film days in Hamburg 2020, which was organized under the motto <em>quot people in trouble</em>.
         The creative team asked us to produce a track, which goes from an energetic and combative energy to something hopeful and positive. The result is a techno snippet with a transformation from moll and breakbeat to dur and straight.</p>
         <p>Trailer concept and cut by Evan Romero - thank you for the good cooperation!</p>
-        
-        <Link href="https://www.facebook.com/watch/?v=2781349775443374" target="blank" rel="noopener">
-        <SoundLink>
-        <Image className="arrow" src={arrow} alt="arrow" height="17" width="17"></Image>view the trailer here
-        </SoundLink>
-        </Link>
+
+        <ArrowButton link="https://www.facebook.com/watch/?v=2781349775443374" text="view the trailer here"/>
+
         <Spacer></Spacer>
        </main>
 
@@ -90,49 +78,6 @@ display:flex;
 flex-direction: column;
 align-items:flex-start;
 gap: 0.8rem;`
-
-const SoundLink = styled.div`
-
-border-width: 2px;
-border-style: solid;
-border-color: var(--dark);
-height: 2.2rem;
-font-size: 0.9rem !important;
-display:flex;
-align-items:center;
-justify-content:center;
-gap: 0.7rem;
-margin:0;
-padding:0.3rem 0.7rem 0.3rem 0.7rem;
-border-radius: 100px;
-box-sizing: border-box;
-background:rgb(255, 255, 255, 0);
-color: rgb(0, 0, 0);
-transition: background 2s, color 2s, border-color 2s;
-cursor:pointer;
-
-&:hover{
-background: var(--dark);
-color:rgb(255, 255, 255);
-border-color: rgba(0, 0, 0, 0);
-
-.arrow{
-  filter: invert(0%) brightness(180%);
-  transition: filter 2s;
-}
-
-&:hover .arrow{  
-  filter: invert(100%);
-}
-
-div(
-  margin: 0;
-  padding:0;
- background:hotpink;
- border: 2px solid red;
-
-)
-`
 
 const Spacer = styled.div`
 height: 3rem;

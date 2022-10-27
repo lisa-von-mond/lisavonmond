@@ -105,5 +105,4 @@ div .spacer{
 .moonpic{
  margin-bottom: 1rem;
 }
-
 `
