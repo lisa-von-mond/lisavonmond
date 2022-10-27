@@ -9,15 +9,15 @@ export function Moon({color}){
 
 const [moonPhase, setMoonPhase] = useState(null)
 const [nextFullMoon, setNextFullMoon] = useState(null)
+const [specialMoon, setSpecialMoon] = useState(null)
 
 const today = new Date()
 
 function transformDate(d){
-
-const moonMonth = d.getMonth() + 1;   
-const moonYear = d.getFullYear(); 
-const moonDate = d.getDate();
-return moonDate.toString() + "/" + moonMonth.toString() + "/" + moonYear.toString()
+  const moonMonth = d.getMonth() + 1;   
+  const moonYear = d.getFullYear(); 
+  const moonDate = d.getDate();
+  return moonDate.toString() + "/" + moonMonth.toString() + "/" + moonYear.toString()
 }
 
 const todayDate = transformDate(today);
@@ -36,26 +36,36 @@ function generatePhase()
   
 generatePhase()
 
+function specialMoonToday(){
+const isSpecialMoonToday = mooncalendar.filter(e => (transformDate(new Date(e.date))) === todayDate)
+if (isSpecialMoonToday.length === 1){
+  setSpecialMoon(isSpecialMoonToday.state)
+} else { setSpecialMoon(null) }
+}
+
+specialMoonToday()
+
 function generateNextFullMoon(){
-  const next = (filtered.filter(e => e.state = "full moon"))[0]
-  setNextFullMoon(transformDate(new Date(next.date)))
+  const nextFull = (filtered.filter(e => e.state = "full moon"))[0]
+  const nextFullDate = transformDate(new Date(nextFull.date))
+  setNextFullMoon(nextFullDate)
 }
 
 generateNextFullMoon()
 
 }
-
 )
-
 
 return(
   <MoonWrapper color={color}>
     <div className="moonpic"><Image src={moon} width="70" height="70"></Image></div>
   
   <div><p>{todayDate}</p></div>
-  <div><p className="spacer">  </p><p>{moonPhase}</p></div>
-  <div><p>next full moon:</p></div>
-  <div><p className="spacer">   </p><p>{nextFullMoon}</p></div>
+  <div><p className="spacer"></p>{specialMoon !== null ? <p class="highlighted">{specialMoon}</p> : <p>{moonPhase}</p>}</div>
+
+  {specialMoon === null ? <><div><p>next full moon:</p></div>
+  <div><p className="spacer"></p><p>{nextFullMoon}</p></div></> : null}
+
   </MoonWrapper>
 )    
 }
