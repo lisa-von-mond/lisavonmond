@@ -58,10 +58,10 @@ generateNextFullMoon()
 
 return(
   <MoonWrapper color={color}>
-    <div className="moonpic"><Image src={moon} width="70" height="70"></Image></div>
+    <div className="moonpic"><Image alt="moon" src={moon} width="70" height="70"></Image></div>
   
   <div><p>{todayDate}</p></div>
-  <div><p className="spacer"></p>{specialMoon !== null ? <p class="highlighted">{specialMoon}</p> : <p>{moonPhase}</p>}</div>
+  <div><p className="spacer"></p>{specialMoon !== null ? <p className="highlighted">{specialMoon}</p> : <p>{moonPhase}</p>}</div>
 
   {specialMoon === null ? <><div><p>next full moon:</p></div>
   <div><p className="spacer"></p><p>{nextFullMoon}</p></div></> : null}
