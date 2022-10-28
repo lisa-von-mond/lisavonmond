@@ -1,18 +1,18 @@
 export const mooncalendar = [
 
-    {date:"08/11/2022",
+    {date:"November 8, 2022",
     state:"full moon",
     },
 
-    {date:"24/11/2022",
+    {date:"November 24, 2022",
     state:"new moon",
     },
 
-    {date:"08/12/2022",
+    {date:"December 8, 2022",
     state:"full moon",
     },
 
-    {date:"23/12/2022",
+    {date:"December 23, 2022",
     state:"new moon",
     },
 ]
